@@ -10,16 +10,48 @@
 
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:8080/api';
+const API_BASE_URL = 'http://localhost:9000/api';
 
 // TODO: axios 인스턴스를 생성하세요
+const api = axios.create({
+    baseURL: API_BASE_URL,
+    headers: {
+        'Content-Type' : 'application/json',
+    }
+})
 
 // TODO: 요청 인터셉터를 설정하세요
 // localStorage에서 token을 가져와서 Authorization 헤더에 추가
+// 모든 요청에 JWT 토큰 추가
+api.interceptors.request.use(
+    config => {
+        const token = localStorage.getItem('token');
+        if(token) {
+            config.headers.Authorization = `Bearer ${token}`;
+        }
+
+        return config;
+    },
+    (error) => {
+        return Promise.reject(error);
+    }
+)
 
 // TODO: 응답 인터셉터를 설정하세요
 // 401 에러가 발생하면 localStorage를 비우고 /login으로 이동
+/*
+export const 기능1번 = () => {}
 
+const 기능2번 = {
+    회원가입기능 : () => {},
+    로그인기능 : () => {}
+}
+*/
+/*
+export default 기능2번;
+*/
+
+// 기능 2번과 같은 형태로 함수 활용
 const apiService = {
     // ===== 인증 API =====
 
@@ -28,6 +60,13 @@ const apiService = {
     // body: { username, email, password, fullName }
     signup: async (username, email, password, fullName) => {
         // TODO: API 호출을 완성하세요
+        const response = await axios.post(`${API_BASE_URL}/auth/signup`, {
+            username: username,
+            email: email,
+            password: password,
+            fullName: fullName,
+        });
+        return response.data;
     },
 
     // TODO: 로그인 API
@@ -35,6 +74,25 @@ const apiService = {
     // body: { username, password }
     login: async (username, password) => {
         // TODO: API 호출을 완성하세요
+        //JWT
+        const res = await axios.post(`${API_BASE_URL}/auth/login`,
+            {
+                       userMame: username,
+                       userPassword: password
+                   },
+            {withCredentials:true}
+                .then(
+                    res => {
+
+                    }
+                ).catch(err => {
+                console.log("로그인 에러 : ", err);
+                return {
+                    success: false,
+                    message: '로그인 중 오류가 발생했습니다.'
+                }
+            })
+        )
     },
 
     // TODO: 로그아웃 함수

@@ -13,16 +13,22 @@ import { ArrowLeft, Image } from 'lucide-react';
 
 const UploadPage = () => {
     // TODO: selectedImage state를 선언하세요
+    const [selectedImage, setSelectedImage] = useState(null);
 
     // TODO: imagePreview state를 선언하세요
+    const [imagePreview, setImagePreview] = useState(null);
 
     // TODO: caption state를 선언하세요
+    const [caption, setCaption] = useState('');
 
     // TODO: location state를 선언하세요
+    const [location, setLocation] = useState('');
 
     // TODO: loading state를 선언하세요
+    const [loading, setLoading] = useState(true);
 
     // TODO: useNavigate를 사용하여 navigate 함수를 가져오세요
+    const navigate = useNavigate();
 
     // TODO: localStorage에서 user 정보를 가져오세요
 
@@ -66,6 +72,7 @@ const UploadPage = () => {
                         {/* TODO: imagePreview가 있으면 이미지 표시, 없으면 업로드 UI 표시 */}
                         {/* FileReader로 변환한 base64 이미지를 img src에 사용 */}
                         {/* input type="file" accept="image/*" onChange={handleImageChange} */}
+                         <input type="file" accept="image/*" onChange={handleImageChange} />
                     </div>
 
                     {/* TODO: 캡션 입력 영역 작성 */}
@@ -80,7 +87,10 @@ const UploadPage = () => {
                                 {/* placeholder: "문구를 입력하세요..." */}
                                 {/* value: caption */}
                                 {/* onChange: setCaption */}
-
+                                <textarea placeholder="문구를 입력하세요."
+                                          value={caption}
+                                          onChange={(e) => setCaption(e.target.value)}
+                                />
                                 {/* TODO: 글자 수 표시 (예: 0/2,200) */}
                             </div>
                         </div>
