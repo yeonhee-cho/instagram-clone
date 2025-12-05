@@ -21,4 +21,15 @@ public class UserController {
     public void signUp(@RequestBody User user) {
         userService.signUp(user);
     }
+
+    @PostMapping("/login")
+    public void login(@RequestBody User user) {
+        // 사용자 인증 이메일, 비밀번호
+        
+        if(user == null) {
+            // 401을 전달
+        }
+        // 로그인 성공 JWT 토큰 생성
+        // 토큰 발급에 대한 응답 데이터 생성
+    }
 }
