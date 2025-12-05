@@ -9,6 +9,7 @@
 // ============================================
 
 import axios from 'axios';
+import config from "tailwindcss/defaultConfig";
 
 const API_BASE_URL = 'http://localhost:9000/api';
 
@@ -23,6 +24,7 @@ const api = axios.create({
 // TODO: 요청 인터셉터를 설정하세요
 // localStorage에서 token을 가져와서 Authorization 헤더에 추가
 // 모든 요청에 JWT 토큰 추가
+// 사용자의 요청을 가로채다 = interceptor
 api.interceptors.request.use(
     config => {
         const token = localStorage.getItem('token');
@@ -39,6 +41,29 @@ api.interceptors.request.use(
 
 // TODO: 응답 인터셉터를 설정하세요
 // 401 에러가 발생하면 localStorage를 비우고 /login으로 이동
+/**
+ * 401: 인증 안 됨 : 로그인을 안했거나, 토큰 만료
+ *     -> 로그인 페이지로 이동(토큰 만료, 토큰이 임의로 삭제, 잘못된 토큰 = 누군가가 토큰을 임의로 조작)
+ * 403: 권한 없음 : 로그인은 했지만, 접근할 권한 부족 - 사업자
+ *     -> 권한 없습니다. 알림 처리, 이전 페이지로 돌려보내거나 메인 페이지로 돌려보내기
+ * 404: 없음 : 게시물 / 사용자 / 페이지 없음
+ *     -> 찾을 수 없습니다. 알림 이전 페이지로 돌려보내거나 메인 페이지로 돌려보내기
+ * 500: 서버 에러 : 서버 문제
+ *     -> 고객 센터 연락 방법 띄우기
+ */
+api.interceptors.response.use(
+    response => {
+        return response;
+    },
+    error => {
+        if(error.response && error.response.status === 401) {
+            localStorage.removeItem('token');
+            localStorage.removeItem('user');
+            window.location.href = '/login';
+        }
+    }
+)
+
 /*
 export const 기능1번 = () => {}
 
@@ -60,7 +85,7 @@ const apiService = {
     // body: { username, email, password, fullName }
     signup: async (username, email, password, fullName) => {
         // TODO: API 호출을 완성하세요
-        const response = await axios.post(`${API_BASE_URL}/auth/signup`, {
+        const response = await api.post('/auth/signup', {
             username: username,
             email: email,
             password: password,
@@ -75,24 +100,17 @@ const apiService = {
     login: async (username, password) => {
         // TODO: API 호출을 완성하세요
         //JWT
-        const res = await axios.post(`${API_BASE_URL}/auth/login`,
-            {
-                       userMame: username,
-                       userPassword: password
-                   },
-            {withCredentials:true}
-                .then(
-                    res => {
+        const res = await api.post('/auth/login', {
+            userName: username,
+            userPassword: password,
+        });
 
-                    }
-                ).catch(err => {
-                console.log("로그인 에러 : ", err);
-                return {
-                    success: false,
-                    message: '로그인 중 오류가 발생했습니다.'
-                }
-            })
-        )
+        // 토큰과 사용자 정보를 localStorage 저장
+        if(res.data.token) {
+            localStorage.setItem('token', res.data.token);
+            localStorage.setItem('user', JSON.stringify(res.data.user));
+        }
+        return res.data;
     },
 
     // TODO: 로그아웃 함수
