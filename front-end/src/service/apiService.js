@@ -80,11 +80,11 @@ export default 기능2번;
 const apiService = {
     // ===== 인증 API =====
 
-    // TODO: 회원가입 API
+    // 회원가입 API
     // POST /auth/signup
     // body: { username, email, password, fullName }
     signup: async (username, email, password, fullName) => {
-        // TODO: API 호출을 완성하세요
+        // API 호출을 완성하세요
         const response = await api.post('/auth/signup', {
             username: username,
             email: email,
@@ -97,11 +97,11 @@ const apiService = {
     // TODO: 로그인 API
     // POST /auth/login
     // body: { username, password }
-    login: async (username, password) => {
+    login: async (userEmail, password) => {
         // TODO: API 호출을 완성하세요
         //JWT
         const res = await api.post('/auth/login', {
-            userName: username,
+            userEmail: userEmail,
             userPassword: password,
         });
 

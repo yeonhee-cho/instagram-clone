@@ -34,7 +34,6 @@ public class UserServiceImpl implements UserService {
         // user에서 비밀번호 자리에 저장하기 (암호화 처리한 프론트엔드에서 클라이언트가 작성한 기존 비밀번호)
         user.setUserPassword(passwordEncoder.encode(user.getUserPassword()));
 
-
         // 기본 아바타 설정 유저가 아바타 설정을 안했을 때 기본 아바타 이미지로 설정
         if(user.getUserAvatar() == null || user.getUserAvatar().isEmpty()) {
             user.setUserAvatar("default-avatar.png");

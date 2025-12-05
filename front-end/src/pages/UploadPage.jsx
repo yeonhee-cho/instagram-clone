@@ -12,22 +12,22 @@ import apiService from '../service/apiService';
 import { ArrowLeft, Image } from 'lucide-react';
 
 const UploadPage = () => {
-    // TODO: selectedImage state를 선언하세요
+    // selectedImage state를 선언하세요
     const [selectedImage, setSelectedImage] = useState(null);
 
-    // TODO: imagePreview state를 선언하세요
+    // imagePreview state를 선언하세요
     const [imagePreview, setImagePreview] = useState(null);
 
-    // TODO: caption state를 선언하세요
+    // caption state를 선언하세요
     const [caption, setCaption] = useState('');
 
-    // TODO: location state를 선언하세요
+    // location state를 선언하세요
     const [location, setLocation] = useState('');
 
-    // TODO: loading state를 선언하세요
+    // loading state를 선언하세요
     const [loading, setLoading] = useState(true);
 
-    // TODO: useNavigate를 사용하여 navigate 함수를 가져오세요
+    // useNavigate를 사용하여 navigate 함수를 가져오세요
     const navigate = useNavigate();
 
     // TODO: localStorage에서 user 정보를 가져오세요
@@ -83,7 +83,7 @@ const UploadPage = () => {
                             <div className="upload-caption-right">
                                 {/* TODO: 사용자명 표시 */}
 
-                                {/* TODO: textarea로 캡션 입력 */}
+                                {/* textarea로 캡션 입력 */}
                                 {/* placeholder: "문구를 입력하세요..." */}
                                 {/* value: caption */}
                                 {/* onChange: setCaption */}

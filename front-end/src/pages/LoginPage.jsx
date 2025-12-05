@@ -14,16 +14,18 @@ import {useNavigate} from 'react-router-dom';
 import apiService from '../service/apiService';
 
 const LoginPage = () => {
-    // TODO: username state를 선언하세요
+    // username state를 선언하세요
     const [username, setUsername] = useState('');
+    const [userEmail, setUserEmail] = useState('');
 
-    // TODO: password state를 선언하세요
+    // password state를 선언하세요
     const [password, setPassword] = useState('');
 
-    // TODO: loading state를 선언하세요
+    // loading state를 선언하세요
     const [loading, setLoading] = useState(false);
 
-    // TODO: useNavigate를 사용하여 navigate 함수를 가져오세요
+    // useNavigate를 사용하여 navigate 함수를 가져오세요
+    const navigate = useNavigate();
 
     // TODO: handleLogin 함수를 작성하세요
     // 1. 입력값 검증 (username과 password가 비어있는지 확인)
@@ -34,18 +36,24 @@ const LoginPage = () => {
     // 6. finally: loading을 false로 설정
     const handleLogin = async () => {
         // TODO: 함수를 완성하세요
+        try {
+            const res = await apiService.login(username, password);
 
-
+            alert("로그인 성공!");
+            navigate("/feed");
+        } catch(err) {
+            if(err.response?.status === 401) {
+                alert("이메일 또는 비밀번호가 올바르지 않습니다.");
+            } else {
+                alert("로그인에 실채햇습니다. 다시 로그인해주세요.");
+            }
+        }
     };
 
     // TODO: Enter 키 입력 시 handleLogin 호출하는 함수 작성
     const handleKeyPress = (e) => {
         // TODO: 함수를 완성하세요
     };
-
-    const handleChange = async () => {
-        const res = await apiService.login(username, password)
-    }
 
     return (
         <div className="login-container">
@@ -61,8 +69,8 @@ const LoginPage = () => {
                         {/* onKeyPress: handleKeyPress */}
                         <input type="text"
                                placeholder="전화번호, 사용자 이름 또는 이메일"
-                               value={username}
-                               onChange={handleChange}
+                               value={userEmail}
+                               onChange={e=> setUserEmail(e.target.value)}
                                onKeyPress={handleKeyPress}
                         />
 
@@ -75,7 +83,7 @@ const LoginPage = () => {
                         <input type="password"
                                placeholder="비밀번호"
                                value={password}
-                               onChange={handleChange}
+                               onChange={e=> setPassword(e.target.value)}
                                onKeyPress={handleKeyPress}
                         />
 
