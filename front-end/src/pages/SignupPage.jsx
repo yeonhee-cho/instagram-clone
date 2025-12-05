@@ -86,10 +86,10 @@ const SignupPage = () => {
                         marginBottom: '1.5rem',
                         lineHeight: '1.4'
                     }}>
-                        친구들의 사진과 동영상을 보려면<br/>가입하세요.
+                        친구들의 사진과 동영상을 보려면<br />가입하세요.
                     </p>
 
-                    <button className="facebook-login" style={{marginBottom: '1rem'}}>
+                    <button className="facebook-login" style={{ marginBottom: '1rem' }}>
                         <svg
                             style={{
                                 width: '1rem',
@@ -101,10 +101,9 @@ const SignupPage = () => {
                             fill="currentColor"
                             viewBox="0 0 24 24"
                         >
-                            <path
-                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                         </svg>
-                        Facebook으로 로그인
+                        SNS으로 로그인
                     </button>
 
                     <div className="divider">
@@ -114,6 +113,7 @@ const SignupPage = () => {
                     </div>
 
                     <div>
+
                         {/*
                         // 매개변수가 1개일 때는 소괄호를 제거하고 작성 ok
                           onChange={ e  => setEmail(e.target.value)}
@@ -125,14 +125,6 @@ const SignupPage = () => {
                           //input 에서 change의 경우 input 태그에 이벤트(=변화된행동)가 발생한 상황이기 때문에
                           // e 를 작성한 후 타겟의 행동에 대한 값을 가져와 input 태그를 실시간으로 change 한다.
                         */}
-
-                        {/* TODO: 이메일 입력 input 작성 (user_email - UNIQUE) */}
-                        {/* placeholder: "휴대폰 번호 또는 이메일 주소" */}
-                        {/* type: "email" */}
-                        {/* value: email */}
-                        {/* onChange: setEmail */}
-                        {/* onKeyPress: handleKeyPress */}
-                        {/* autoComplete: "email" */}
                         <input
                             className="login-input"
                             type="email"
@@ -142,14 +134,6 @@ const SignupPage = () => {
                             onKeyPress={handleKeyPress}
                             autoComplete="email"
                         />
-
-                        {/* TODO: 성명 입력 input 작성 (user_fullname) */}
-                        {/* placeholder: "성명" */}
-                        {/* type: "text" */}
-                        {/* value: fullName */}
-                        {/* onChange: setFullName */}
-                        {/* onKeyPress: handleKeyPress */}
-                        {/* autoComplete: "name" */}
                         <input className="login-input"
                                type="text"
                                placeholder="성명"
@@ -158,14 +142,6 @@ const SignupPage = () => {
                                onKeyPress={handleKeyPress}
                                autoComplete="name"
                         />
-
-                        {/* TODO: 사용자 이름 입력 input 작성 (user_name - UNIQUE) */}
-                        {/* placeholder: "사용자 이름" */}
-                        {/* type: "text" */}
-                        {/* value: username */}
-                        {/* onChange: setUsername */}
-                        {/* onKeyPress: handleKeyPress */}
-                        {/* autoComplete: "username" */}
                         <input className="login-input"
                                type="text"
                                placeholder="사용자 이름"
@@ -174,14 +150,6 @@ const SignupPage = () => {
                                onKeyPress={handleKeyPress}
                                autoComplete="username"
                         />
-
-                        {/* TODO: 비밀번호 입력 input 작성 (user_password) */}
-                        {/* placeholder: "비밀번호" */}
-                        {/* type: "password" */}
-                        {/* value: password */}
-                        {/* onChange: setPassword */}
-                        {/* onKeyPress: handleKeyPress */}
-                        {/* autoComplete: "new-password" */}
                         <input className="login-input"
                                type="password"
                                placeholder="비밀번호"
@@ -191,18 +159,13 @@ const SignupPage = () => {
                                autoComplete="new-password"
                         />
 
-                        {/* TODO: 가입 버튼 작성 */}
-                        {/* onClick: handleSignup */}
-                        {/* disabled: loading */}
-                        {/* 버튼 텍스트: loading이면 "가입 중...", 아니면 "가입" */}
-                        {/* 스타일: loading일 때 opacity 0.7, cursor not-allowed */}
                         <button className="login-button"
                                 onClick={(e) => handleSignup(e)}
                                 disabled={loading}
                         >
                             {loading === false ?
                                 (
-                                    <div style={{opacity: '0.7', cursor: 'not-allowed'}}
+                                    <div style={{opacity: '0.7', cursor:'not-allowed'}}
                                     >
                                         가입
                                     </div>
@@ -219,9 +182,8 @@ const SignupPage = () => {
                         lineHeight: '1.5',
                         padding: '0 1rem'
                     }}>
-                        가입하면 Instagram의 <strong style={{fontWeight: 600}}>약관</strong>, <strong
-                        style={{fontWeight: 600}}>데이터 정책</strong> 및<br/>
-                        <strong style={{fontWeight: 600}}>쿠키 정책</strong>에 동의하게 됩니다.
+                        가입하면 Instagram의 <strong style={{ fontWeight: 600 }}>약관</strong>, <strong style={{ fontWeight: 600 }}>데이터 정책</strong> 및<br />
+                        <strong style={{ fontWeight: 600 }}>쿠키 정책</strong>에 동의하게 됩니다.
                     </p>
                 </div>
 
@@ -242,7 +204,7 @@ const SignupPage = () => {
                     marginTop: '1.5rem',
                     fontSize: '0.875rem'
                 }}>
-                    <p style={{marginBottom: '1rem', color: '#262626'}}>앱을 다운로드하세요.</p>
+                    <p style={{ marginBottom: '1rem', color: '#262626' }}>앱을 다운로드하세요.</p>
                     <div style={{
                         display: 'flex',
                         justifyContent: 'center',
@@ -252,12 +214,12 @@ const SignupPage = () => {
                         <img
                             src="https://static.cdninstagram.com/rsrc.php/v3/yz/r/c5Rp7Ym-Klz.png"
                             alt="Google Play에서 다운로드"
-                            style={{height: '40px', cursor: 'pointer'}}
+                            style={{ height: '40px', cursor: 'pointer' }}
                         />
                         <img
                             src="https://static.cdninstagram.com/rsrc.php/v3/yu/r/EHY6QnZYdNX.png"
                             alt="Microsoft에서 다운로드"
-                            style={{height: '40px', cursor: 'pointer'}}
+                            style={{ height: '40px', cursor: 'pointer' }}
                         />
                     </div>
                 </div>

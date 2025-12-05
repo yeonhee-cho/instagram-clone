@@ -86,10 +86,10 @@ const apiService = {
     signup: async (username, email, password, fullName) => {
         // API 호출을 완성하세요
         const response = await api.post('/auth/signup', {
-            username: username,
-            email: email,
-            password: password,
-            fullName: fullName,
+            userName: username,
+            userEmail: email,
+            userPassword: password,
+            userFullname: fullName,
         });
         return response.data;
     },

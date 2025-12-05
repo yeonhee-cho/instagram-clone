@@ -37,7 +37,7 @@ const LoginPage = () => {
     const handleLogin = async () => {
         // TODO: 함수를 완성하세요
         try {
-            const res = await apiService.login(username, password);
+            const res = await apiService.login(userEmail, password);
 
             alert("로그인 성공!");
             navigate("/feed");
@@ -45,7 +45,7 @@ const LoginPage = () => {
             if(err.response?.status === 401) {
                 alert("이메일 또는 비밀번호가 올바르지 않습니다.");
             } else {
-                alert("로그인에 실채햇습니다. 다시 로그인해주세요.");
+                alert("로그인에 실패했습니다. 다시 로그인해주세요.");
             }
         }
     };
@@ -62,35 +62,28 @@ const LoginPage = () => {
                     <h1 className="login-title">Instagram</h1>
 
                     <div>
-                        {/* TODO: 아이디 입력 input 작성 */}
-                        {/* placeholder: "전화번호, 사용자 이름 또는 이메일" */}
-                        {/* value: username */}
-                        {/* onChange: setUsername */}
-                        {/* onKeyPress: handleKeyPress */}
-                        <input type="text"
-                               placeholder="전화번호, 사용자 이름 또는 이메일"
-                               value={userEmail}
-                               onChange={e=> setUserEmail(e.target.value)}
-                               onKeyPress={handleKeyPress}
+                        <input
+                            type="text"
+                            placeholder="전화번호, 사용자 이름 또는 이메일"
+                            value={userEmail}
+                            onChange={e => setUserEmail(e.target.value)}
+                            onKeyPress={handleKeyPress}
                         />
 
-                        {/* TODO: 비밀번호 입력 input 작성 */}
-                        {/* type: "password" */}
-                        {/* placeholder: "비밀번호" */}
-                        {/* value: password */}
-                        {/* onChange: setPassword */}
-                        {/* onKeyPress: handleKeyPress */}
-                        <input type="password"
-                               placeholder="비밀번호"
-                               value={password}
-                               onChange={e=> setPassword(e.target.value)}
-                               onKeyPress={handleKeyPress}
+                        <input
+                            type="password"
+                            placeholder="비밀번호"
+                            value={password}
+                            onChange={e => setPassword(e.target.value)}
+                            onKeyPress={handleKeyPress}
                         />
 
-                        {/* TODO: 로그인 버튼 작성 */}
-                        {/* onClick: handleLogin */}
-                        {/* disabled: loading */}
-                        {/* 버튼 텍스트: loading이면 "로그인 중...", 아니면 "로그인" */}
+                        <button className="login-button"
+                                onClick={handleLogin}
+                                disabled={loading}
+                        >
+                            {loading ? '로그인 중...' : '로그인'}
+                        </button>
                     </div>
 
                     <div className="divider">
@@ -110,7 +103,12 @@ const LoginPage = () => {
 
                 <div className="signup-box">
                     <p>
-                        계정이 없으신가요? <button className="signup-link">가입하기</button>
+                        계정이 없으신가요?
+                        <button className="signup-link"
+                                onClick={() => navigate("/signup")}
+                        >
+                            가입하기
+                        </button>
                     </p>
                 </div>
             </div>

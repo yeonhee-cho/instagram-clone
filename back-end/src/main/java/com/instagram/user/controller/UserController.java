@@ -1,6 +1,6 @@
 package com.instagram.user.controller;
 
-import com.instagram.common.utill.JwtUtil;
+import com.instagram.common.util.JwtUtil;
 import com.instagram.user.model.dto.LoginRequest;
 import com.instagram.user.model.dto.LoginResponse;
 import com.instagram.user.model.dto.User;
@@ -45,7 +45,7 @@ public class UserController {
         loginResponse.setToken(token);
         loginResponse.setUser(user);
         log.info("로그인 성공 - 이메일 : {}", user.getUserEmail());
-        // ok == 200
+        // ok = 200
         return ResponseEntity.ok(loginResponse);
     }
 }

@@ -19,7 +19,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public void signUp(User user) {
         // 이미 존재하는 이메일인지 확인
-        String existingEmail = userMapper.selectUserByUserEmail(user.getUserEmail());
+        User existingEmail = userMapper.selectUserByUserEmail(user.getUserEmail());
         if (existingEmail != null) {
             throw new RuntimeException("이미 존재하는 이메일입니다.");
         }
@@ -60,7 +60,7 @@ public class UserServiceImpl implements UserService {
 
         // 비밀번호는 응답에서 제거
         user.setUserPassword(null);
-        log.info("로그인성공 - 이메일 {}",userEmail);
+        log.info("로그인성공 - 이메일 : {}",userEmail);
         return user;
     }
 
