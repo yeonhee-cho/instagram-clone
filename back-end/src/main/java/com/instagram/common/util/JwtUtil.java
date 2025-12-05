@@ -48,7 +48,7 @@ public class JwtUtil {
 
         return Jwts.builder()
                 .subject(String.valueOf(userId))                    // 학번
-                .claim("email", userEmail)                        // 이메일
+                .claim("email", userEmail)                       // 이메일
                 .issuedAt(now)                                      // 발급일
                 .expiration(validity)                               // 도장 만료일
                 .signWith(getSigningKey())                          // 도장 찍기
