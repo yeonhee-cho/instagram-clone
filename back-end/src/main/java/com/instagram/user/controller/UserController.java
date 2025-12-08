@@ -22,6 +22,7 @@ public class UserController {
     private final UserService userService;
     // 토큰
     private final JwtUtil jwtUtil;
+//    private JwtUtil jwtUtil = new JwtUtil();
 
     @PostMapping("/signup")
     public void signUp(@RequestBody User user) {
@@ -32,7 +33,6 @@ public class UserController {
     public ResponseEntity<LoginResponse> login(@RequestBody LoginRequest request) {
         // 사용자 인증 이메일, 비밀번호
         User user = userService.login(request.getUserEmail(), request.getUserPassword());
-        
         if(user == null) {
             // 401을 전달
             return ResponseEntity.status(401).body(null);
@@ -44,8 +44,8 @@ public class UserController {
         LoginResponse loginResponse = new LoginResponse();
         loginResponse.setToken(token);
         loginResponse.setUser(user);
-        log.info("로그인 성공 - 이메일 : {}", user.getUserEmail());
-        // ok = 200
+        log.info("로그인 성공 - 이메일 : {}",user.getUserEmail());
+        // ok == 200
         return ResponseEntity.ok(loginResponse);
     }
 }
