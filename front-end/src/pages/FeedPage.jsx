@@ -14,35 +14,49 @@ import apiService from '../service/apiService';
 import { Heart, MessageCircle, Send, Bookmark, MoreHorizontal, Home, PlusSquare, Film, User } from 'lucide-react';
 
 const FeedPage = () => {
-    // TODO: posts state를 선언하세요 (초기값: [])
+    // posts state 선언 (초기값: [])
     const [posts, setPosts] = useState([]);
 
-    // TODO: stories state를 선언하세요 (초기값: [])
+    // stories state 선언 (초기값: [])
     const [stories, setStories] = useState([]);
 
-    // TODO: loading state를 선언하세요 (초기값: true)
+    // loading state 선언 (초기값: true)
     const [loading, setLoading] = useState(false);
 
-    // TODO: useNavigate를 사용하여 navigate 함수를 가져오세요
+    // navigate 함수
     const navigate = useNavigate();
 
-    // TODO: useEffect를 사용하여 컴포넌트 마운트 시 loadFeedData 호출
+    // useEffect를 사용하여 컴포넌트 마운트 시 loadFeedData 호출
     useEffect(() => {
         loadFeedData();
     }, []);
 
 
-    // TODO: loadFeedData 함수를 작성하세요
-    // 1. try-catch 사용
-    // 2. apiService.getPosts()와 apiService.getStories()를 Promise.all로 동시 호출
-    // 3. 받아온 데이터로 posts와 stories state 업데이트
-    // 4. catch: 에러 처리 (console.error, alert)
-    // 5. finally: loading을 false로 설정
+    // loadFeedData 함수
     const loadFeedData = async () => {
-        // TODO: 함수를 완성하세요
-        const feedData= await apiService.getPosts();
-        console.log(feedData, 'feedData')
-        setPosts(feedData);
+        // 1. try-catch 사용
+        try {
+            // 2. apiService.getPosts()와 apiService.getStories()를 Promise.all로 동시 호출
+            // const postsData = await apiService.getPosts();
+            // const storiesData = await apiService.getStories();
+            const [postsData, storiesData] = await Promise.all([
+                apiService.getPosts(),
+                apiService.getStories()
+            ]);
+
+            console.log('📌 postsData', postsData);
+            console.log('📌 storiesData', storiesData);
+
+            // 3. 받아온 데이터로 posts와 stories state 업데이트
+            setPosts(postsData);
+        } catch (err) {
+            // 4. catch: 에러 처리 (console.error, alert)
+            console.error("❌ 피드 불러오기 실패:", err);
+            alert("피드를 불러오는 중 문제가 발생했습니다.");
+        } finally {
+            // 5. finally: loading을 false로 설정
+            setLoading(false);
+        }
 
     };
 

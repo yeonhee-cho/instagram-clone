@@ -43,7 +43,7 @@ public class FileUploadService {
             if(!created){
                 throw new IOException("❌ 업로드 디렉토리 생성에 실패했습니다: " + profileUploadPath);
             }
-            log.info("⭕ 업로드 디렉토리 생성: {}", profileUploadPath);
+            log.info("✅ 업로드 디렉토리 생성: {}", profileUploadPath);
         }
 
         // 업로드한 이미지 원본 파일명 가져오기
@@ -68,7 +68,7 @@ public class FileUploadService {
         // 파일 저장
         try {
             Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
-            log.info("⭕ 프로필 이미지 업로드 성공: {} -> {}", clientUploadToFileName, reFilename);
+            log.info("✅ 프로필 이미지 업로드 성공: {} -> {}", clientUploadToFileName, reFilename);
         } catch (IOException e) {
             log.error("❌ 파일 저장 중 오류 발생: {}", e.getMessage());
             throw new IOException("파일 저장에 실패했습니다: " + e.getMessage());
@@ -92,7 +92,7 @@ public class FileUploadService {
             if(!created){
                 throw new IOException("❌ 스토리 이미지 디렉토리 생성을 실패했습니다: " + storyFolder);
             }
-            log.info("⭕ 스토리 이미지 디렉토리 생성: {}", storyFolder);
+            log.info("✅ 스토리 이미지 디렉토리 생성: {}", storyFolder);
         }
 
         String clientUploadFileName = file.getOriginalFilename();
@@ -105,7 +105,7 @@ public class FileUploadService {
 
         try {
             Files.copy(file.getInputStream(), saveToPath, StandardCopyOption.REPLACE_EXISTING);
-            log.info("⭕ 스토리 이미지 업로드 성공: {} -> {}", clientUploadFileName, fileName);
+            log.info("✅ 스토리 이미지 업로드 성공: {} -> {}", clientUploadFileName, fileName);
         } catch (Exception e) {
             log.error("❌ 스토리 이미지 저장 중 오류 발생: {}", e.getMessage());
             throw new IOException("스토리 이미지 저장에 실패했습니다: " + e.getMessage());
@@ -128,7 +128,7 @@ public class FileUploadService {
             if(!created){
                 throw new IOException("❌ 게시물 이미지 디렉토리 생성을 실패했습니다: " + postUploadPath);
             }
-            log.info("⭕ 게시물 이미지 디렉토리 생성: {}", postUploadPath);
+            log.info("✅ 게시물 이미지 디렉토리 생성: {}", postUploadPath);
         }
 
         String clientUploadFileName = file.getOriginalFilename();
@@ -147,7 +147,7 @@ public class FileUploadService {
 
         try{
             Files.copy(file.getInputStream(), saveToPath, StandardCopyOption.REPLACE_EXISTING);
-            log.info("⭕ 게시물 이미지 업로드 성공: {} -> {}", clientUploadFileName, fileName);
+            log.info("✅ 게시물 이미지 업로드 성공: {} -> {}", clientUploadFileName, fileName);
         } catch (Exception e){
             log.error("❌ 게시물 이미지 저장 중 오류 발생: {}", e.getMessage());
             throw new IOException("❌ 게시물 이미지 저장에 실패했습니다: " + e.getMessage());
@@ -202,7 +202,7 @@ public class FileUploadService {
             boolean fileRemove = file.delete();
 
             if(fileRemove) {
-                log.info("⭕ 파일 삭제 성공: {}", absolutePath);
+                log.info("✅ 파일 삭제 성공: {}", absolutePath);
             } else {
                 log.error("❌ 파일 삭제 실패: {}", absolutePath);
             }

@@ -13,34 +13,34 @@ import { ArrowLeft, Image } from 'lucide-react';
 import {getFilteredFile, FILTER_OPTIONS} from "../service/filterService";
 
 const PostUploadPage = () => {
-    // selectedImage state를 선언하세요
+    // selectedImage state 선언
     const [selectedImage, setSelectedImage] = useState(null);
 
-    // imagePreview state를 선언하세요
+    // imagePreview state 선언
     const [imagePreview, setImagePreview] = useState(null);
 
-    // caption state를 선언하세요
+    // caption state 선언
     const [caption, setCaption] = useState('');
 
-    // location state를 선언하세요
+    // location state 선언
     const [location, setLocation] = useState('');
 
-    // loading state를 선언하세요
+    // loading state 선언
     const [loading, setLoading] = useState(false);
 
+    // 필터 값
     const [selectedFilter, setSelectedFilter] = useState('none');
 
-    // useNavigate를 사용하여 navigate 함수를 가져오세요
+    // navigate
     const navigate = useNavigate();
 
-    // TODO: localStorage에서 user 정보를 가져오세요
+    // user 정보
     const user = JSON.parse(localStorage.getItem('user') || {});
 
-    // TODO: handleImageChange 함수를 작성하세요
     const handleImageChange = (e) => {
-        // TODO: 함수를 완성하세요
         // 1. e.target.files[0]으로 파일 가져오기
         const imageFile = e.target.files[0];
+
         // 2. 파일이 있으면 selectedImage에 저장
         if(imageFile) {
             setSelectedImage(imageFile);
@@ -48,35 +48,34 @@ const PostUploadPage = () => {
             const reader = new FileReader();
             // 4. imagePreview에 base64 데이터 저장
             reader.onloadend = () => {
-                setImagePreview(reader.result);
+                setImagePreview(reader.result); // base64 URL 생성
                 setSelectedFilter('none'); // 이미지 변경 시 필터 초기화
             };
             reader.readAsDataURL(imageFile);
         }
     }
 
-    // TODO: handlePost 함수를 작성하세요
-    // 1. 입력값 검증 (selectedImage와 caption이 있는지 확인)
-    // 2. loading을 true로 설정
-    // 3. apiService.createPost(imagePreview, caption, location) 호출
-    // 4. 성공 시: alert로 성공 메시지, /feed로 이동
-    // 5. 실패 시: alert로 에러 메시지
-    // 6. finally: loading을 false로 설정
     const handlePost = async () => {
-        // TODO: 함수를 완성하세요
+
+        // 1. 입력값 검증 (selectedImage와 caption이 있는지 확인)
         if(!selectedImage || !caption.trim()) {
             alert("이미지와 캡션을 입력해주세요.");
             return;
         }
 
         try {
+            // 2. loading을 true로 설정
             setLoading(true);
+            // 3. apiService.createPost(imagePreview, caption, location) 호출
             await apiService.createPost(selectedImage, caption, location);
+            // 4. 성공 시: alert로 성공 메시지, /feed로 이동
             alert("게시물이 성공적으로 등록되었습니다.");
             navigate("/feed")
         } catch (err) {
+            // 5. 실패 시: alert로 에러 메시지
             alert("게시물 등록에 실패했습니다.");
         } finally {
+            // 6. finally: loading을 false로 설정
             setLoading(false);
         }
     };
@@ -92,22 +91,19 @@ const PostUploadPage = () => {
     const avatarImage = user.userAvatar && user.userAvatar.trim() !== '' ?
         user.userAvatar : defaultImage;
 
+    /**
+     * 이미지 오류 시 기본 이미지로 변경
+     */
     const handleAvatarError = (e) => {
-        try {
-            e.target.src = defaultImage;
-        } catch (e) {
-            console.log("데이터가 존재하지 않습니다.", e)
-        } finally {
-            console.log("데이터를 불러올 수 없습니다.");
-        }
+        e.target.src = defaultImage;
     }
 
     return (
         <div className="upload-container">
-            {/* TODO: 헤더 작성 */}
+            {/* 헤더 */}
             <header className="upload-header">
                 <div className="upload-header-content">
-                    {/* TODO: 뒤로가기 버튼 (onClick: /feed로 이동) */}
+                    {/* 뒤로가기 버튼 (onClick: /feed로 이동) */}
                     <button className="upload-back-btn"
                             onClick={() => navigate("/feed")}
                     >
@@ -116,7 +112,7 @@ const PostUploadPage = () => {
 
                     <h2 className="upload-title">새 게시물</h2>
 
-                    {/* TODO: 공유 버튼 (onClick: handlePost, disabled: loading) */}
+                    {/* 공유 버튼 (onClick: handlePost, disabled: loading) */}
                     <button className="upload-submit-btn"
                             onClick={handlePost}
                             disabled={loading}
@@ -128,9 +124,9 @@ const PostUploadPage = () => {
 
             <div className="upload-content">
                 <div className="upload-card">
-                    {/* TODO: 이미지 업로드 영역 작성 */}
+                    {/* 이미지 업로드 영역 작성 */}
                     <div className="upload-image-area">
-                        {/* TODO: imagePreview가 있으면 이미지 표시, 없으면 업로드 UI 표시 */}
+                        {/* imagePreview가 있으면 이미지 표시, 없으면 업로드 UI 표시 */}
                         {/* FileReader로 변환한 base64 이미지를 img src에 사용 */}
                         {/* input type="file" accept="image/*" onChange={handleImageChange} */}
                         {imagePreview ? (
@@ -188,17 +184,17 @@ const PostUploadPage = () => {
                         }
                     </div>
 
-                    {/* TODO: 캡션 입력 영역 작성 */}
+                    {/* 캡션 입력 영역 작성 */}
                     <div className="upload-caption-area">
                         <div className="upload-caption-content">
-                            {/* TODO: 프로필 이미지 표시 */}
+                            {/* 프로필 이미지 표시 */}
                             <img className="upload-user-avatar"
                                    src={avatarImage}
                                    onError={handleAvatarError}
                             />
 
                             <div className="upload-caption-right">
-                                {/* TODO: 사용자명 표시 */}
+                                {/* 사용자명 표시 */}
                                 <div className="upload-username">
                                     {user.userName}
                                 </div>
@@ -213,7 +209,7 @@ const PostUploadPage = () => {
                                           rows={4}
                                           className="upload-caption-input"
                                 />
-                                {/* TODO: 글자 수 표시 (예: 0/2,200) */}
+                                {/* 글자 수 표시 (예: 0/2,200) */}
                                 <div className="upload-caption-content">
                                     {caption.length}/2,200
                                 </div>
@@ -221,7 +217,7 @@ const PostUploadPage = () => {
                         </div>
                     </div>
 
-                    {/* TODO: 추가 옵션 (위치 추가, 태그하기) */}
+                    {/* TODO : 추가 옵션 (위치 추가, 태그하기) */}
                     <div className="upload-options">
                         <button className="upload-option-btn"
                                 onClick={handleLocationChange}

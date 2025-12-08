@@ -35,19 +35,19 @@ public class PostController {
         int currentUserId = Integer.parseInt(authentication.getName());
         */
         String token = authHeader.substring(7); // 맨 앞 "Bearer "만 제거하고 추출
-        log.info("✅ token: {}", token);
+        log.info("📌 token: {}", token);
         int currentUserId = jwtUtil.getUserIdFromToken(token); // token 에서 userId 추출
-        log.info("✅ currentUserId: {}", currentUserId);
+        log.info("📌 currentUserId: {}", currentUserId);
         // 게시글 생성
         boolean success = postService.createPost(postImage, postCaption, postLocation, currentUserId);
-        log.info("✅ success: {}", success);
+        log.info("📌 success: {}", success);
 
         // Post 생성 성공 여부에 따른 응답 처리
         if(success){
-            log.info("⭕ 성공");
+            log.info("✅ 성공");
             return ResponseEntity.ok("success");
         } else {
-            log.info("❌ 성공");
+            log.info("❌ 실패");
             return ResponseEntity.badRequest().build();
         }
     }
@@ -56,7 +56,7 @@ public class PostController {
     public List<Post> getAllPosts(@RequestHeader("Authorization") String authHeader) {
         String token = authHeader.substring(7);
         int currentUserId = jwtUtil.getUserIdFromToken(token);
-        log.info("✅ retrun 값 : {}", postService.getAllPosts(currentUserId));
+        log.info("📌 retrun 값 : {}", postService.getAllPosts(currentUserId));
         return postService.getAllPosts(currentUserId);
     }
 }

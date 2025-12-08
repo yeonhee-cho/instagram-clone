@@ -1,6 +1,6 @@
 // ============================================
 // src/service/apiService.js
-// TODO: Axios를 이용한 API 호출 함수 작성
+// Axios를 이용한 API 호출 함수 작성
 // - axios import 하기
 // - API_BASE_URL 설정 (http://localhost:8080/api)
 // - axios 인스턴스 생성
@@ -11,11 +11,12 @@
 import axios from 'axios';
 import config from "tailwindcss/defaultConfig";
 
-axios.defaults.withCredentials = true;
+axios.defaults.withCredentials = true; // 쿠키 포함 허용 설정
 
+// 백엔드 API 기본 주소
 const API_BASE_URL = 'http://localhost:9000/api';
 
-// TODO: axios 인스턴스를 생성하세요
+// axios 인스턴스 생성
 const api = axios.create({
     baseURL: API_BASE_URL,
     headers: {
@@ -23,13 +24,15 @@ const api = axios.create({
     }
 })
 
-// TODO: 요청 인터셉터를 설정하세요
-// localStorage에서 token을 가져와서 Authorization 헤더에 추가
+// 요청 인터셉터 설정
+// 모든 API 요청 전에 실행되는 함수
+// localStorage에서 token을 가져와서 Authorization 헤더에 `Bearer ${token}` 추가
 // 모든 요청에 JWT 토큰 추가
 // 사용자의 요청을 가로채다 = interceptor
 api.interceptors.request.use(
     config => {
-        const token = localStorage.getItem('token');
+        const token = localStorage.getItem('token'); // 저장된 JWT 가져오기
+        // 토큰이 있으면 헤더에 추가
         if(token) {
             config.headers.Authorization = `Bearer ${token}`;
         }
@@ -41,7 +44,7 @@ api.interceptors.request.use(
     }
 )
 
-// TODO: 응답 인터셉터를 설정하세요
+// 응답 인터셉터 설정
 // 401 에러가 발생하면 localStorage를 비우고 /login으로 이동
 /**
  * 401: 인증 안 됨 : 로그인을 안했거나, 토큰 만료
@@ -59,8 +62,10 @@ api.interceptors.response.use(
     },
     error => {
         if(error.response && error.response.status === 401) {
+            // 로그인 유저 정보 제거
             localStorage.removeItem('token');
             localStorage.removeItem('user');
+            // 로그인 페이지 이동
             window.location.href = '/login';
         }
     }
@@ -86,7 +91,7 @@ const apiService = {
     // POST /auth/signup
     // body: { username, email, password, fullName }
     signup: async (username, email, password, fullName) => {
-        // API 호출을 완성하세요
+        // 회원 정보 전달하여 회원가입 요청
         const response = await api.post('/auth/signup', {
             userName: username,
             userEmail: email,
@@ -96,11 +101,10 @@ const apiService = {
         return response.data;
     },
 
-    // TODO: 로그인 API
+    // 로그인 API
     // POST /auth/login
     // body: { username, password }
     login: async (userEmail, password) => {
-        // TODO: API 호출을 완성하세요
         //JWT
         const res = await api.post('/auth/login', {
             userEmail: userEmail,
@@ -118,41 +122,42 @@ const apiService = {
     // TODO: 로그아웃 함수
     // localStorage에서 token과 user 제거하고 /login으로 이동
     logout: () => {
-        // TODO: 로그아웃 로직을 완성하세요
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        window.location.href = '/login';
     },
 
     // ===== 게시물 API =====
 
-    // TODO: 모든 게시물 조회
+    // 모든 게시물 조회
     // GET /posts
     getPosts: async () => {
-        // TODO: API 호출을 완성하세요
         const res = await api.get('/posts');
-        console.log(res.data, 'res.data');
+        console.log('✅ res.data', res.data);
         return res.data;
     },
 
     // TODO: 특정 게시물 조회
     // GET /posts/:postId
     getPost: async (postId) => {
-        // TODO: API 호출을 완성하세요
+        return (await api.get(`/posts/${postId}`)).data;
     },
 
-    // TODO: 게시물 작성
+    // 게시물 작성
     // POST /posts
     // body: { postImage, postCaption, postLocation }
     createPost: async (postImage, postCaption, postLocation) => {
-        // TODO: API 호출을 완성하세요
         const formData = new FormData();
         formData.append('postImage', postImage);
         formData.append('postCaption', postCaption);
         formData.append('postLocation', postLocation);
+
         const res = await  api.post("/posts", formData, {
             headers: {
                 'Content-Type': 'multipart/form-data',
             }
         });
-        return res.data;
+        return res.data; // 서버 응답 반환
     },
 
     // TODO: 게시물 삭제
