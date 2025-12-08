@@ -11,6 +11,8 @@
 import axios from 'axios';
 import config from "tailwindcss/defaultConfig";
 
+axios.defaults.withCredentials = true;
+
 const API_BASE_URL = 'http://localhost:9000/api';
 
 // TODO: axios 인스턴스를 생성하세요
@@ -125,6 +127,9 @@ const apiService = {
     // GET /posts
     getPosts: async () => {
         // TODO: API 호출을 완성하세요
+        const res = await api.get('/posts');
+        console.log(res.data, 'res.data');
+        return res.data;
     },
 
     // TODO: 특정 게시물 조회
@@ -138,15 +143,15 @@ const apiService = {
     // body: { postImage, postCaption, postLocation }
     createPost: async (postImage, postCaption, postLocation) => {
         // TODO: API 호출을 완성하세요
-        const formData = new formData();
+        const formData = new FormData();
         formData.append('postImage', postImage);
         formData.append('postCaption', postCaption);
         formData.append('postLocation', postLocation);
-        const res = await api.post("/posts", formData, {
+        const res = await  api.post("/posts", formData, {
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'multipart/form-data',
             }
-        })
+        });
         return res.data;
     },
 

@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.List;
+
 @Slf4j
 @RestController
 @RequestMapping("/api/posts")
@@ -43,5 +45,12 @@ public class PostController {
         } else {
             return ResponseEntity.badRequest().build();
         }
+    }
+
+    @GetMapping
+    public List<Post> getAllPosts(@RequestHeader("Authorization") String authHeader) {
+        String token = authHeader.substring(7);
+        int currentUserId = jwtUtil.getUserIdFromToken(token);
+        return postService.getAllPosts(currentUserId);
     }
 }

@@ -47,7 +47,7 @@ public class PostServiceImpl implements PostService {
 
             return postMapper.insertPost(post) > 0;
         } catch (Exception e){
-            log.error("게시물 작성 실패 : ", e.getMessage());
+            log.error("게시물 작성 실패 : ", e);
             return false;
         }
 

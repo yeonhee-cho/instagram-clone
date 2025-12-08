@@ -44,13 +44,13 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/profile_images/**")
-                .addResourceLocations("file:"+profileUploadPath+"/");
+                .addResourceLocations("file:" + profileUploadPath+"/");
 
-        registry.addResourceHandler("/product_images/**")
-                .addResourceLocations("file:"+storyUploadPath + "/");
+        registry.addResourceHandler("/story_images/**")
+                .addResourceLocations("file:" + storyUploadPath + "/");
 
-        registry.addResourceHandler("/board_images/**")
-                .addResourceLocations("file:"+postUploadPath + "/");
+        registry.addResourceHandler("/post_images/**")
+                .addResourceLocations("file:" + postUploadPath + "/");
 
     }
 }

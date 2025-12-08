@@ -15,7 +15,7 @@ import { Heart, MessageCircle, Send, Bookmark, MoreHorizontal, Home, PlusSquare,
 
 const FeedPage = () => {
     // TODO: posts state를 선언하세요 (초기값: [])
-    const [posts, setPost] = useState([]);
+    const [posts, setPosts] = useState([]);
 
     // TODO: stories state를 선언하세요 (초기값: [])
     const [stories, setStories] = useState([]);
@@ -27,6 +27,9 @@ const FeedPage = () => {
     const navigate = useNavigate();
 
     // TODO: useEffect를 사용하여 컴포넌트 마운트 시 loadFeedData 호출
+    useEffect(() => {
+        loadFeedData();
+    }, []);
 
 
     // TODO: loadFeedData 함수를 작성하세요
@@ -37,6 +40,10 @@ const FeedPage = () => {
     // 5. finally: loading을 false로 설정
     const loadFeedData = async () => {
         // TODO: 함수를 완성하세요
+        const feedData= await apiService.getPosts();
+        console.log(feedData, 'feedData')
+        setPosts(feedData);
+
     };
 
     // TODO: toggleLike 함수를 작성하세요
@@ -66,26 +73,30 @@ const FeedPage = () => {
         );
     }
 
+    const defaultImage = '/static/img/default-avatar.jpg';
+    const handleAvatarError = (e) => {
+        try {
+            e.target.src = defaultImage;
+        } catch (e) {
+            console.log("데이터가 존재하지 않습니다.", e)
+        } finally {
+            console.log("데이터를 불러올 수 없습니다.");
+        }
+    }
+
     return (
         <div className="feed-container">
-            {/* TODO: 헤더 작성 */}
             <header className="header">
                 <div className="header-container">
                     <h1 className="header-title">Instagram</h1>
                     <div className="header-nav">
-                        {/* TODO: 아이콘들을 작성하세요 */}
-                        {/* Home, MessageCircle, PlusSquare(onClick: /upload 이동), Film, User(onClick: 로그아웃) */}
                         <Home className="header-icon"
-                              onClick={() => navigate("/")}
-                        />
+                              onClick={() => navigate(('/'))}/>
                         <MessageCircle className="header-icon"/>
                         <PlusSquare className="header-icon"
-                                    onClick={() => navigate("/upload")}
-                        />
+                                    onClick={() => navigate(('/upload'))}/>
                         <Film className="header-icon"/>
-                        <User className="header-icon"
-                              onClick={handleLogout}
-                        />
+                        <User className="header-icon" onClick={handleLogout}/>
                     </div>
                 </div>
             </header>
@@ -94,18 +105,71 @@ const FeedPage = () => {
                 {/* TODO: 스토리 섹션 작성 */}
                 {/* stories 배열이 있을 때만 표시 */}
                 {/* stories.map으로 각 스토리를 렌더링 */}
+                {stories.length > 0 && (
+                    <div className="stories-container">
+                        <div className="stories-wrapper">
+                            {stories.map((story => (
+                                <div key={story.id} className="story-item">
+                                    <div className="story-avatar-wrapper" key={story.id}>
+                                        <img src={story.userAvatar} className="story-avatar"/>
+                                    </div>
+                                    <span className="story-username">{story.userName}</span>
+                                </div>
+                            )))}
+                        </div>
+                    </div>
+                )}
 
-                {/* TODO: 게시물 목록 작성 */}
-                {/* posts.map으로 각 게시물을 렌더링 */}
-                {/* 게시물 헤더: 프로필 이미지, 사용자명 */}
-                {/* 게시물 이미지 */}
-                {/* 게시물 액션: 좋아요, 댓글, 공유, 북마크 */}
-                {/* 좋아요 수 */}
-                {/* 캡션 */}
-                {/* 댓글 수 */}
-                {/* 작성 시간 */}
-                {/* 댓글 입력창 */}
 
+                {posts.length > 0 && (
+                    posts.map((post) => (
+                        <article key={post.id} className="post-card">
+                            <div className="post-header">
+                                <div className="post-user-info">
+                                    <img src={post.userAvatar}
+                                         className="post-user-avatar"
+                                         onError={handleAvatarError}
+                                    />
+                                    <span className="post-username">{post.userName}</span>
+                                </div>
+                                <MoreHorizontal className="post-more-icon" />
+                            </div>
+
+                            <img src={post.postImage} className="post-image" />
+                            <div className="post-content">
+                                <div className="post-actions">
+                                    <div className="post-actions-left">
+                                        <Heart
+                                            className={`action-icon like-icon ${post.isLiked ? 'liked' : ''}`}
+                                            onClick={() => toggleLike(post.postId, post.isLiked)}
+                                            fill={post.isLiked ? "#ed4956" : "none"}
+                                        />
+                                        <MessageCircle className="action-icon" />
+                                        <Send className="action-icon" />
+                                    </div>
+                                    <Bookmark className="action-icon" />
+                                </div>
+
+                                <div className="post-likes">
+                                    좋아요 {post.likeCount}개
+                                </div>
+
+                                <div className="post-caption">
+                                    <span className="post-caption-username">{post.userName}</span>
+                                    {post.postCaption}
+                                </div>
+                                {post.commentCount > 0 && (
+                                    <button className="post-comments-btn">
+                                        댓글{post.commentCount}개 모두 보기
+                                    </button>
+                                )}
+                                <div className="post-time">
+                                    {post.createdAt ||'방금 전'}
+                                </div>
+                            </div>
+                        </article>
+                    ))
+                )}
                 {/* TODO: 게시물이 없을 때 메시지 표시 */}
             </div>
         </div>
