@@ -75,6 +75,17 @@ const FeedPage = () => {
                     <div className="header-nav">
                         {/* TODO: 아이콘들을 작성하세요 */}
                         {/* Home, MessageCircle, PlusSquare(onClick: /upload 이동), Film, User(onClick: 로그아웃) */}
+                        <Home className="header-icon"
+                              onClick={() => navigate("/")}
+                        />
+                        <MessageCircle className="header-icon"/>
+                        <PlusSquare className="header-icon"
+                                    onClick={() => navigate("/upload")}
+                        />
+                        <Film className="header-icon"/>
+                        <User className="header-icon"
+                              onClick={handleLogout}
+                        />
                     </div>
                 </div>
             </header>
