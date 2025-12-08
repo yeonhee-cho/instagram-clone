@@ -1,6 +1,8 @@
 package com.instagram.post.model.service;
 
 import com.instagram.post.model.dto.Post;
+import org.springframework.web.bind.annotation.RequestPart;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -10,7 +12,11 @@ public interface PostService {
 
     Post getPostById(int postId, int currentUserId);
 
-    boolean createPost(Post post);
+    boolean createPost(MultipartFile postImage,
+                       String postCaption,
+                       String postLocation,
+                       int currentUserId);
+
     boolean deletePost(int postId);
 
     List<Post> getPostsByUserId(int userId, int currentUserId);

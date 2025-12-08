@@ -1,10 +1,12 @@
 package com.instagram.post.model.service;
 
+import com.instagram.common.util.FileUploadService;
 import com.instagram.post.model.dto.Post;
 import com.instagram.post.model.mapper.PostMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -14,6 +16,7 @@ import java.util.List;
 public class PostServiceImpl implements PostService {
     // alt + enter 메서드 구현
     private final PostMapper postMapper;
+    private final FileUploadService fileUploadService;
 
     @Override
     public List<Post> getAllPosts(int currentUserId) {
@@ -26,9 +29,28 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public boolean createPost(Post post) {
-        // 게시물이 하나라도 등록되면 true 0
-        return postMapper.insertPost(post) > 0;
+    public boolean createPost(MultipartFile postImage,
+                              String postCaption,
+                              String postLocation,
+                              int currentUserId) {
+        // 게시물이 하나라도 등록되면 true 0 이하는 false
+        // 파일 업로드 서비스 이용해서 게시물 이미지 데이터 저장
+
+        try {
+            String imageUrl = fileUploadService.uploadPostImage(postImage);
+
+            Post post = new Post();
+            post.setUserId(currentUserId);
+            post.setPostCaption(postCaption);
+            post.setPostLocation(postLocation);
+            post.setPostImage(imageUrl);
+
+            return postMapper.insertPost(post) > 0;
+        } catch (Exception e){
+            log.error("게시물 작성 실패 : ", e.getMessage());
+            return false;
+        }
+
     }
 
     @Override

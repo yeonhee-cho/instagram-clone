@@ -25,7 +25,7 @@ const UploadPage = () => {
     const [location, setLocation] = useState('');
 
     // loading state를 선언하세요
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
 
     // useNavigate를 사용하여 navigate 함수를 가져오세요
     const navigate = useNavigate();

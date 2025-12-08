@@ -54,8 +54,10 @@
         ORDER BY created_at DESC
     </select>
 
-    <!-- 게시물 작성 -->
-    <insert id="insertPost" parameterType="Post" useGeneratedKeys="true" keyProperty="postId" keyColumn="postId">
+    <!-- 게시물 작성
+    keyProperty -> 자바에 있는
+    -->
+    <insert id="insertPost" parameterType="Post" useGeneratedKeys="true" keyProperty="postId" keyColumn="post_id">
         INSERT INTO posts (user_id, post_image, post_caption, post_location)
         VALUES (#{postId},#{postImage},#{postCaption},#{postLocation})
     </insert>
