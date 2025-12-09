@@ -49,6 +49,7 @@ const FeedPage = () => {
 
             // 3. 받아온 데이터로 posts와 stories state 업데이트
             setPosts(postsData);
+            setStories(storiesData);
         } catch (err) {
             // 4. catch: 에러 처리 (console.error, alert)
             console.error("❌ 피드 불러오기 실패:", err);
@@ -111,7 +112,7 @@ const FeedPage = () => {
             </header>
 
             <div className="feed-content">
-                {/* TODO: 스토리 섹션 작성 */}
+                {/* 스토리 섹션 작성 */}
                 {/* stories 배열이 있을 때만 표시 */}
                 {/* stories.map으로 각 스토리를 렌더링 */}
                 {stories.length > 0 && (
@@ -120,7 +121,10 @@ const FeedPage = () => {
                             {stories.map((story => (
                                 <div key={story.id} className="story-item">
                                     <div className="story-avatar-wrapper" key={story.id}>
-                                        <img src={story.userAvatar} className="story-avatar"/>
+                                        <img src={story.userAvatar}
+                                             className="story-avatar"
+                                             onError={handleAvatarError}
+                                        />
                                     </div>
                                     <span className="story-username">{story.userName}</span>
                                 </div>
