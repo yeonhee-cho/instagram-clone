@@ -34,6 +34,7 @@ const FeedPage = () => {
 
     // loadFeedData 함수
     const loadFeedData = async () => {
+        /*
         // 1. try-catch 사용
         try {
             // 2. apiService.getPosts()와 apiService.getStories()를 Promise.all로 동시 호출
@@ -58,26 +59,58 @@ const FeedPage = () => {
             // 5. finally: loading을 false로 설정
             setLoading(false);
         }
+        */
+
+        try {
+            const postsData = await apiService.getPosts();
+            console.log('📌 postsData', postsData);
+            setPosts(postsData);
+        } catch (err) {
+            console.error("❌ post 피드 불러오기 실패:", err);
+            alert("post 피드를 불러오는 중 문제가 발생했습니다.");
+        } finally {
+            setLoading(false);
+        }
+        try {
+            const storiesData = await apiService.getStories();
+            console.log('📌 storiesData', storiesData);
+            setStories(storiesData);
+        } catch (err) {
+            console.error("❌ stories 피드 불러오기 실패:", err);
+            alert("stories 피드를 불러오는 중 문제가 발생했습니다.");
+        } finally {
+            setLoading(false);
+        }
 
     };
 
-    // TODO: toggleLike 함수를 작성하세요
+    // toggleLike 함수를 작성하세요
     // 1. postId와 isLiked를 파라미터로 받음
-    // 2. isLiked가 true면 removeLike, false면 addLike 호출
-    // 3. 완료 후 getPosts()를 다시 호출하여 목록 새로고침
-    // 4. catch: 에러 처리
     const toggleLike = async (postId, isLiked) => {
-        // TODO: 함수를 완성하세요
+        try{
+            // 2. isLiked가 true면 removeLike, false면 addLike 호출
+            if(isLiked) {
+                await apiService.removeLike(postId);
+            } else {
+                await apiService.addLike(postId);
+            }
+            // 3. 완료 후 getPosts()를 다시 호출하여 목록 새로고침
+            await apiService.getPosts();
+        } catch (e) {
+            // 4. catch: 에러 처리
+            alert("좋아요 처리에 실패했습니다.");
+        }
+
     };
 
-    // TODO: handleLogout 함수를 작성하세요
-    // 1. window.confirm으로 로그아웃 확인
-    // 2. 확인하면 apiService.logout() 호출
+    // handleLogout 함수
     const handleLogout = () => {
-        // TODO: 함수를 완성하세요
+        // 1. window.confirm으로 로그아웃 확인
+        // 2. 확인하면 apiService.logout() 호출
+        if(window.confirm('로그아웃 하시겠습니까?')) apiService.logout();
     };
 
-    // TODO: loading이 true면 "로딩 중..." 표시
+    // loading이 true면 "로딩 중..." 표시
     if (loading) {
         return (
             <div className="feed-container">
@@ -118,9 +151,9 @@ const FeedPage = () => {
                 {stories.length > 0 && (
                     <div className="stories-container">
                         <div className="stories-wrapper">
-                            {stories.map((story => (
-                                <div key={story.id} className="story-item">
-                                    <div className="story-avatar-wrapper" key={story.id}>
+                            {stories.map((story) => (
+                                <div key={story.storyId} className="story-item">
+                                    <div className="story-avatar-wrapper">
                                         <img src={story.userAvatar}
                                              className="story-avatar"
                                              onError={handleAvatarError}
@@ -128,7 +161,7 @@ const FeedPage = () => {
                                     </div>
                                     <span className="story-username">{story.userName}</span>
                                 </div>
-                            )))}
+                            ))}
                         </div>
                     </div>
                 )}
@@ -136,7 +169,7 @@ const FeedPage = () => {
 
                 {posts.length > 0 && (
                     posts.map((post) => (
-                        <article key={post.id} className="post-card">
+                        <article key={post.postId} className="post-card">
                             <div className="post-header">
                                 <div className="post-user-info">
                                     <img src={post.userAvatar}

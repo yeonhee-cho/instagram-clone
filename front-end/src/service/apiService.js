@@ -140,7 +140,9 @@ const apiService = {
     // 특정 게시물 조회
     // GET /posts/:postId
     getPost: async (postId) => {
-        return (await api.get(`/posts/${postId}`)).data;
+        const res = await api.get(`/posts/${postId}`);
+
+        return res.data;
     },
 
     // 게시물 작성

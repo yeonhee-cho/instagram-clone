@@ -10,7 +10,7 @@
         INSERT INTO stories (user_id,story_image,created_at,expires_at)
         VALUES (#{userId},#{storyImage},CURRENT_TIMESTAMP,CURRENT_TIMESTAMP + INTERVAL '24 hours')
     </insert>
-<!-- 자동 생성 하면 안 넣어줘도 됨 -->
+    <!-- ! 자동 생성 하면 안 넣어줘도 됨 ! -->
 
     <!--
         모든 스토리 조회 view 사용
