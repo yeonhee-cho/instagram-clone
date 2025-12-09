@@ -66,11 +66,14 @@ const PostUploadPage = () => {
         try {
             // 2. loading을 true로 설정
             setLoading(true);
+            // -  필터가 적용된 이미지 파일 생성한 데이터에 변수 담기
+            const filteredImage = await getFilteredFile(selectedImage, selectedFilter);
+            // -  필터가 적용된 이미지를 서버에 전송
             // 3. apiService.createPost(imagePreview, caption, location) 호출
-            await apiService.createPost(selectedImage, caption, location);
+            await apiService.createPost(filteredImage, caption, location);
             // 4. 성공 시: alert로 성공 메시지, /feed로 이동
             alert("게시물이 성공적으로 등록되었습니다.");
-            navigate("/feed")
+            navigate("/feed");
         } catch (err) {
             // 5. 실패 시: alert로 에러 메시지
             alert("게시물 등록에 실패했습니다.");

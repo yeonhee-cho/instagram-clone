@@ -133,11 +133,11 @@ const apiService = {
     // GET /posts
     getPosts: async () => {
         const res = await api.get('/posts');
-        console.log('✅ res.data', res.data);
+        console.log('✅ posts.data', res.data);
         return res.data;
     },
 
-    // TODO: 특정 게시물 조회
+    // 특정 게시물 조회
     // GET /posts/:postId
     getPost: async (postId) => {
         return (await api.get(`/posts/${postId}`)).data;
@@ -147,12 +147,12 @@ const apiService = {
     // POST /posts
     // body: { postImage, postCaption, postLocation }
     createPost: async (postImage, postCaption, postLocation) => {
-        const formData = new FormData();
-        formData.append('postImage', postImage);
-        formData.append('postCaption', postCaption);
-        formData.append('postLocation', postLocation);
+        const postFormData = new FormData();
+        postFormData.append('postImage', postImage);
+        postFormData.append('postCaption', postCaption);
+        postFormData.append('postLocation', postLocation);
 
-        const res = await  api.post("/posts", formData, {
+        const res = await api.post("/posts", postFormData, {
             headers: {
                 'Content-Type': 'multipart/form-data',
             }
@@ -203,17 +203,28 @@ const apiService = {
 
     // ===== 스토리 API =====
 
-    // TODO: 스토리 목록 조회
+    // 스토리 목록 조회
     // GET /stories
     getStories: async () => {
-        // TODO: API 호출을 완성하세요
+        const res = await api.get('/stories');
+        console.log('✅ stories.data', res.data);
+        return res.data;
     },
 
-    // TODO: 스토리 작성
+    // 스토리 작성
     // POST /stories
     // body: { storyImage }
     createStory: async (storyImage) => {
-        // TODO: API 호출을 완성하세요
+        const storyFormData = new FormData();
+        storyFormData.append('storyImage', storyImage);
+
+        const res = await api.post("/stories", storyFormData, {
+            headers: {
+                'Content-Type':'multipart/form-data'
+            }
+        });
+
+        return res.data;
     },
 
     // ===== 사용자 API =====

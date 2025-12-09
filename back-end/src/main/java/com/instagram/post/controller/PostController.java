@@ -56,7 +56,7 @@ public class PostController {
     public List<Post> getAllPosts(@RequestHeader("Authorization") String authHeader) {
         String token = authHeader.substring(7);
         int currentUserId = jwtUtil.getUserIdFromToken(token);
-        log.info("📌 retrun 값 : {}", postService.getAllPosts(currentUserId));
+        log.info("📌 post retrun 값 : {}", postService.getAllPosts(currentUserId));
         return postService.getAllPosts(currentUserId);
     }
 }

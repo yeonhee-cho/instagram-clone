@@ -37,12 +37,12 @@ const FeedPage = () => {
         // 1. try-catch 사용
         try {
             // 2. apiService.getPosts()와 apiService.getStories()를 Promise.all로 동시 호출
-            // const postsData = await apiService.getPosts();
-            // const storiesData = await apiService.getStories();
-            const [postsData, storiesData] = await Promise.all([
-                apiService.getPosts(),
-                apiService.getStories()
-            ]);
+            const postsData = await apiService.getPosts();
+            const storiesData = await apiService.getStories();
+            // const [postsData, storiesData] = await Promise.all([
+            //     apiService.getPosts(),
+            //     apiService.getStories()
+            // ]);
 
             console.log('📌 postsData', postsData);
             console.log('📌 storiesData', storiesData);
@@ -89,13 +89,7 @@ const FeedPage = () => {
 
     const defaultImage = '/static/img/default-avatar.jpg';
     const handleAvatarError = (e) => {
-        try {
-            e.target.src = defaultImage;
-        } catch (e) {
-            console.log("데이터가 존재하지 않습니다.", e)
-        } finally {
-            console.log("데이터를 불러올 수 없습니다.");
-        }
+        e.target.src = defaultImage;
     }
 
     return (
@@ -109,7 +103,8 @@ const FeedPage = () => {
                         <MessageCircle className="header-icon"/>
                         <PlusSquare className="header-icon"
                                     onClick={() => navigate(('/upload'))}/>
-                        <Film className="header-icon"/>
+                        {/* 아이콘 클릭하면 스토리 업로드로 이동 설정 */}
+                        <Film className="header-icon" onClick={() => navigate("/story/upload")}/>
                         <User className="header-icon" onClick={handleLogout}/>
                     </div>
                 </div>
