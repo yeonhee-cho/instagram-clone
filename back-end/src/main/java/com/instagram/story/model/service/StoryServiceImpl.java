@@ -24,7 +24,7 @@ public class StoryServiceImpl implements StoryService{
 
         Story story = new Story();
         story.setUserId(userId);
-        story.setStoryImage("storyImage - 서버 컴퓨터에 저장된 경로 스토리 파일");
+        story.setStoryImage("storyImage - 서버 컴퓨터에 저장된 경로 스토리 파일"); // null이면 오류남 따라서 기본 값으로 저장
 
         storyMapper.insertStory(story);
         log.info("임시 스토리 생성 완료 - 스토리 ID : {}", story.getUserId());
