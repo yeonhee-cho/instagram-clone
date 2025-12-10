@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import {useNavigate, useParams} from 'react-router-dom';
 import { X, MoreHorizontal, Heart, Send } from 'lucide-react';
 import apiService, {API_BASE_URL} from "../service/apiService";
-import {getImageUrl} from "../service/commonService";
+import {formatDate, getImageUrl} from "../service/commonService";
 
 /**
  * commonService 에 현재 날짜를 몇 시간 전에 업로드했는지 formatDate 메서드 사용하여 날짜 변환
@@ -93,7 +93,7 @@ const StoryDetailPage = () => {
                             {storyData.userName}
                         </span>
                         <span className="story-time">
-                            {storyData.createdAt}
+                            {formatDate(storyData.createdAt)}
                         </span>
                     </div>
                     <div className="story-header-actions">

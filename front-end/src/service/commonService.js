@@ -25,3 +25,32 @@ export const getImageUrl = (path) => {
 
     return `${API_BASE_URL}${path}`
 };
+
+/**
+ * commonService 에 현재 날짜를 몇 시간 전에 업로드했는지 formatDate 메서드 사용하여 날짜 변환
+ * <span className="story-time">
+ *     {storyData.createdAt}
+ * </span>
+ *
+ * formatDate 형태로 1시간 1분전 업로드 형태 수정
+ * 또는
+ * formatDate 형태로 yyyy-mm-dd 형태로 확인 수정
+ */
+
+export const formatDate = (dateString) => {
+    if(!dateString) return '-';
+    const date = new Date(dateString);
+    const now = new Date();
+    const diff = (now - date) / 1000;
+    if (diff < 60) return "방금 전"; // 1분
+    if (diff < 3600) return `${Math.floor(diff / 60)}분 전`; // 1시간
+    // if (diff < 86400) return `${Math.floor(diff / 3600)}시간 전`; // 24시간
+    // if (diff < 2592000) return `${Math.floor(diff / 86400)}일 전`; // 30일
+
+    // 그 외
+    const yyyy = date.getFullYear();
+    const mm = String(date.getMonth() + 1).padStart(2, "0");
+    const dd = String(date.getDate()).padStart(2, "0");
+
+    return `${yyyy}-${mm}-${dd}`;
+}
