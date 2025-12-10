@@ -35,6 +35,14 @@ public class PostServiceImpl implements PostService {
     }
 
     /**
+     * 특정 사용자의 게시글 목록 조회
+     */
+    @Override
+    public List<Post> getPostsByUserId(int userId) {
+        return postMapper.selectPostsByUserId(userId);
+    }
+
+    /**
      * 게시글 생성
      */
     @Override
@@ -57,7 +65,7 @@ public class PostServiceImpl implements PostService {
             return postMapper.insertPost(post) > 0; // insert 실행 후 성공 시 1 이상 반환
             
         } catch (Exception e){
-            log.error("게시물 작성 실패 : ", e);
+            log.error("❌ 게시물 작성 실패 : ", e);
             return false;
         }
 
@@ -71,13 +79,6 @@ public class PostServiceImpl implements PostService {
         return postMapper.deletePost(postId) > 0;
     }
 
-    /**
-     * 특정 사용자의 게시글 목록 조회
-     */
-    @Override
-    public List<Post> getPostsByUserId(int userId, int currentUserId) {
-        return postMapper.selectPostsByUserId(userId, currentUserId);
-    }
 
     /**
      * 좋아요 추가

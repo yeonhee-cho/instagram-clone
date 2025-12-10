@@ -1,6 +1,6 @@
 // ============================================
 // src/pages/PostUploadPage.jsx
-// TODO: 업로드 페이지 UI 및 기능 구현
+// 업로드 페이지 UI 및 기능 구현
 // - selectedImage, imagePreview, caption, location, loading state 선언
 // - handleImageChange: 파일 선택 시 미리보기 생성
 // - handlePost: 게시물 업로드 (입력값 검증, API 호출, /feed 이동)
@@ -11,7 +11,10 @@ import { useNavigate } from 'react-router-dom';
 import apiService from '../service/apiService';
 import { ArrowLeft, Image } from 'lucide-react';
 import {getFilteredFile, FILTER_OPTIONS} from "../service/filterService";
+import Header from "../components/Header";
 
+/* 필요에 따라 소비자가 업로드 한 이미지를 리사이즈 처리화 해야할 수 있다. 
+* 예) 10mb 이상의 이미지를 올리면 8mb 이하의 이미지로 사이즈 축소, 크기 축소*/
 const PostUploadPage = () => {
     // selectedImage state 선언
     const [selectedImage, setSelectedImage] = useState(null);
@@ -104,26 +107,13 @@ const PostUploadPage = () => {
     return (
         <div className="upload-container">
             {/* 헤더 */}
-            <header className="upload-header">
-                <div className="upload-header-content">
-                    {/* 뒤로가기 버튼 (onClick: /feed로 이동) */}
-                    <button className="upload-back-btn"
-                            onClick={() => navigate("/feed")}
-                    >
-                        <ArrowLeft size={24}/>
-                    </button>
-
-                    <h2 className="upload-title">새 게시물</h2>
-
-                    {/* 공유 버튼 (onClick: handlePost, disabled: loading) */}
-                    <button className="upload-submit-btn"
-                            onClick={handlePost}
-                            disabled={loading}
-                    >
-                        {loading ? '등록 중...' : '공유'}
-                    </button>
-                </div>
-            </header>
+            <Header type="upload"
+                    title="새 게시물"
+                    onSubmit={handlePost}
+                    submitDisabled={!selectedImage || !caption.trim()}
+                    loading={loading}
+                    submitText={"공유"}
+            />
 
             <div className="upload-content">
                 <div className="upload-card">

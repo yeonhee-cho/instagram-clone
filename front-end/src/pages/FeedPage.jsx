@@ -1,6 +1,6 @@
 // ============================================
 // src/pages/FeedPage.jsx
-// TODO: 피드 페이지 UI 및 기능 구현
+// 피드 페이지 UI 및 기능 구현
 // - posts, stories, loading state 선언
 // - useEffect로 컴포넌트 마운트 시 데이터 로드
 // - loadFeedData 함수: getPosts, getStories 호출
@@ -12,7 +12,11 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import apiService from '../service/apiService';
 import { Heart, MessageCircle, Send, Bookmark, MoreHorizontal, Home, PlusSquare, Film, User } from 'lucide-react';
+import Header from "../components/Header";
 
+/*
+피드 페이지에서 Heart 를 클릭하면 좋아요 수 증가
+*/
 const FeedPage = () => {
     // posts state 선언 (초기값: [])
     const [posts, setPosts] = useState([]);
@@ -60,7 +64,7 @@ const FeedPage = () => {
             setLoading(false);
         }
         */
-
+        setLoading(true);
         try {
             const postsData = await apiService.getPosts();
             console.log('📌 postsData', postsData);
@@ -87,18 +91,48 @@ const FeedPage = () => {
     // toggleLike 함수를 작성하세요
     // 1. postId와 isLiked를 파라미터로 받음
     const toggleLike = async (postId, isLiked) => {
+
+        // 소비자의 눈에서 좋아요 취소를 보여주고, 백엔드 작업 시작
+        // 1. 현재 게시물 목록 복사 (원본을 바로 건드리면 안 됨)
+        const newPosts = [...posts];
+
+        // 2. 내가 클릭한 게시물이 몇 번째에 있는지 찾기
+        const targetIndex = newPosts.findIndex(post => post.postId === postId);
+
+        // 게시물을 찾았다면
+        if(targetIndex !== -1) {
+            // 좋아요 상태를 반대로 뒤집기(true -> false)
+            newPosts[targetIndex].isLiked = !isLiked;
+
+            // 숫자 취소 -1 차감
+            if(isLiked) newPosts[targetIndex].likeCount -= 1;
+            
+            // 숫자 추가 + 1 추가
+            else newPosts[targetIndex].likeCount += 1;
+
+            // 변경된 상태로 화면 업그레이드
+            setPosts(newPosts);
+        }
+
         try{
             // 2. isLiked가 true면 removeLike, false면 addLike 호출
+            // 좋아요 누르고 취소가 되지만 백그라운드에서 작업한 내용이 바로 보이는 상황이 아님
             if(isLiked) {
                 await apiService.removeLike(postId);
             } else {
                 await apiService.addLike(postId);
             }
             // 3. 완료 후 getPosts()를 다시 호출하여 목록 새로고침
-            await apiService.getPosts();
+            /* NOTE
+            기존에는 백엔드 -> 프론트엔드 변경했다면
+            수정내용은 프론트엔드 -> 백엔드 로직
+            const postsData = await apiService.getPosts();
+            setPosts(postsData);
+             */
         } catch (e) {
             // 4. catch: 에러 처리
             alert("좋아요 처리에 실패했습니다.");
+            loadFeedData(); // 다시 원래대로 돌려놓기
         }
 
     };
@@ -128,21 +162,7 @@ const FeedPage = () => {
 
     return (
         <div className="feed-container">
-            <header className="header">
-                <div className="header-container">
-                    <h1 className="header-title">Instagram</h1>
-                    <div className="header-nav">
-                        <Home className="header-icon"
-                              onClick={() => navigate(('/'))}/>
-                        <MessageCircle className="header-icon"/>
-                        <PlusSquare className="header-icon"
-                                    onClick={() => navigate(('/upload'))}/>
-                        {/* 아이콘 클릭하면 스토리 업로드로 이동 설정 */}
-                        <Film className="header-icon" onClick={() => navigate("/story/upload")}/>
-                        <User className="header-icon" onClick={handleLogout}/>
-                    </div>
-                </div>
-            </header>
+            <Header/>
 
             <div className="feed-content">
                 {/* 스토리 섹션 작성 */}
@@ -157,6 +177,7 @@ const FeedPage = () => {
                                         <img src={story.userAvatar}
                                              className="story-avatar"
                                              onError={handleAvatarError}
+                                             onClick={() => {navigate(`/story/detail/${story.userId}`)}}
                                         />
                                     </div>
                                     <span className="story-username">{story.userName}</span>
@@ -175,6 +196,7 @@ const FeedPage = () => {
                                     <img src={post.userAvatar}
                                          className="post-user-avatar"
                                          onError={handleAvatarError}
+                                         onClick={() => {navigate(`/myfeed`)}}
                                     />
                                     <span className="post-username">{post.userName}</span>
                                 </div>

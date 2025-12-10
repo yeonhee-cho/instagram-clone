@@ -1,6 +1,6 @@
 // ============================================
 // src/App.js
-// TODO: React Router 설정하기
+// React Router 설정하기
 // - BrowserRouter, Routes, Route import 하기
 // - LoginPage, FeedPage, PostUploadPage import 하기
 // - PrivateRoute import 하기
@@ -10,7 +10,7 @@
 // - 기본 경로(/)는 /login으로 리다이렉트
 // ============================================
 
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
@@ -19,13 +19,21 @@ import PrivateRoute from "./provider/PrivateRoute";
 import FeedPage from "./pages/FeedPage";
 import PostUploadPage from "./pages/PostUploadPage";
 import StoryUploadPage from "./pages/StoryUploadPage";
-
-// TODO: 필요한 컴포넌트들을 import 하세요
+import MyFeedPage from "./pages/MyFeedPage";
+import StoryDetailPage from "./pages/StoryDetailPage";
 
 function App() {
+    const [user, setUser] = useState(() => {
+        const savedUser = localStorage.getItem("user");
+        const token = localStorage.getItem("token");
+
+        if(savedUser && token) {
+            return JSON.parse(savedUser);
+        }
+        return null;
+    })
     return (
         <div>
-            {/* TODO: Router 설정을 완성하세요 */}
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<Navigate to="/login" replace/>}/>
@@ -43,7 +51,6 @@ function App() {
                                    <PostUploadPage/>
                                </PrivateRoute>
                            }
-
                     />
                     <Route path="/story/upload"
                            element={
@@ -51,7 +58,20 @@ function App() {
                                    <StoryUploadPage/>
                                </PrivateRoute>
                            }
-
+                    />
+                    <Route path="/story/detail/:userId"
+                           element={
+                               <PrivateRoute>
+                                   <StoryDetailPage/>
+                               </PrivateRoute>
+                           }
+                    />
+                    <Route path="/myfeed"
+                           element={
+                               <PrivateRoute>
+                                   <MyFeedPage/>
+                               </PrivateRoute>
+                           }
                     />
                 </Routes>
             </BrowserRouter>

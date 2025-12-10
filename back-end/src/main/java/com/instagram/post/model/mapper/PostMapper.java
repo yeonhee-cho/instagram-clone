@@ -20,7 +20,7 @@ public interface PostMapper {
     /**
      * 특정 게시물 사용자 조회
      */
-    List<Post> selectPostsByUserId(int userId, int currentUserId);
+    List<Post> selectPostsByUserId(int userId);
 
     /**
      * 게시물 작성

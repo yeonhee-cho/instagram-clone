@@ -14,7 +14,7 @@ import config from "tailwindcss/defaultConfig";
 axios.defaults.withCredentials = true; // 쿠키 포함 허용 설정
 
 // 백엔드 API 기본 주소
-const API_BASE_URL = 'http://localhost:9000/api';
+export const API_BASE_URL = 'http://localhost:9000/api';
 
 // axios 인스턴스 생성
 const api = axios.create({
@@ -139,8 +139,9 @@ const apiService = {
 
     // 특정 게시물 조회
     // GET /posts/:postId
-    getPost: async (postId) => {
-        const res = await api.get(`/posts/${postId}`);
+    getPost: async (userId) => {
+        const res = await api.get(`/posts/${userId}`);
+        console.log('✅ 특정 게시물 조회', res.data);
 
         return res.data;
     },
@@ -170,16 +171,22 @@ const apiService = {
 
     // ===== 좋아요 API =====
 
-    // TODO: 좋아요 추가
+    // 좋아요
     // POST /posts/:postId/like
     addLike: async (postId) => {
-        // TODO: API 호출을 완성하세요
+        console.log("postId",postId)
+        const res = await api.post(`/posts/${postId}/like`);
+        console.log("✅ 좋아요 +",res.data);
+        return res.data;
     },
 
-    // TODO: 좋아요 취소
+    // 좋아요 취소
     // DELETE /posts/:postId/like
     removeLike: async (postId) => {
-        // TODO: API 호출을 완성하세요
+        console.log("postId",postId)
+        const res = await api.delete(`/posts/${postId}/like`);
+        console.log("✅ 좋아요 취소",res.data);
+        return res.data;
     },
 
     // ===== 댓글 API =====
@@ -213,6 +220,13 @@ const apiService = {
         return res.data;
     },
 
+    getStory : async (userId) => {
+        console.log("getStory");
+        const res = await api.get(`/stories/user/${userId}`);
+        console.log('✅ stories.data,userId', res.data);
+        return res.data;
+    },
+
     // 스토리 작성
     // POST /stories
     // body: { storyImage }
@@ -231,16 +245,20 @@ const apiService = {
 
     // ===== 사용자 API =====
 
-    // TODO: 사용자 프로필 조회
+    // 사용자 프로필 조회
     // GET /users/:userId
     getUser: async (userId) => {
-        // TODO: API 호출을 완성하세요
+        const res = await api.get(`/users/${userId}`);
+        console.log("✅ 사용자 프로필 조회", res.data)
+        return res.data;
     },
 
-    // TODO: 사용자 게시물 조회
+    // 사용자 게시물 조회
     // GET /users/:userId/posts
     getUserPosts: async (userId) => {
-        // TODO: API 호출을 완성하세요
+        const res = await api.get(`/users/${userId}/post`);
+        console.log("✅ 사용자 게시물 조회", res.data)
+        return res.data;
     }
 };
 

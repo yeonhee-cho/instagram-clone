@@ -17,7 +17,7 @@ public interface StoryMapper {
     void updateStoryImage(int storyId, String storyImage);
 
     // 특정 사용자 조회
-    Story selectStoriesByUserId(int id);
+    Story selectStoriesByUserId(int userId);
 
     // 만료된 스토리 void updateStory(Story story);
 }

@@ -41,23 +41,27 @@ public class StoryController {
             return ResponseEntity.badRequest().body("❌ 스토리 생성 실패 : " + e.getMessage());
         }
     }
+
     @GetMapping
     public ResponseEntity<?> getAllStories(@RequestHeader("Authorization") String token){
         try {
             List<Story> stories = storyService.getAllStories();
             return ResponseEntity.ok(stories);
         } catch (Exception e) {
-            return ResponseEntity.badRequest().body("스토리 조회 실패 :" + e.getMessage());
+            return ResponseEntity.badRequest().body("❌ 스토리 조회 실패 :" + e.getMessage());
         }
     }
 
     @GetMapping("/user/{userId}")
-    public ResponseEntity<?> getStoryByUserId(@PathVariable("userId") int userId){
-        try {
+    public ResponseEntity<?> getStory(@PathVariable("userId") int userId){
+        log.info("시작");
+        try{
             Story a = storyService.getStoriesByUserId(userId);
+            log.info("a: {}", a);
             return ResponseEntity.ok(a);
-        } catch (Exception e) {
-            return ResponseEntity.badRequest().body("스토리 조회 실패 : " + e.getMessage());
+        } catch (Exception e){
+            e.printStackTrace(); // 에러 메세지
+            return ResponseEntity.badRequest().body("❌ 스토리 조회 실패 : "+ e.getMessage());
         }
     }
 }

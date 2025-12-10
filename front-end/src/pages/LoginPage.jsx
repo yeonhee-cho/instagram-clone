@@ -1,6 +1,6 @@
 // ============================================
 // src/pages/LoginPage.jsx
-// TODO: 로그인 페이지 UI 및 기능 구현
+// 로그인 페이지 UI 및 기능 구현
 // - username, password state 선언
 // - loading state 선언
 // - handleLogin 함수: apiService.login 호출
@@ -27,32 +27,39 @@ const LoginPage = () => {
     // useNavigate를 사용하여 navigate 함수를 가져오세요
     const navigate = useNavigate();
 
-    // TODO: handleLogin 함수를 작성하세요
-    // 1. 입력값 검증 (username과 password가 비어있는지 확인)
-    // 2. loading을 true로 설정
-    // 3. apiService.login(username, password) 호출
-    // 4. 성공 시: localStorage에 token과 user 저장, /feed로 이동
-    // 5. 실패 시: alert로 에러 메시지 표시
-    // 6. finally: loading을 false로 설정
+    // handleLogin 함수를 작성하세요
     const handleLogin = async () => {
-        // TODO: 함수를 완성하세요
-        try {
-            const res = await apiService.login(userEmail, password);
+        // 1. 입력값 검증 (username과 password가 비어있는지 확인)
+        if(!username && username.trim() == "" && !password && password.trim() == "") {
+            return;
+        }
 
+        try {
+            // 2. loading을 true로 설정
+            setLoading(true);
+            // 3. apiService.login(username, password) 호출
+            // 4. 성공 시: localStorage에 token과 user 저장, /feed로 이동
+            const res = await apiService.login(userEmail, password);
             alert("로그인 성공!");
             navigate("/feed");
         } catch(err) {
+            // 5. 실패 시: alert로 에러 메시지 표시
             if(err.response?.status === 401) {
                 alert("이메일 또는 비밀번호가 올바르지 않습니다.");
             } else {
                 alert("로그인에 실패했습니다. 다시 로그인해주세요.");
             }
+        } finally {
+            // 6. finally: loading을 false로 설정
+            setLoading(false);
         }
     };
 
-    // TODO: Enter 키 입력 시 handleLogin 호출하는 함수 작성
+    // Enter 키 입력 시 handleLogin 호출하는 함수
     const handleKeyPress = (e) => {
-        // TODO: 함수를 완성하세요
+        if (e.key === 'Enter') {
+            handleLogin();
+        }
     };
 
     return (

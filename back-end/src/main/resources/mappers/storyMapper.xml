@@ -5,33 +5,30 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.instagram.story.model.mapper.StoryMapper">
-    <!-- insertStory 스토리 생성 유저아이디 스토리이미지 생성일자 -->
+    <!-- 스토리 생성 -->
+    <!-- ! 자동 생성 하면 story_id 안 넣어줘도 됨 ! -->
     <insert id="insertStory" parameterType="Story" useGeneratedKeys="true" keyProperty="storyId" keyColumn="story_id">
         INSERT INTO stories (user_id,story_image,created_at,expires_at)
         VALUES (#{userId},#{storyImage},CURRENT_TIMESTAMP,CURRENT_TIMESTAMP + INTERVAL '24 hours')
     </insert>
-    <!-- ! 자동 생성 하면 안 넣어줘도 됨 ! -->
 
-    <!--
-        모든 스토리 조회 view 사용
-        스토리아이디 유저아이디 스토리이미지 생성일자 유저이름 유저아바타
-    -->
+    <!-- 모든 스토리 조회 -->
     <select id="selectAllStories" resultType="Story">
         SELECT story_id,user_id,story_image,created_at,expires_at,user_name,user_avatar
         FROM active_stories_view
         ORDER BY created_at DESC
     </select>
 
-    <!--
-        특정 사용자 조회
-    -->
-    <select id="selectStoryById" resultType="Story" parameterType="int">
+
+    <!-- 특정 사용자 스토리 조회 -->
+    <select id="selectStoriesByUserId" resultType="Story" parameterType="int">
         SELECT story_id, user_id, story_image, created_at, expires_at, user_name, user_avatar
         FROM active_stories_view
         WHERE user_id = #{userId}
         ORDER BY created_at DESC
     </select>
 
+    <!-- 스토리 이미지 업데이트 -->
     <update id="updateStoryImage" parameterType="Story">
         UPDATE stories
         SET story_image = #{storyImage}
@@ -40,19 +37,10 @@
     <!--
         만료된 스토리
         - 삭제? 안 보이고 보관?
+        <delete id="deleteStory" parameterType="int">
+            DELETE
+            FROM stories
+            WHERE story_id = #{storyId}
+        </delete>
     -->
 </mapper>
-<!--
-SELECT
-    s.story_id,
-    s.user_id,
-    s.story_image,
-    s.created_at,
-    s.expires_at,
-    u.user_name,
-    u.user_avatar
-FROM stories s
-INNER JOIN users u ON s.user_id = u.user_id
-WHERE s.expires_at > CURRENT_TIMESTAMP
-ORDER BY s.created_at DESC
--->

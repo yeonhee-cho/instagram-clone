@@ -1,6 +1,6 @@
 // ============================================
 // src/pages/SignupPage.jsx
-// TODO: 회원가입 페이지 UI 및 기능 구현
+// 회원가입 페이지 UI 및 기능 구현
 // - username, email, password, fullName state 선언
 // - loading state 선언
 // - handleSignup 함수: apiService.signup 호출
@@ -14,42 +14,41 @@ import {useNavigate} from 'react-router-dom';
 import apiService from '../service/apiService';
 
 const SignupPage = () => {
-    // TODO: username state를 선언하세요 (user_name)
+    // username state 선언 (user_name)
     const [username, setUsername] = useState('');
 
-    // TODO: email state를 선언하세요 (user_email)
+    // email state 선언 (user_email)
     const [email, setEmail] = useState('');
 
-    // TODO: password state를 선언하세요 (user_password)
+    // password state 선언 (user_password)
     const [password, setPassword] = useState('');
 
-    // TODO: fullName state를 선언하세요 (user_fullname)
+    // fullName state 선언 (user_fullname)
     const [fullName, setFullName] = useState('');
 
-    // TODO: loading state를 선언하세요
+    // loading state 선언
     const [loading, setLoading] = useState(false);
 
-    // TODO: useNavigate를 사용하여 navigate 함수를 가져오세요
+    // navigate 함수
     const navigate = useNavigate();
 
-    // TODO: handleSignup 함수를 작성하세요
-    // 1. 입력값 검증 (모든 필드가 비어있는지 확인)
-    // 2. 이메일 형식 검증 (정규식 사용)
-    // 3. 사용자명 규칙 검증 (영문, 숫자, 밑줄, 마침표만 허용, 3-50자)
-    // 4. 비밀번호 길이 검증 (최소 6자)
-    // 5. loading을 true로 설정
-    // 6. apiService.signup(username, email, password, fullName) 호출
-    // 7. 성공 시: alert로 성공 메시지, /login으로 이동
-    // 8. 실패 시: alert로 에러 메시지 표시 (409: 중복, 400: 잘못된 입력)
-    // 9. finally: loading을 false로 설정
+    // handleSignup 함수
     const handleSignup = async () => {
-        // TODO: 함수를 완성하세요
+        // 1. 입력값 검증 (모든 필드가 비어있는지 확인)
+        // 2. 이메일 형식 검증 (정규식 사용)
+        // 3. 사용자명 규칙 검증 (영문, 숫자, 밑줄, 마침표만 허용, 3-50자)
+        // 4. 비밀번호 길이 검증 (최소 6자)
 
         try {
+            // 5. loading을 true로 설정
+            setLoading(true);
+            // 6. apiService.signup(username, email, password, fullName) 호출
             const response = await apiService.signup(username, email, password, fullName);
-            alert("화원가입이 완료되었습니다. 로그인해주세요.");
+            // 7. 성공 시: alert로 성공 메시지, /login으로 이동
+            alert("회원가입이 완료되었습니다. 로그인해주세요.");
             navigate("/login");
         } catch (error) {
+            // 8. 실패 시: alert로 에러 메시지 표시 (409: 중복, 400: 잘못된 입력)
             let errorMessage = '회원가입에 실패했습니다.';
 
             if (error.response && error?.message) {
@@ -61,11 +60,12 @@ const SignupPage = () => {
             }
             alert(errorMessage);
         } finally {
+            // 9. finally: loading을 false로 설정
             setLoading(false);
         }
     };
 
-    // TODO: Enter 키 입력 시 handleSignup 호출하는 함수 작성
+    // Enter 키 입력 시 handleSignup 호출하는 함수
     const handleKeyPress = (e) => {
         if (e.key === 'Enter') {
             handleSignup();

@@ -3,6 +3,7 @@ import {useNavigate} from 'react-router-dom';
 import apiService from '../service/apiService';
 import {ArrowLeft, Image, X} from 'lucide-react';
 import {getFilteredFile, FILTER_OPTIONS} from '../service/filterService';
+import Header from "../components/Header";
 
 const StoryUploadPage = () => {
     // selectedImage state 선언
@@ -87,37 +88,14 @@ const StoryUploadPage = () => {
     return (
         <div className="upload-container">
             {/* 헤더 */}
-            <header className="upload-header">
-                <div className="upload-header-content">
-                    {/* 뒤로가기 버튼 */}
-                    {/* ArrowLeft 아이콘 사용, onClick: navigate('/feed') */}
-                    <button className="upload-back-btn"
-                        /* /feed로 이동 */
-                            onClick={() => navigate("/feed")}
-                    >
-                        {/* ArrowLeft 아이콘 추가 (size={24}) */}
-                        <ArrowLeft size={24}/>
-                    </button>
-
-                    {/* 제목 작성 */}
-                    <h2 className="upload-title">새 스토리</h2>
-
-                    {/* 공유 버튼 작성 */}
-                    {/* onClick: handlePost */}
-                    {/* disabled: loading || !selectedImage */}
-                    {/* style: opacity를 조건부로 설정 (이미지 없거나 로딩중이면 0.5, 아니면 1) */}
-                    {/* 버튼 텍스트: loading이면 "업로드 중...", 아니면 "공유" */}
-                    <button
-                        className="upload-submit-btn"
-                        onClick={handlePost}
-                        disabled={loading || !selectedImage}
-                        style={{opacity: loading || !selectedImage}}
-                    >
-                        {loading ? '업로드 중...' : '공유'}
-                    </button>
-                </div>
-            </header>
-
+            <Header type="upload"
+                    title="새 스토리"
+                    onSubmit={handlePost}
+                    submitDisabled={!selectedImage}
+                    loading={loading}
+                    submitText={"공유"}
+            />
+            
             <div className="upload-content">
                 <div className="upload-card">
                     {/* 이미지 업로드 영역 */}
@@ -158,7 +136,7 @@ const StoryUploadPage = () => {
                                                     <X size={20}/>
                                                 </button>
                                             </div>
-                                            {/* TODO: 필터 스크롤 컨테이너 작성 */}
+                                            {/* 필터 스크롤 컨테이너 */}
                                             <div className="filter-scroll-container">
 
                                                 {/* FILTER_OPTIONS.map으로 필터 목록 렌더링 */}

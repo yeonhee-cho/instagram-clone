@@ -5,33 +5,41 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.instagram.user.model.mapper.UserMapper">
-
-
+    <!-- 전체 사용자 조회 -->
     <select id="selectAllUsers" resultType="User">
         SELECT *
         FROM users
         ORDER BY user_id DESC
     </select>
 
+    <!-- id를 이용한 사용자 조회 -->
     <select id="selectUserById" parameterType="int" resultType="User">
         SELECT *
         FROM users
         WHERE user_id= #{userId}
     </select>
+
+    <!-- 유저 명칭을 이용한 사용자 조회 -->
     <select id="selectUserByUserName" parameterType="User" resultType="String">
         SELECT user_name
         FROM users
         WHERE user_name= #{userName}
     </select>
+
+    <!-- email 을 이용한 사용자 조회 -->
     <select id="selectUserByUserEmail" parameterType="String" resultType="User">
         SELECT *
         FROM users
         WHERE user_email= #{userEmail}
     </select>
+
+    <!-- 사용자 생성 -->
     <insert id="insertUser" parameterType="User" useGeneratedKeys="true" keyProperty="userId">
         INSERT INTO users (user_name, user_email, user_password, user_fullname, user_avatar)
         VALUES (#{userName},#{userEmail},#{userPassword},#{userFullname},#{userAvatar})
     </insert>
+
+    <!-- 사용자 수정 -->
     <update id="updateUser" parameterType="User">
         UPDATE users
         SET user_name = #{userName},
@@ -41,6 +49,8 @@
             updated_at = CURRENT_TIME
         WHERE user_id = #{userId}
     </update>
+
+    <!-- 사용자 삭제 -->
     <delete id="deleteUser" parameterType="User">
         DELETE
         FROM users
