@@ -21,6 +21,7 @@ import PostUploadPage from "./pages/PostUploadPage";
 import StoryUploadPage from "./pages/StoryUploadPage";
 import MyFeedPage from "./pages/MyFeedPage";
 import StoryDetailPage from "./pages/StoryDetailPage";
+import EditProfilePage from "./pages/EditProfilePage";
 
 function App() {
     const [user, setUser] = useState(() => {
@@ -72,6 +73,13 @@ function App() {
                                    <MyFeedPage/>
                                </PrivateRoute>
                            }
+                    />
+                    <Route path="/profile/edit"
+                    element={
+                    <PrivateRoute>
+                        <EditProfilePage/>
+                    </PrivateRoute>
+                }
                     />
                 </Routes>
             </BrowserRouter>

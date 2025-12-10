@@ -259,6 +259,39 @@ const apiService = {
         const res = await api.get(`/users/${userId}/post`);
         console.log("✅ 사용자 게시물 조회", res.data)
         return res.data;
+    },
+
+    // updateProfile 함수
+    // PUT /users/:userId
+    // 파라미터: userId, formData
+    // 헤더: 'Content-Type': 'multipart/form-data'
+    // 성공 시 localStorage의 'user' 업데이트
+    updateProfile: async (userId, formData) => {
+        try{
+            // 1. api.put() 호출
+            const res = await api.put(`/auth/profile/edit`, formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            });
+
+            console.log("✅ updateProfile", res.data)
+
+            if(res.data) {
+                // 2. res.data가 있으면 localStorage.setItem('user', JSON.stringify(res.data))
+                // 성공 시 localStorage의 'user' 업데이트
+                localStorage.setItem('user', JSON.stringify(res.data));
+                const token = localStorage.getItem('token');
+                if(token) {
+                    localStorage.setItem('token', token);
+                }
+            } else {
+                // 3. res.data 반환
+                return res.data;
+            }
+        } catch (err) {
+            return Promise.reject(err);
+        }
     }
 };
 

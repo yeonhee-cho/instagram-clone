@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import { Grid, Bookmark, Settings } from 'lucide-react';
 import {useNavigate, useParams} from "react-router-dom";
 import apiService from "../service/apiService";
+import {getImageUrl} from "../service/commonService";
 
 /*
 MyFeedPage 와 StoryDetail 임의 데이터를 controller 에서 가져온 데이터로 변경해보기
@@ -19,12 +20,6 @@ const MyFeedPage = () => {
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
     const currentUser = JSON.parse(localStorage.getItem('user') || '{}');
-    const userId = currentUser.userId;
-
-    const defaultImage = '/static/img/default-avatar.jpg';
-    const handleAvatarError = (e) => {
-        e.target.src = defaultImage;
-    }
 
     useEffect(() => {
         // 1. apiService => 데이터 가져오기 가져 온 데이터 List 형태로 출력
@@ -35,6 +30,9 @@ const MyFeedPage = () => {
     const loadMyFeedData = async () => {
         setLoading(true);
         try {
+            const currentUser = JSON.parse(localStorage.getItem('user'));
+            const userId = currentUser.userId;
+
             if(!userId) return navigate('/login');
             /*
             NOTE
@@ -66,10 +64,9 @@ const MyFeedPage = () => {
                     <div className="profile-image-container">
                         <div className="profile-image-border">
                             <img
-                                src={currentUser.userAvatar || defaultImage}
+                                src={getImageUrl(currentUser.userAvatar)}
                                 alt="profile"
                                 className="profile-image-large"
-                                onError={handleAvatarError}
                             />
                         </div>
                     </div>
@@ -78,7 +75,11 @@ const MyFeedPage = () => {
                         <div className="profile-title-row">
                             <h2 className="profile-username">{currentUser.userName}</h2>
                             <div className="profile-actions">
-                                <button className="profile-edit-btn">프로필 편집</button>
+                                <button className="profile-edit-btn"
+                                        onClick={()=>  navigate('/profile/edit')}
+                                >
+                                    프로필 편집
+                                </button>
                                 <button className="profile-archive-btn">보관함 보기</button>
                             </div>
                         </div>

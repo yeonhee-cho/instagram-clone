@@ -2,6 +2,7 @@ import {ArrowLeft, Film, Home, MessageCircle, PlusSquare, Settings, User} from "
 import React, {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import apiService from "../service/apiService";
+import Sidebar from "./Sidebar";
 
 const Header = ({
     type="feed",
@@ -14,29 +15,37 @@ const Header = ({
 
     const navigate = useNavigate();
 
-    const handleLogout = () => {
-        if(window.confirm("로그아웃하시겠습니까?")) apiService.logout();
-    }
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+    const openSidebar = () => setIsSidebarOpen(true);
+
+    const closeSidebar = () => setIsSidebarOpen(false);
 
     if(type === 'feed') {
         return(
-            <header className="header">
-                <div className="header-container">
-                    <h1 className="header-title">Instagram</h1>
-                    <div className="header-nav">
-                        <Home className="header-icon"
-                              onClick={() => navigate(('/'))}/>
-                        <MessageCircle className="header-icon"/>
-                        <PlusSquare className="header-icon"
-                                    onClick={() => navigate(('/upload'))}/>
-                        {/* 아이콘 클릭하면 스토리 업로드로 이동 설정 */}
-                        <Film className="header-icon" onClick={() => navigate("/story/upload")}/>
-                        <User className="header-icon" onClick={handleLogout}/>
-                        <Settings size={20} className="profile-settings-icon" />
+            <>
+                <header className="header">
+                    <div className="header-container">
+                        <h1 className="header-title">Instagram</h1>
+                        <div className="header-nav">
+                            <Home className="header-icon"
+                                  onClick={() => navigate(('/'))}/>
+                            <MessageCircle className="header-icon"/>
+                            <PlusSquare className="header-icon"
+                                        onClick={() => navigate(('/upload'))}/>
+                            {/* 아이콘 클릭하면 스토리 업로드로 이동 설정 */}
+                            <Film className="header-icon" onClick={() => navigate("/story/upload")}/>
+                            <User className="header-icon" onClick={() => navigate("/myfeed")}/>
+                            <Settings size={20}
+                                      className="profile-settings-icon"
+                                      onClick={openSidebar}
+                            />
+                        </div>
                     </div>
-                </div>
-            </header>
-        )
+                </header>
+                <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
+            </>
+    )
     }
 
     if(type === 'upload') {

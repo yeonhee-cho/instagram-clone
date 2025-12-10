@@ -13,6 +13,7 @@ import { useNavigate } from 'react-router-dom';
 import apiService from '../service/apiService';
 import { Heart, MessageCircle, Send, Bookmark, MoreHorizontal, Home, PlusSquare, Film, User } from 'lucide-react';
 import Header from "../components/Header";
+import {getImageUrl} from "../service/commonService";
 
 /*
 피드 페이지에서 Heart 를 클릭하면 좋아요 수 증가
@@ -155,11 +156,6 @@ const FeedPage = () => {
         );
     }
 
-    const defaultImage = '/static/img/default-avatar.jpg';
-    const handleAvatarError = (e) => {
-        e.target.src = defaultImage;
-    }
-
     return (
         <div className="feed-container">
             <Header/>
@@ -174,9 +170,8 @@ const FeedPage = () => {
                             {stories.map((story) => (
                                 <div key={story.storyId} className="story-item">
                                     <div className="story-avatar-wrapper">
-                                        <img src={story.userAvatar}
+                                        <img src={getImageUrl(story.userAvatar)}
                                              className="story-avatar"
-                                             onError={handleAvatarError}
                                              onClick={() => {navigate(`/story/detail/${story.userId}`)}}
                                         />
                                     </div>
@@ -193,9 +188,8 @@ const FeedPage = () => {
                         <article key={post.postId} className="post-card">
                             <div className="post-header">
                                 <div className="post-user-info">
-                                    <img src={post.userAvatar}
+                                    <img src={getImageUrl(post.userAvatar)}
                                          className="post-user-avatar"
-                                         onError={handleAvatarError}
                                          onClick={() => {navigate(`/myfeed`)}}
                                     />
                                     <span className="post-username">{post.userName}</span>
