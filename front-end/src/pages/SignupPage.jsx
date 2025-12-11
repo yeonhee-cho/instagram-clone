@@ -9,11 +9,18 @@
 // - 입력값 검증 (이메일 형식, 사용자명 규칙, 비밀번호 길이)
 // ============================================
 
-import React, {useState} from 'react';
-import {useNavigate} from 'react-router-dom';
+import React, {useEffect, useState} from 'react';
+import {useLocation, useNavigate} from 'react-router-dom';
 import apiService from '../service/apiService';
 
 const SignupPage = () => {
+    const location = useLocation();
+    console.log("kakao email(state?.email) : ", location.state?.email);
+    console.log("kakao email(state) : ", location.state);
+
+    // navigate 함수
+    const navigate = useNavigate();
+    
     // username state 선언 (user_name)
     const [username, setUsername] = useState('');
 
@@ -29,8 +36,14 @@ const SignupPage = () => {
     // loading state 선언
     const [loading, setLoading] = useState(false);
 
-    // navigate 함수
-    const navigate = useNavigate();
+    // 카카오
+    const [isKakaoSignup, setIsKakaoSignup] = useState(false);
+
+    useEffect(() => {
+        if(location.state?.email) {
+            // 카카오에서 넘어 온 정보로 email username fullname 작성하기
+        }
+    }, []);
 
     // handleSignup 함수
     const handleSignup = async () => {
@@ -44,6 +57,7 @@ const SignupPage = () => {
             setLoading(true);
             // 6. apiService.signup(username, email, password, fullName) 호출
             const response = await apiService.signup(username, email, password, fullName);
+            console.log("response", response);
             // 7. 성공 시: alert로 성공 메시지, /login으로 이동
             alert("회원가입이 완료되었습니다. 로그인해주세요.");
             navigate("/login");

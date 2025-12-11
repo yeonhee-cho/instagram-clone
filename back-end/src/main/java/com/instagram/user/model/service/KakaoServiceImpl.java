@@ -1,4 +1,6 @@
+// import org.springframework.beans.factory.annotation.Value;
 package com.instagram.user.model.service;
+
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -20,22 +22,21 @@ import org.springframework.web.client.RestTemplate;
 @Service
 @RequiredArgsConstructor
 public class KakaoServiceImpl {
-    // import org.springframework.beans.factory.annotation.Value;
+
     @Value("${kakao_client_id}")
     private String kakao_client_id;
 
     @Value("${kakao_redirect_uri}")
     private String kakao_redirect_uri;
 
-    @Value("${kakao_client_secret}")
     public String getAccessToken(String code) {
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-type", "application/x-www-form-urlencoded;charset=utf-8");
 
         MultiValueMap<String, String> body = new LinkedMultiValueMap<>();
         body.add("grant_type", "authorization_code");
-        body.add("client_id", "kakao_client_id");
-        body.add("redirect_uri", "kakao_redirect_uri");
+        body.add("client_id", kakao_client_id);
+        body.add("redirect_uri", kakao_redirect_uri);
         body.add("code", code);
 
         HttpEntity<MultiValueMap<String, String>> kakaoTokenRequest = new HttpEntity<>(body, headers);
