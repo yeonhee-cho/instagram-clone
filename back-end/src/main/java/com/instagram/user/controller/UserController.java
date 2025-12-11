@@ -4,12 +4,16 @@ import com.instagram.common.util.JwtUtil;
 import com.instagram.user.model.dto.LoginRequest;
 import com.instagram.user.model.dto.LoginResponse;
 import com.instagram.user.model.dto.User;
+import com.instagram.user.model.service.KakaoServiceImpl;
 import com.instagram.user.model.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+
+import java.util.HashMap;
+import java.util.Map;
 
 @Slf4j
 @RestController
@@ -21,6 +25,8 @@ public class UserController {
     // 토큰
     private final JwtUtil jwtUtil;
 //    private JwtUtil jwtUtil = new JwtUtil();
+
+    private final KakaoServiceImpl kakaoService;
 
     @PostMapping("/signup")
     public void signUp(@RequestBody User user) {
@@ -78,6 +84,42 @@ public class UserController {
             return ResponseEntity.ok(u);
         } catch (Exception e) {
             return ResponseEntity.status(500).body(null);
+        }
+    }
+
+    // 카카오 서비스
+    @PostMapping("/kakao")
+    public ResponseEntity<?> kakaoLogin(@RequestBody Map<String, String> data) {
+        String code = data.get("code");
+
+        String accessToken = kakaoService.getAccessToken(code);
+        if (accessToken == null) {
+            return ResponseEntity.status(400).body("카카오 토큰 발급 실패");
+        }
+
+        User kakaoUser = kakaoService.getKakaoUserInfo(accessToken);
+        if (kakaoUser == null) {
+            return ResponseEntity.status(400).body("카카오 유저 정보 조회 실패");
+        }
+
+        User existUser = userService.getUserByEmail(kakaoUser.getUserEmail());
+
+        if (existUser != null) {
+            String token = jwtUtil.generateToken(existUser.getUserId(), existUser.getUserEmail());
+
+            LoginResponse loginResponse = new LoginResponse();
+            loginResponse.setToken(token);
+            loginResponse.setUser(existUser);
+
+            log.info("카카오 로그인 성공: {}", existUser.getUserEmail());
+            return ResponseEntity.ok(loginResponse); // 200 OK
+        } else {
+            Map<String, Object> response = new HashMap<>();
+            response.put("message", "need_signup");
+            response.put("kakaoUser", kakaoUser);
+
+            log.info("카카오 로그인 - 미가입 회원: {}", kakaoUser.getUserEmail());
+            return ResponseEntity.status(202).body(response);
         }
     }
 }

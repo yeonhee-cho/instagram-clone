@@ -55,6 +55,19 @@ const LoginPage = () => {
         }
     };
 
+    const handleKakaoLogin = () => {
+        const API_KEY = process.env.REACT_APP_KAKAO_CLIENT_ID;
+        const REDIRECT_URI = process.env.REACT_APP_KAKAO_REDIRECT_URL;
+        console.log("✨ API_KEY : ", API_KEY);
+        console.log("REDIRECT_URI : ", REDIRECT_URI);
+        if(!API_KEY || !REDIRECT_URI) {
+            alert("✨ 카카오 설정 오류 : 환경변수를 확인해주세요.");
+            return;
+        }
+        const kakaoAuthUrl = `https://kauth.kakao.com/oauth/authorize?client_id=${API_KEY}&redirect_uri=${REDIRECT_URI}&response_type=code`;
+        window.location.href = kakaoAuthUrl;
+    };
+
     // Enter 키 입력 시 handleLogin 호출하는 함수
     const handleKeyPress = (e) => {
         if (e.key === 'Enter') {
@@ -102,6 +115,10 @@ const LoginPage = () => {
                     <button className="facebook-login">
                         Facebook으로 로그인
                     </button>
+
+                    <img src="/static/img/kakao_login_large_wide.png"
+                         onClick={handleKakaoLogin}
+                    />
 
                     <button className="forgot-password">
                         비밀번호를 잊으셨나요?

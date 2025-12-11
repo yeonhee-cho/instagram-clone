@@ -9590,3 +9590,1320 @@ This generated password is for development use only. Your security configuration
 2025-12-11 14:21:31.334  INFO 19764 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ===================================================================================
 2025-12-11 14:26:01.773  INFO 19764 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1]
 2025-12-11 14:56:01.779  INFO 19764 --- [MessageBroker-2] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 3, active threads = 1, queued tasks = 0, completed tasks = 2]
+2025-12-11 15:26:01.784  INFO 19764 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 3]
+2025-12-11 15:56:01.787  INFO 19764 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 0, completed tasks = 4]
+2025-12-11 16:05:55.835  INFO 19764 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-12-11 16:05:55.848  INFO 19764 --- [Thread-31] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-11 16:05:55.853  INFO 19764 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-11 16:05:55.856  INFO 19764 --- [Thread-31] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-12-11 16:05:55.857  INFO 19764 --- [Thread-31] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7b49ec47]]
+2025-12-11 16:05:55.857  INFO 19764 --- [Thread-31] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-12-11 16:05:55.864  INFO 19764 --- [Thread-31] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:05:55.871  INFO 19764 --- [Thread-31] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown initiated...
+2025-12-11 16:05:55.880  INFO 19764 --- [Thread-31] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown completed.
+2025-12-11 16:05:56.218  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Starting BackEndApplication using Java 21.0.7 with PID 19764 (E:\풀스택 조연희\instagram-clone\back-end\build\classes\java\main started by TJ in E:\풀스택 조연희\instagram-clone\back-end)
+2025-12-11 16:05:56.219  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-12-11 16:05:57.047  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-11 16:05:57.058  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2025-12-11 16:05:57.514  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9000 (http)
+2025-12-11 16:05:57.516  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-11 16:05:57.516  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-11 16:05:57.547  INFO 19764 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-11 16:05:57.547  INFO 19764 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1326 ms
+2025-12-11 16:05:57.848  INFO 19764 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-11 16:05:57.853  INFO 19764 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-11 16:05:57.871  INFO 19764 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-11 16:05:57.872  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Starting...
+2025-12-11 16:05:57.935  INFO 19764 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : MyHikariCP - Added connection org.postgresql.jdbc.PgConnection@4819ceae
+2025-12-11 16:05:57.935  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Start completed.
+2025-12-11 16:05:57.953  INFO 19764 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (MyHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-11 16:05:57.977  INFO 19764 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-11 16:05:57.977  INFO 19764 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:05:58.397  WARN 19764 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-11 16:05:59.340  WARN 19764 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 79854edf-8376-4cc1-bcdb-d407ee2f4c2f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-11 16:05:59.345  INFO 19764 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-11 16:06:00.060  WARN 19764 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-12-11 16:06:00.884  INFO 19764 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-11 16:06:00.992  INFO 19764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-12-11 16:06:01.023  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-12-11 16:06:01.023  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@376b47ce]]
+2025-12-11 16:06:01.024  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-12-11 16:06:01.026  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9000 (http) with context path '/'
+2025-12-11 16:06:01.037  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Started BackEndApplication in 4.935 seconds (process running for 11431.88)
+2025-12-11 16:06:01.039  INFO 19764 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-12-11 16:06:29.446  INFO 19764 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-12-11 16:06:29.447  INFO 19764 --- [Thread-35] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-11 16:06:29.451  INFO 19764 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-11 16:06:29.452  INFO 19764 --- [Thread-35] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-12-11 16:06:29.452  INFO 19764 --- [Thread-35] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@376b47ce]]
+2025-12-11 16:06:29.452  INFO 19764 --- [Thread-35] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-12-11 16:06:29.455  INFO 19764 --- [Thread-35] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:06:29.456  INFO 19764 --- [Thread-35] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown initiated...
+2025-12-11 16:06:29.461  INFO 19764 --- [Thread-35] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown completed.
+2025-12-11 16:06:29.608  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Starting BackEndApplication using Java 21.0.7 with PID 19764 (E:\풀스택 조연희\instagram-clone\back-end\build\classes\java\main started by TJ in E:\풀스택 조연희\instagram-clone\back-end)
+2025-12-11 16:06:29.608  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-12-11 16:06:30.241  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-11 16:06:30.251  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2025-12-11 16:06:30.658  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9000 (http)
+2025-12-11 16:06:30.658  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-11 16:06:30.659  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-11 16:06:30.684  INFO 19764 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-11 16:06:30.684  INFO 19764 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1075 ms
+2025-12-11 16:06:30.935  INFO 19764 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-11 16:06:30.939  INFO 19764 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-11 16:06:30.956  INFO 19764 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-11 16:06:30.957  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Starting...
+2025-12-11 16:06:31.156  INFO 19764 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : MyHikariCP - Added connection org.postgresql.jdbc.PgConnection@34cfdda4
+2025-12-11 16:06:31.156  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Start completed.
+2025-12-11 16:06:31.173  INFO 19764 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (MyHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-11 16:06:31.211  INFO 19764 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-11 16:06:31.212  INFO 19764 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:06:31.646  WARN 19764 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-11 16:06:31.752  WARN 19764 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: ef510ef6-bd4c-4895-b32e-728a2e9dba54
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-11 16:06:31.757  INFO 19764 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-11 16:06:32.453  WARN 19764 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-12-11 16:06:33.234  INFO 19764 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-11 16:06:33.330  INFO 19764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-12-11 16:06:33.361  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-12-11 16:06:33.361  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@3c924890]]
+2025-12-11 16:06:33.361  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-12-11 16:06:33.364  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9000 (http) with context path '/'
+2025-12-11 16:06:33.375  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Started BackEndApplication in 3.839 seconds (process running for 11464.218)
+2025-12-11 16:06:33.378  INFO 19764 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-12-11 16:06:34.797  INFO 19764 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-12-11 16:06:34.801  INFO 19764 --- [Thread-39] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-11 16:06:34.808  INFO 19764 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-11 16:06:34.810  INFO 19764 --- [Thread-39] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-12-11 16:06:34.810  INFO 19764 --- [Thread-39] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@3c924890]]
+2025-12-11 16:06:34.810  INFO 19764 --- [Thread-39] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-12-11 16:06:34.815  INFO 19764 --- [Thread-39] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:06:34.817  INFO 19764 --- [Thread-39] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown initiated...
+2025-12-11 16:06:34.824  INFO 19764 --- [Thread-39] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown completed.
+2025-12-11 16:06:34.923  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Starting BackEndApplication using Java 21.0.7 with PID 19764 (E:\풀스택 조연희\instagram-clone\back-end\build\classes\java\main started by TJ in E:\풀스택 조연희\instagram-clone\back-end)
+2025-12-11 16:06:34.923  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-12-11 16:06:35.374  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-11 16:06:35.380  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2025-12-11 16:06:35.725  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9000 (http)
+2025-12-11 16:06:35.726  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-11 16:06:35.727  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-11 16:06:35.753  INFO 19764 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-11 16:06:35.753  INFO 19764 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 829 ms
+2025-12-11 16:06:36.006  INFO 19764 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-11 16:06:36.010  INFO 19764 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-11 16:06:36.025  INFO 19764 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-11 16:06:36.027  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Starting...
+2025-12-11 16:06:36.151  INFO 19764 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : MyHikariCP - Added connection org.postgresql.jdbc.PgConnection@4756f653
+2025-12-11 16:06:36.152  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Start completed.
+2025-12-11 16:06:36.169  INFO 19764 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (MyHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-11 16:06:36.192  INFO 19764 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-11 16:06:36.192  INFO 19764 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:06:36.865  WARN 19764 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-11 16:06:36.968  WARN 19764 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 921bfd46-2fdd-4a19-84cc-78139c0a1d8a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-11 16:06:36.972  INFO 19764 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-11 16:06:37.570  WARN 19764 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-12-11 16:06:39.757  INFO 19764 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-11 16:06:40.487  INFO 19764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-12-11 16:06:40.525  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-12-11 16:06:40.525  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@23392b1f]]
+2025-12-11 16:06:40.525  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-12-11 16:06:40.528  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9000 (http) with context path '/'
+2025-12-11 16:06:40.539  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Started BackEndApplication in 5.656 seconds (process running for 11471.382)
+2025-12-11 16:06:40.541  INFO 19764 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-12-11 16:07:40.522  INFO 19764 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2025-12-11 16:08:09.703  INFO 19764 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-12-11 16:08:09.705  INFO 19764 --- [Thread-43] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-11 16:08:09.708  INFO 19764 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-11 16:08:09.709  INFO 19764 --- [Thread-43] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-12-11 16:08:09.709  INFO 19764 --- [Thread-43] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@23392b1f]]
+2025-12-11 16:08:09.709  INFO 19764 --- [Thread-43] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-12-11 16:08:09.711  INFO 19764 --- [Thread-43] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:08:09.713  INFO 19764 --- [Thread-43] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown initiated...
+2025-12-11 16:08:09.722  INFO 19764 --- [Thread-43] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown completed.
+2025-12-11 16:08:09.858  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Starting BackEndApplication using Java 21.0.7 with PID 19764 (E:\풀스택 조연희\instagram-clone\back-end\build\classes\java\main started by TJ in E:\풀스택 조연희\instagram-clone\back-end)
+2025-12-11 16:08:09.858  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-12-11 16:08:10.488  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-11 16:08:10.494  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2025-12-11 16:08:10.954  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9000 (http)
+2025-12-11 16:08:10.958  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-11 16:08:10.958  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-11 16:08:10.999  INFO 19764 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-11 16:08:10.999  INFO 19764 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1139 ms
+2025-12-11 16:08:11.241  INFO 19764 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-11 16:08:11.245  INFO 19764 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-11 16:08:11.253  INFO 19764 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-11 16:08:11.254  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Starting...
+2025-12-11 16:08:11.427  INFO 19764 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : MyHikariCP - Added connection org.postgresql.jdbc.PgConnection@39072321
+2025-12-11 16:08:11.427  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Start completed.
+2025-12-11 16:08:11.440  INFO 19764 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (MyHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-11 16:08:11.464  INFO 19764 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-11 16:08:11.464  INFO 19764 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:08:11.791  WARN 19764 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-11 16:08:12.703  WARN 19764 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: c716ab03-d1ad-47a7-9df0-b3623865247f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-11 16:08:12.710  INFO 19764 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-11 16:08:13.501  WARN 19764 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-12-11 16:08:14.420  INFO 19764 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-11 16:08:14.517  INFO 19764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-12-11 16:08:14.548  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-12-11 16:08:14.549  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5a33501a]]
+2025-12-11 16:08:14.549  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-12-11 16:08:14.551  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9000 (http) with context path '/'
+2025-12-11 16:08:14.561  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Started BackEndApplication in 4.76 seconds (process running for 11565.403)
+2025-12-11 16:08:14.562  INFO 19764 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-12-11 16:08:15.962  INFO 19764 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-12-11 16:08:15.963  INFO 19764 --- [Thread-47] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-11 16:08:15.967  INFO 19764 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-11 16:08:15.967  INFO 19764 --- [Thread-47] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-12-11 16:08:15.968  INFO 19764 --- [Thread-47] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5a33501a]]
+2025-12-11 16:08:15.968  INFO 19764 --- [Thread-47] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-12-11 16:08:15.970  INFO 19764 --- [Thread-47] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:08:15.970  INFO 19764 --- [Thread-47] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown initiated...
+2025-12-11 16:08:15.974  INFO 19764 --- [Thread-47] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown completed.
+2025-12-11 16:08:16.078  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Starting BackEndApplication using Java 21.0.7 with PID 19764 (E:\풀스택 조연희\instagram-clone\back-end\build\classes\java\main started by TJ in E:\풀스택 조연희\instagram-clone\back-end)
+2025-12-11 16:08:16.078  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-12-11 16:08:16.533  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-11 16:08:16.540  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2025-12-11 16:08:16.848  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9000 (http)
+2025-12-11 16:08:16.848  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-11 16:08:16.849  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-11 16:08:16.890  INFO 19764 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-11 16:08:16.890  INFO 19764 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 810 ms
+2025-12-11 16:08:17.123  INFO 19764 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-11 16:08:17.126  INFO 19764 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-11 16:08:17.134  INFO 19764 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-11 16:08:17.135  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Starting...
+2025-12-11 16:08:17.360  INFO 19764 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : MyHikariCP - Added connection org.postgresql.jdbc.PgConnection@7fc55829
+2025-12-11 16:08:17.360  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Start completed.
+2025-12-11 16:08:17.374  INFO 19764 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (MyHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-11 16:08:17.399  INFO 19764 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-11 16:08:17.399  INFO 19764 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:08:17.702  WARN 19764 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-11 16:08:17.820  WARN 19764 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 45eb4d89-413d-447d-9879-4c4bb4ae9516
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-11 16:08:17.825  INFO 19764 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-11 16:08:18.477  WARN 19764 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-12-11 16:08:19.225  INFO 19764 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-11 16:08:19.310  INFO 19764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-12-11 16:08:19.335  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-12-11 16:08:19.335  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@15cdd69d]]
+2025-12-11 16:08:19.335  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-12-11 16:08:19.338  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9000 (http) with context path '/'
+2025-12-11 16:08:19.347  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Started BackEndApplication in 3.31 seconds (process running for 11570.19)
+2025-12-11 16:08:19.348  INFO 19764 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-12-11 16:09:19.335  INFO 19764 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2025-12-11 16:10:48.333  INFO 19764 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-12-11 16:10:48.343  INFO 19764 --- [Thread-51] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-11 16:10:48.376  INFO 19764 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-11 16:10:48.377  INFO 19764 --- [Thread-51] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-12-11 16:10:48.377  INFO 19764 --- [Thread-51] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@15cdd69d]]
+2025-12-11 16:10:48.377  INFO 19764 --- [Thread-51] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-12-11 16:10:48.380  INFO 19764 --- [Thread-51] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:10:48.382  INFO 19764 --- [Thread-51] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown initiated...
+2025-12-11 16:10:48.443  INFO 19764 --- [Thread-51] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown completed.
+2025-12-11 16:10:48.721  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Starting BackEndApplication using Java 21.0.7 with PID 19764 (E:\풀스택 조연희\instagram-clone\back-end\build\classes\java\main started by TJ in E:\풀스택 조연희\instagram-clone\back-end)
+2025-12-11 16:10:48.721  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-12-11 16:10:49.217  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-11 16:10:49.224  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2025-12-11 16:10:49.536  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9000 (http)
+2025-12-11 16:10:49.551  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-11 16:10:49.551  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-11 16:10:49.578  INFO 19764 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-11 16:10:49.578  INFO 19764 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 855 ms
+2025-12-11 16:10:49.813  INFO 19764 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-11 16:10:49.817  INFO 19764 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-11 16:10:49.827  INFO 19764 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-11 16:10:49.829  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Starting...
+2025-12-11 16:10:49.895  INFO 19764 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : MyHikariCP - Added connection org.postgresql.jdbc.PgConnection@5da57201
+2025-12-11 16:10:49.895  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Start completed.
+2025-12-11 16:10:49.907  INFO 19764 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (MyHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-11 16:10:49.927  INFO 19764 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-11 16:10:49.928  INFO 19764 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:10:50.325  WARN 19764 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-11 16:10:50.428  WARN 19764 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 6c02a708-5928-487e-b251-f99c3fd14515
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-11 16:10:50.437  INFO 19764 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-11 16:10:51.104  WARN 19764 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-12-11 16:10:51.893  INFO 19764 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-11 16:10:51.991  INFO 19764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-12-11 16:10:52.018  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-12-11 16:10:52.019  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@d30e1e5]]
+2025-12-11 16:10:52.019  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-12-11 16:10:52.022  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9000 (http) with context path '/'
+2025-12-11 16:10:52.031  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Started BackEndApplication in 3.347 seconds (process running for 11722.874)
+2025-12-11 16:10:52.034  INFO 19764 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-12-11 16:10:53.447  INFO 19764 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-12-11 16:10:53.450  INFO 19764 --- [Thread-55] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-11 16:10:53.455  INFO 19764 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-11 16:10:53.456  INFO 19764 --- [Thread-55] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-12-11 16:10:53.456  INFO 19764 --- [Thread-55] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@d30e1e5]]
+2025-12-11 16:10:53.456  INFO 19764 --- [Thread-55] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-12-11 16:10:53.461  INFO 19764 --- [Thread-55] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:10:53.463  INFO 19764 --- [Thread-55] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown initiated...
+2025-12-11 16:10:53.469  INFO 19764 --- [Thread-55] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown completed.
+2025-12-11 16:10:53.561  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Starting BackEndApplication using Java 21.0.7 with PID 19764 (E:\풀스택 조연희\instagram-clone\back-end\build\classes\java\main started by TJ in E:\풀스택 조연희\instagram-clone\back-end)
+2025-12-11 16:10:53.561  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-12-11 16:10:53.984  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-11 16:10:53.991  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2025-12-11 16:10:54.321  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9000 (http)
+2025-12-11 16:10:54.322  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-11 16:10:54.322  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-11 16:10:54.346  INFO 19764 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-11 16:10:54.347  INFO 19764 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 785 ms
+2025-12-11 16:10:54.573  INFO 19764 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-11 16:10:54.575  INFO 19764 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-11 16:10:54.585  INFO 19764 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-11 16:10:54.586  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Starting...
+2025-12-11 16:10:54.650  INFO 19764 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : MyHikariCP - Added connection org.postgresql.jdbc.PgConnection@58f29a1d
+2025-12-11 16:10:54.650  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Start completed.
+2025-12-11 16:10:54.662  INFO 19764 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (MyHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-11 16:10:54.679  INFO 19764 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-11 16:10:54.680  INFO 19764 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:10:54.953  WARN 19764 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-11 16:10:55.049  WARN 19764 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: fc1ef2e8-af59-4fab-99d7-dd127ee38c15
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-11 16:10:55.055  INFO 19764 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-11 16:10:55.778  WARN 19764 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-12-11 16:10:56.561  INFO 19764 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-11 16:10:56.674  INFO 19764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-12-11 16:10:56.702  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-12-11 16:10:56.702  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@3f46ac7f]]
+2025-12-11 16:10:56.702  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-12-11 16:10:56.705  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9000 (http) with context path '/'
+2025-12-11 16:10:56.714  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Started BackEndApplication in 3.186 seconds (process running for 11727.557)
+2025-12-11 16:10:56.716  INFO 19764 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-12-11 16:11:12.533  INFO 19764 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-12-11 16:11:12.542  INFO 19764 --- [Thread-59] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-11 16:11:12.547  INFO 19764 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-11 16:11:12.552  INFO 19764 --- [Thread-59] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-12-11 16:11:12.552  INFO 19764 --- [Thread-59] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@3f46ac7f]]
+2025-12-11 16:11:12.552  INFO 19764 --- [Thread-59] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-12-11 16:11:12.555  INFO 19764 --- [Thread-59] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:11:12.556  INFO 19764 --- [Thread-59] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown initiated...
+2025-12-11 16:11:12.567  INFO 19764 --- [Thread-59] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown completed.
+2025-12-11 16:11:12.680  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Starting BackEndApplication using Java 21.0.7 with PID 19764 (E:\풀스택 조연희\instagram-clone\back-end\build\classes\java\main started by TJ in E:\풀스택 조연희\instagram-clone\back-end)
+2025-12-11 16:11:12.680  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-12-11 16:11:13.409  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-11 16:11:13.422  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 JPA repository interfaces.
+2025-12-11 16:11:13.972  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9000 (http)
+2025-12-11 16:11:13.972  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-11 16:11:13.972  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-11 16:11:13.997  INFO 19764 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-11 16:11:13.997  INFO 19764 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1313 ms
+2025-12-11 16:11:14.226  INFO 19764 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-11 16:11:14.229  INFO 19764 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-11 16:11:14.238  INFO 19764 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-11 16:11:14.238  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Starting...
+2025-12-11 16:11:14.298  INFO 19764 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : MyHikariCP - Added connection org.postgresql.jdbc.PgConnection@3aedab0c
+2025-12-11 16:11:14.298  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Start completed.
+2025-12-11 16:11:14.314  INFO 19764 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (MyHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-11 16:11:14.347  INFO 19764 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-11 16:11:14.347  INFO 19764 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:11:14.631  WARN 19764 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-11 16:11:14.737  WARN 19764 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: a694fdc4-f0ee-4e37-a5ed-4e64bda19fad
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-11 16:11:14.742  INFO 19764 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-11 16:11:15.367  WARN 19764 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-12-11 16:11:16.043  INFO 19764 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-11 16:11:16.126  INFO 19764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-12-11 16:11:16.162  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-12-11 16:11:16.162  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@76ad4ae7]]
+2025-12-11 16:11:16.162  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-12-11 16:11:16.165  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9000 (http) with context path '/'
+2025-12-11 16:11:16.175  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Started BackEndApplication in 3.543 seconds (process running for 11747.018)
+2025-12-11 16:11:16.177  INFO 19764 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-12-11 16:11:17.561  INFO 19764 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-12-11 16:11:17.562  INFO 19764 --- [Thread-63] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-11 16:11:17.566  INFO 19764 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-11 16:11:17.566  INFO 19764 --- [Thread-63] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-12-11 16:11:17.566  INFO 19764 --- [Thread-63] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@76ad4ae7]]
+2025-12-11 16:11:17.566  INFO 19764 --- [Thread-63] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-12-11 16:11:17.568  INFO 19764 --- [Thread-63] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:11:17.569  INFO 19764 --- [Thread-63] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown initiated...
+2025-12-11 16:11:17.571  INFO 19764 --- [Thread-63] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown completed.
+2025-12-11 16:11:17.650  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Starting BackEndApplication using Java 21.0.7 with PID 19764 (E:\풀스택 조연희\instagram-clone\back-end\build\classes\java\main started by TJ in E:\풀스택 조연희\instagram-clone\back-end)
+2025-12-11 16:11:17.650  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-12-11 16:11:18.076  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-11 16:11:18.082  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2025-12-11 16:11:18.391  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9000 (http)
+2025-12-11 16:11:18.392  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-11 16:11:18.392  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-11 16:11:18.468  INFO 19764 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-11 16:11:18.468  INFO 19764 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 816 ms
+2025-12-11 16:11:18.800  INFO 19764 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-11 16:11:18.803  INFO 19764 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-11 16:11:18.811  INFO 19764 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-11 16:11:18.811  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Starting...
+2025-12-11 16:11:18.875  INFO 19764 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : MyHikariCP - Added connection org.postgresql.jdbc.PgConnection@10ef6a16
+2025-12-11 16:11:18.875  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Start completed.
+2025-12-11 16:11:18.888  INFO 19764 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (MyHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-11 16:11:18.906  INFO 19764 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-11 16:11:18.906  INFO 19764 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:11:19.544  WARN 19764 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-11 16:11:19.677  WARN 19764 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: cc3ecb96-84b4-4879-b273-630604691a90
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-11 16:11:19.683  INFO 19764 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-11 16:11:20.410  WARN 19764 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-12-11 16:11:21.145  INFO 19764 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-11 16:11:21.233  INFO 19764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-12-11 16:11:21.259  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-12-11 16:11:21.259  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@56509322]]
+2025-12-11 16:11:21.259  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-12-11 16:11:21.262  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9000 (http) with context path '/'
+2025-12-11 16:11:21.271  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Started BackEndApplication in 3.647 seconds (process running for 11752.114)
+2025-12-11 16:11:21.272  INFO 19764 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-12-11 16:11:26.770  INFO 19764 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-12-11 16:11:26.772  INFO 19764 --- [Thread-67] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-11 16:11:26.775  INFO 19764 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-11 16:11:26.776  INFO 19764 --- [Thread-67] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-12-11 16:11:26.776  INFO 19764 --- [Thread-67] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@56509322]]
+2025-12-11 16:11:26.776  INFO 19764 --- [Thread-67] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-12-11 16:11:26.778  INFO 19764 --- [Thread-67] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:11:26.779  INFO 19764 --- [Thread-67] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown initiated...
+2025-12-11 16:11:26.782  INFO 19764 --- [Thread-67] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown completed.
+2025-12-11 16:11:26.928  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Starting BackEndApplication using Java 21.0.7 with PID 19764 (E:\풀스택 조연희\instagram-clone\back-end\build\classes\java\main started by TJ in E:\풀스택 조연희\instagram-clone\back-end)
+2025-12-11 16:11:26.929  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-12-11 16:11:27.849  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-11 16:11:27.865  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 0 JPA repository interfaces.
+2025-12-11 16:11:28.315  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9000 (http)
+2025-12-11 16:11:28.316  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-11 16:11:28.316  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-11 16:11:28.344  INFO 19764 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-11 16:11:28.344  INFO 19764 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1412 ms
+2025-12-11 16:11:28.592  INFO 19764 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-11 16:11:28.594  INFO 19764 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-11 16:11:28.603  INFO 19764 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-11 16:11:28.604  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Starting...
+2025-12-11 16:11:28.672  INFO 19764 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : MyHikariCP - Added connection org.postgresql.jdbc.PgConnection@599cbce1
+2025-12-11 16:11:28.672  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Start completed.
+2025-12-11 16:11:28.684  INFO 19764 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (MyHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-11 16:11:28.702  INFO 19764 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-11 16:11:28.702  INFO 19764 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:11:28.991  WARN 19764 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-11 16:11:29.095  WARN 19764 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 81758ced-2b3b-4314-87b7-f422a7936e33
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-11 16:11:29.105  INFO 19764 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-11 16:11:29.720  WARN 19764 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-12-11 16:11:30.627  INFO 19764 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-11 16:11:30.728  INFO 19764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-12-11 16:11:30.760  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-12-11 16:11:30.760  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5d89f5a3]]
+2025-12-11 16:11:30.760  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-12-11 16:11:30.765  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9000 (http) with context path '/'
+2025-12-11 16:11:30.775  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Started BackEndApplication in 3.887 seconds (process running for 11761.618)
+2025-12-11 16:11:30.778  INFO 19764 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-12-11 16:11:32.164  INFO 19764 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-12-11 16:11:32.165  INFO 19764 --- [Thread-71] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-11 16:11:32.168  INFO 19764 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-11 16:11:32.169  INFO 19764 --- [Thread-71] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-12-11 16:11:32.169  INFO 19764 --- [Thread-71] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5d89f5a3]]
+2025-12-11 16:11:32.169  INFO 19764 --- [Thread-71] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-12-11 16:11:32.172  INFO 19764 --- [Thread-71] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:11:32.172  INFO 19764 --- [Thread-71] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown initiated...
+2025-12-11 16:11:32.175  INFO 19764 --- [Thread-71] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown completed.
+2025-12-11 16:11:32.268  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Starting BackEndApplication using Java 21.0.7 with PID 19764 (E:\풀스택 조연희\instagram-clone\back-end\build\classes\java\main started by TJ in E:\풀스택 조연희\instagram-clone\back-end)
+2025-12-11 16:11:32.268  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-12-11 16:11:32.650  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-11 16:11:32.656  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2025-12-11 16:11:32.897  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9000 (http)
+2025-12-11 16:11:32.897  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-11 16:11:32.897  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-11 16:11:32.923  INFO 19764 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-11 16:11:32.923  INFO 19764 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 654 ms
+2025-12-11 16:11:33.173  INFO 19764 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-11 16:11:33.176  INFO 19764 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-11 16:11:33.184  INFO 19764 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-11 16:11:33.185  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Starting...
+2025-12-11 16:11:33.251  INFO 19764 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : MyHikariCP - Added connection org.postgresql.jdbc.PgConnection@264fb6ee
+2025-12-11 16:11:33.251  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Start completed.
+2025-12-11 16:11:33.263  INFO 19764 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (MyHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-11 16:11:33.280  INFO 19764 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-11 16:11:33.280  INFO 19764 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:11:33.561  WARN 19764 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-11 16:11:33.661  WARN 19764 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: fca7c606-6948-4f89-84ae-8ed972524cee
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-11 16:11:33.665  INFO 19764 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-11 16:11:34.298  WARN 19764 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-12-11 16:11:35.807  INFO 19764 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-11 16:11:35.930  INFO 19764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-12-11 16:11:35.988  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-12-11 16:11:35.989  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5d0c5394]]
+2025-12-11 16:11:35.989  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-12-11 16:11:35.994  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9000 (http) with context path '/'
+2025-12-11 16:11:36.005  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Started BackEndApplication in 3.764 seconds (process running for 11766.848)
+2025-12-11 16:11:36.011  INFO 19764 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-12-11 16:11:40.798  INFO 19764 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-12-11 16:11:40.801  INFO 19764 --- [Thread-75] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-11 16:11:40.805  INFO 19764 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-11 16:11:40.806  INFO 19764 --- [Thread-75] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-12-11 16:11:40.806  INFO 19764 --- [Thread-75] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5d0c5394]]
+2025-12-11 16:11:40.806  INFO 19764 --- [Thread-75] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-12-11 16:11:40.808  INFO 19764 --- [Thread-75] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:11:40.809  INFO 19764 --- [Thread-75] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown initiated...
+2025-12-11 16:11:40.811  INFO 19764 --- [Thread-75] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown completed.
+2025-12-11 16:11:40.926  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Starting BackEndApplication using Java 21.0.7 with PID 19764 (E:\풀스택 조연희\instagram-clone\back-end\build\classes\java\main started by TJ in E:\풀스택 조연희\instagram-clone\back-end)
+2025-12-11 16:11:40.926  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-12-11 16:11:41.510  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-11 16:11:41.518  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2025-12-11 16:11:42.184  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9000 (http)
+2025-12-11 16:11:42.185  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-11 16:11:42.185  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-11 16:11:42.229  INFO 19764 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-11 16:11:42.232  INFO 19764 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1303 ms
+2025-12-11 16:11:42.695  INFO 19764 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-11 16:11:42.698  INFO 19764 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-11 16:11:42.707  INFO 19764 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-11 16:11:42.707  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Starting...
+2025-12-11 16:11:42.770  INFO 19764 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : MyHikariCP - Added connection org.postgresql.jdbc.PgConnection@81c0f5d
+2025-12-11 16:11:42.770  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Start completed.
+2025-12-11 16:11:42.783  INFO 19764 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (MyHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-11 16:11:42.801  INFO 19764 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-11 16:11:42.801  INFO 19764 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:11:43.066  WARN 19764 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-11 16:11:43.162  WARN 19764 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 861e5bda-bb57-4c5b-b4c6-8019a22097b6
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-11 16:11:43.167  INFO 19764 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-11 16:11:43.794  WARN 19764 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-12-11 16:11:44.533  INFO 19764 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-11 16:11:44.624  INFO 19764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-12-11 16:11:44.650  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-12-11 16:11:44.650  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@16d9764e]]
+2025-12-11 16:11:44.650  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-12-11 16:11:44.653  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9000 (http) with context path '/'
+2025-12-11 16:11:44.662  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Started BackEndApplication in 3.764 seconds (process running for 11775.505)
+2025-12-11 16:11:44.664  INFO 19764 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-12-11 16:11:46.071  INFO 19764 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-12-11 16:11:46.072  INFO 19764 --- [Thread-79] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-11 16:11:46.075  INFO 19764 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-11 16:11:46.076  INFO 19764 --- [Thread-79] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-12-11 16:11:46.076  INFO 19764 --- [Thread-79] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@16d9764e]]
+2025-12-11 16:11:46.077  INFO 19764 --- [Thread-79] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-12-11 16:11:46.079  INFO 19764 --- [Thread-79] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:11:46.080  INFO 19764 --- [Thread-79] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown initiated...
+2025-12-11 16:11:46.084  INFO 19764 --- [Thread-79] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown completed.
+2025-12-11 16:11:46.187  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Starting BackEndApplication using Java 21.0.7 with PID 19764 (E:\풀스택 조연희\instagram-clone\back-end\build\classes\java\main started by TJ in E:\풀스택 조연희\instagram-clone\back-end)
+2025-12-11 16:11:46.187  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-12-11 16:11:46.611  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-11 16:11:46.619  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2025-12-11 16:11:46.868  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9000 (http)
+2025-12-11 16:11:46.868  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-11 16:11:46.868  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-11 16:11:46.892  INFO 19764 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-11 16:11:46.892  INFO 19764 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 703 ms
+2025-12-11 16:11:47.147  INFO 19764 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-11 16:11:47.151  INFO 19764 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-11 16:11:47.159  INFO 19764 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-11 16:11:47.160  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Starting...
+2025-12-11 16:11:47.224  INFO 19764 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : MyHikariCP - Added connection org.postgresql.jdbc.PgConnection@3de056b
+2025-12-11 16:11:47.224  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Start completed.
+2025-12-11 16:11:47.237  INFO 19764 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (MyHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-11 16:11:47.255  INFO 19764 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-11 16:11:47.256  INFO 19764 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:11:47.526  WARN 19764 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-11 16:11:47.690  WARN 19764 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 39fcfa28-04e0-495f-9fe9-a9f9b2432d43
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-11 16:11:47.694  INFO 19764 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-11 16:11:48.376  WARN 19764 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-12-11 16:11:49.182  INFO 19764 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-11 16:11:49.277  INFO 19764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-12-11 16:11:49.304  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-12-11 16:11:49.304  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1d240d96]]
+2025-12-11 16:11:49.304  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-12-11 16:11:49.308  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9000 (http) with context path '/'
+2025-12-11 16:11:49.318  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Started BackEndApplication in 3.161 seconds (process running for 11780.161)
+2025-12-11 16:11:49.319  INFO 19764 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-12-11 16:12:03.086  INFO 19764 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-12-11 16:12:03.087  INFO 19764 --- [Thread-83] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-11 16:12:03.090  INFO 19764 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-11 16:12:03.091  INFO 19764 --- [Thread-83] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-12-11 16:12:03.091  INFO 19764 --- [Thread-83] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1d240d96]]
+2025-12-11 16:12:03.091  INFO 19764 --- [Thread-83] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-12-11 16:12:03.093  INFO 19764 --- [Thread-83] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:12:03.094  INFO 19764 --- [Thread-83] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown initiated...
+2025-12-11 16:12:03.097  INFO 19764 --- [Thread-83] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown completed.
+2025-12-11 16:12:03.192  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Starting BackEndApplication using Java 21.0.7 with PID 19764 (E:\풀스택 조연희\instagram-clone\back-end\build\classes\java\main started by TJ in E:\풀스택 조연희\instagram-clone\back-end)
+2025-12-11 16:12:03.192  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-12-11 16:12:03.843  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-11 16:12:03.854  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2025-12-11 16:12:04.787  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9000 (http)
+2025-12-11 16:12:04.788  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-11 16:12:04.788  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-11 16:12:04.830  INFO 19764 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-11 16:12:04.830  INFO 19764 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1637 ms
+2025-12-11 16:12:05.246  INFO 19764 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-11 16:12:05.250  INFO 19764 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-11 16:12:05.267  INFO 19764 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-11 16:12:05.268  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Starting...
+2025-12-11 16:12:05.397  INFO 19764 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : MyHikariCP - Added connection org.postgresql.jdbc.PgConnection@3285c70b
+2025-12-11 16:12:05.397  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Start completed.
+2025-12-11 16:12:05.409  INFO 19764 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (MyHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-11 16:12:05.432  INFO 19764 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-11 16:12:05.432  INFO 19764 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:12:05.740  WARN 19764 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-11 16:12:05.887  WARN 19764 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 4359fcf1-b055-4cca-8b96-ce97a5326cec
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-11 16:12:05.892  INFO 19764 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-11 16:12:06.509  WARN 19764 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-12-11 16:12:07.231  INFO 19764 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-11 16:12:07.343  INFO 19764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-12-11 16:12:07.382  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-12-11 16:12:07.382  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@395627cf]]
+2025-12-11 16:12:07.382  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-12-11 16:12:07.385  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9000 (http) with context path '/'
+2025-12-11 16:12:07.397  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Started BackEndApplication in 4.233 seconds (process running for 11798.24)
+2025-12-11 16:12:07.399  INFO 19764 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-12-11 16:12:08.778  INFO 19764 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-12-11 16:12:08.783  INFO 19764 --- [Thread-87] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-11 16:12:08.793  INFO 19764 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-11 16:12:08.798  INFO 19764 --- [Thread-87] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-12-11 16:12:08.799  INFO 19764 --- [Thread-87] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@395627cf]]
+2025-12-11 16:12:08.799  INFO 19764 --- [Thread-87] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-12-11 16:12:08.807  INFO 19764 --- [Thread-87] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:12:08.809  INFO 19764 --- [Thread-87] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown initiated...
+2025-12-11 16:12:08.815  INFO 19764 --- [Thread-87] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown completed.
+2025-12-11 16:12:08.924  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Starting BackEndApplication using Java 21.0.7 with PID 19764 (E:\풀스택 조연희\instagram-clone\back-end\build\classes\java\main started by TJ in E:\풀스택 조연희\instagram-clone\back-end)
+2025-12-11 16:12:08.924  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-12-11 16:12:09.398  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-11 16:12:09.405  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2025-12-11 16:12:09.667  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9000 (http)
+2025-12-11 16:12:09.668  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-11 16:12:09.668  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-11 16:12:09.692  INFO 19764 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-11 16:12:09.692  INFO 19764 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 767 ms
+2025-12-11 16:12:09.933  INFO 19764 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-11 16:12:09.936  INFO 19764 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-11 16:12:09.946  INFO 19764 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-11 16:12:09.947  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Starting...
+2025-12-11 16:12:10.030  INFO 19764 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : MyHikariCP - Added connection org.postgresql.jdbc.PgConnection@2f2fac13
+2025-12-11 16:12:10.030  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Start completed.
+2025-12-11 16:12:10.044  INFO 19764 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (MyHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-11 16:12:10.065  INFO 19764 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-11 16:12:10.065  INFO 19764 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:12:10.366  WARN 19764 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-11 16:12:10.457  WARN 19764 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 35d8b3d1-4174-4630-866a-dca74b80db15
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-11 16:12:10.461  INFO 19764 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-11 16:12:11.131  WARN 19764 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-12-11 16:12:11.839  INFO 19764 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-11 16:12:11.924  INFO 19764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-12-11 16:12:11.949  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-12-11 16:12:11.950  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@79b67ae3]]
+2025-12-11 16:12:11.950  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-12-11 16:12:11.952  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9000 (http) with context path '/'
+2025-12-11 16:12:11.961  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Started BackEndApplication in 3.063 seconds (process running for 11802.805)
+2025-12-11 16:12:11.963  INFO 19764 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-12-11 16:12:27.213  INFO 19764 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-12-11 16:12:27.220  INFO 19764 --- [Thread-91] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-11 16:12:27.223  INFO 19764 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-11 16:12:27.223  INFO 19764 --- [Thread-91] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-12-11 16:12:27.223  INFO 19764 --- [Thread-91] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@79b67ae3]]
+2025-12-11 16:12:27.224  INFO 19764 --- [Thread-91] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-12-11 16:12:27.227  INFO 19764 --- [Thread-91] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:12:27.227  INFO 19764 --- [Thread-91] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown initiated...
+2025-12-11 16:12:27.231  INFO 19764 --- [Thread-91] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown completed.
+2025-12-11 16:12:27.345  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Starting BackEndApplication using Java 21.0.7 with PID 19764 (E:\풀스택 조연희\instagram-clone\back-end\build\classes\java\main started by TJ in E:\풀스택 조연희\instagram-clone\back-end)
+2025-12-11 16:12:27.346  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-12-11 16:12:28.597  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-11 16:12:28.639  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 0 JPA repository interfaces.
+2025-12-11 16:12:29.120  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9000 (http)
+2025-12-11 16:12:29.120  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-11 16:12:29.121  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-11 16:12:29.177  INFO 19764 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-11 16:12:29.177  INFO 19764 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1830 ms
+2025-12-11 16:12:29.524  INFO 19764 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-11 16:12:29.528  INFO 19764 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-11 16:12:29.536  INFO 19764 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-11 16:12:29.537  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Starting...
+2025-12-11 16:12:29.610  INFO 19764 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : MyHikariCP - Added connection org.postgresql.jdbc.PgConnection@1dfd728e
+2025-12-11 16:12:29.611  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Start completed.
+2025-12-11 16:12:29.622  INFO 19764 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (MyHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-11 16:12:29.642  INFO 19764 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-11 16:12:29.642  INFO 19764 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:12:29.960  WARN 19764 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-11 16:12:30.058  WARN 19764 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: e882bd52-8e82-42d9-9cf9-4689d71d4cde
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-11 16:12:30.063  INFO 19764 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-11 16:12:30.678  WARN 19764 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-12-11 16:12:31.420  INFO 19764 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-11 16:12:31.525  INFO 19764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-12-11 16:12:31.554  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-12-11 16:12:31.554  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5abb65ff]]
+2025-12-11 16:12:31.554  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-12-11 16:12:31.557  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9000 (http) with context path '/'
+2025-12-11 16:12:31.566  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Started BackEndApplication in 4.249 seconds (process running for 11822.41)
+2025-12-11 16:12:31.568  INFO 19764 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-12-11 16:12:32.971  INFO 19764 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-12-11 16:12:32.972  INFO 19764 --- [Thread-95] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-11 16:12:32.976  INFO 19764 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-11 16:12:32.978  INFO 19764 --- [Thread-95] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-12-11 16:12:32.978  INFO 19764 --- [Thread-95] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5abb65ff]]
+2025-12-11 16:12:32.978  INFO 19764 --- [Thread-95] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-12-11 16:12:32.980  INFO 19764 --- [Thread-95] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:12:32.981  INFO 19764 --- [Thread-95] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown initiated...
+2025-12-11 16:12:32.983  INFO 19764 --- [Thread-95] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown completed.
+2025-12-11 16:12:33.096  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Starting BackEndApplication using Java 21.0.7 with PID 19764 (E:\풀스택 조연희\instagram-clone\back-end\build\classes\java\main started by TJ in E:\풀스택 조연희\instagram-clone\back-end)
+2025-12-11 16:12:33.096  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-12-11 16:12:33.640  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-11 16:12:33.648  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2025-12-11 16:12:33.945  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9000 (http)
+2025-12-11 16:12:33.946  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-11 16:12:33.946  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-11 16:12:33.975  INFO 19764 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-11 16:12:33.975  INFO 19764 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 878 ms
+2025-12-11 16:12:34.214  INFO 19764 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-11 16:12:34.217  INFO 19764 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-11 16:12:34.224  INFO 19764 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-11 16:12:34.225  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Starting...
+2025-12-11 16:12:34.290  INFO 19764 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : MyHikariCP - Added connection org.postgresql.jdbc.PgConnection@3bc77a92
+2025-12-11 16:12:34.290  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Start completed.
+2025-12-11 16:12:34.302  INFO 19764 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (MyHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-11 16:12:34.318  INFO 19764 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-11 16:12:34.318  INFO 19764 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:12:34.670  WARN 19764 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-11 16:12:34.771  WARN 19764 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 14982740-b5eb-4365-a82d-207b9872c3d5
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-11 16:12:34.775  INFO 19764 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-11 16:12:35.375  WARN 19764 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-12-11 16:12:36.095  INFO 19764 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-11 16:12:36.180  INFO 19764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-12-11 16:12:36.208  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-12-11 16:12:36.208  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@715c05a2]]
+2025-12-11 16:12:36.208  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-12-11 16:12:36.211  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9000 (http) with context path '/'
+2025-12-11 16:12:36.220  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Started BackEndApplication in 3.154 seconds (process running for 11827.063)
+2025-12-11 16:12:36.221  INFO 19764 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-12-11 16:13:18.875  INFO 19764 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2025-12-11 16:13:18.877  INFO 19764 --- [Thread-99] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-11 16:13:18.880  INFO 19764 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-11 16:13:18.880  INFO 19764 --- [Thread-99] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-12-11 16:13:18.880  INFO 19764 --- [Thread-99] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@715c05a2]]
+2025-12-11 16:13:18.880  INFO 19764 --- [Thread-99] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-12-11 16:13:18.883  INFO 19764 --- [Thread-99] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:13:18.883  INFO 19764 --- [Thread-99] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown initiated...
+2025-12-11 16:13:18.886  INFO 19764 --- [Thread-99] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown completed.
+2025-12-11 16:13:19.019  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Starting BackEndApplication using Java 21.0.7 with PID 19764 (E:\풀스택 조연희\instagram-clone\back-end\build\classes\java\main started by TJ in E:\풀스택 조연희\instagram-clone\back-end)
+2025-12-11 16:13:19.019  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-12-11 16:13:19.504  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-11 16:13:19.513  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2025-12-11 16:13:20.177  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9000 (http)
+2025-12-11 16:13:20.178  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-11 16:13:20.178  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-11 16:13:20.213  INFO 19764 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-11 16:13:20.213  INFO 19764 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1192 ms
+2025-12-11 16:13:20.552  INFO 19764 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-11 16:13:20.555  INFO 19764 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-11 16:13:20.570  INFO 19764 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-11 16:13:20.571  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Starting...
+2025-12-11 16:13:20.634  INFO 19764 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : MyHikariCP - Added connection org.postgresql.jdbc.PgConnection@6bd42ebd
+2025-12-11 16:13:20.634  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Start completed.
+2025-12-11 16:13:20.646  INFO 19764 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (MyHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-11 16:13:20.663  INFO 19764 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-11 16:13:20.663  INFO 19764 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:13:21.028  WARN 19764 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-11 16:13:21.128  WARN 19764 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 465112dd-63db-45d9-9f50-59ac1042f855
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-11 16:13:21.133  INFO 19764 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-11 16:13:21.833  WARN 19764 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-12-11 16:13:22.599  INFO 19764 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-11 16:13:22.703  INFO 19764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-12-11 16:13:22.732  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-12-11 16:13:22.732  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4698dd7]]
+2025-12-11 16:13:22.732  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-12-11 16:13:22.735  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9000 (http) with context path '/'
+2025-12-11 16:13:22.746  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Started BackEndApplication in 3.755 seconds (process running for 11873.589)
+2025-12-11 16:13:22.748  INFO 19764 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-12-11 16:13:24.138  INFO 19764 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (2 additions, 0 deletions, 0 modifications)
+2025-12-11 16:13:24.140  INFO 19764 --- [Thread-103] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-11 16:13:24.144  INFO 19764 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-11 16:13:24.145  INFO 19764 --- [Thread-103] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-12-11 16:13:24.145  INFO 19764 --- [Thread-103] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4698dd7]]
+2025-12-11 16:13:24.145  INFO 19764 --- [Thread-103] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-12-11 16:13:24.148  INFO 19764 --- [Thread-103] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:13:24.149  INFO 19764 --- [Thread-103] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown initiated...
+2025-12-11 16:13:24.152  INFO 19764 --- [Thread-103] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown completed.
+2025-12-11 16:13:24.264  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Starting BackEndApplication using Java 21.0.7 with PID 19764 (E:\풀스택 조연희\instagram-clone\back-end\build\classes\java\main started by TJ in E:\풀스택 조연희\instagram-clone\back-end)
+2025-12-11 16:13:24.264  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-12-11 16:13:24.631  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-11 16:13:24.638  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2025-12-11 16:13:24.920  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9000 (http)
+2025-12-11 16:13:24.920  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-11 16:13:24.920  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-11 16:13:24.962  INFO 19764 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-11 16:13:24.962  INFO 19764 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 697 ms
+2025-12-11 16:13:25.205  INFO 19764 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-11 16:13:25.208  INFO 19764 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-11 16:13:25.217  INFO 19764 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-11 16:13:25.218  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Starting...
+2025-12-11 16:13:25.291  INFO 19764 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : MyHikariCP - Added connection org.postgresql.jdbc.PgConnection@104e3a36
+2025-12-11 16:13:25.291  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Start completed.
+2025-12-11 16:13:25.302  INFO 19764 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (MyHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-11 16:13:25.318  INFO 19764 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-11 16:13:25.318  INFO 19764 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:13:25.613  WARN 19764 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-11 16:13:25.703  WARN 19764 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 6313725a-a915-40d3-bfd0-44a4fe5dd02e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-11 16:13:25.708  INFO 19764 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-11 16:13:26.663  WARN 19764 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-12-11 16:13:27.510  INFO 19764 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-11 16:13:27.652  INFO 19764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-12-11 16:13:27.695  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-12-11 16:13:27.695  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1ba50b79]]
+2025-12-11 16:13:27.695  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-12-11 16:13:27.701  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9000 (http) with context path '/'
+2025-12-11 16:13:27.717  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Started BackEndApplication in 3.478 seconds (process running for 11878.56)
+2025-12-11 16:13:27.720  INFO 19764 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-12-11 16:13:30.106  INFO 19764 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2025-12-11 16:13:30.109  INFO 19764 --- [Thread-107] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-11 16:13:30.118  INFO 19764 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-11 16:13:30.119  INFO 19764 --- [Thread-107] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-12-11 16:13:30.120  INFO 19764 --- [Thread-107] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1ba50b79]]
+2025-12-11 16:13:30.120  INFO 19764 --- [Thread-107] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-12-11 16:13:30.122  INFO 19764 --- [Thread-107] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:13:30.123  INFO 19764 --- [Thread-107] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown initiated...
+2025-12-11 16:13:30.127  INFO 19764 --- [Thread-107] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown completed.
+2025-12-11 16:13:30.259  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Starting BackEndApplication using Java 21.0.7 with PID 19764 (E:\풀스택 조연희\instagram-clone\back-end\build\classes\java\main started by TJ in E:\풀스택 조연희\instagram-clone\back-end)
+2025-12-11 16:13:30.260  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-12-11 16:13:31.089  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-11 16:13:31.100  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2025-12-11 16:13:31.494  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9000 (http)
+2025-12-11 16:13:31.495  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-11 16:13:31.495  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-11 16:13:31.522  INFO 19764 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-11 16:13:31.522  INFO 19764 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1260 ms
+2025-12-11 16:13:31.805  INFO 19764 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-11 16:13:31.809  INFO 19764 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-11 16:13:31.817  INFO 19764 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-11 16:13:31.817  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Starting...
+2025-12-11 16:13:31.878  INFO 19764 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : MyHikariCP - Added connection org.postgresql.jdbc.PgConnection@1734c412
+2025-12-11 16:13:31.879  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Start completed.
+2025-12-11 16:13:31.892  INFO 19764 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (MyHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-11 16:13:31.910  INFO 19764 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-11 16:13:31.911  INFO 19764 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:13:32.259  WARN 19764 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-11 16:13:32.365  WARN 19764 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: bd8030ed-dcd5-4d45-89f9-c87f4bd9f18b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-11 16:13:32.369  INFO 19764 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-11 16:13:32.950  WARN 19764 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-12-11 16:13:33.669  INFO 19764 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-11 16:13:33.750  INFO 19764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-12-11 16:13:33.777  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-12-11 16:13:33.777  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4df6ed58]]
+2025-12-11 16:13:33.777  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-12-11 16:13:33.780  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9000 (http) with context path '/'
+2025-12-11 16:13:33.788  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Started BackEndApplication in 3.559 seconds (process running for 11884.632)
+2025-12-11 16:13:33.790  INFO 19764 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-12-11 16:13:35.180  INFO 19764 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (2 additions, 0 deletions, 0 modifications)
+2025-12-11 16:13:35.184  INFO 19764 --- [Thread-111] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-11 16:13:35.193  INFO 19764 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-11 16:13:35.195  INFO 19764 --- [Thread-111] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-12-11 16:13:35.195  INFO 19764 --- [Thread-111] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4df6ed58]]
+2025-12-11 16:13:35.195  INFO 19764 --- [Thread-111] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-12-11 16:13:35.203  INFO 19764 --- [Thread-111] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:13:35.205  INFO 19764 --- [Thread-111] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown initiated...
+2025-12-11 16:13:35.212  INFO 19764 --- [Thread-111] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown completed.
+2025-12-11 16:13:35.336  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Starting BackEndApplication using Java 21.0.7 with PID 19764 (E:\풀스택 조연희\instagram-clone\back-end\build\classes\java\main started by TJ in E:\풀스택 조연희\instagram-clone\back-end)
+2025-12-11 16:13:35.336  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-12-11 16:13:35.762  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-11 16:13:35.768  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2025-12-11 16:13:36.074  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9000 (http)
+2025-12-11 16:13:36.075  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-11 16:13:36.075  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-11 16:13:36.102  INFO 19764 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-11 16:13:36.102  INFO 19764 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 765 ms
+2025-12-11 16:13:36.355  INFO 19764 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-11 16:13:36.359  INFO 19764 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-11 16:13:36.369  INFO 19764 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-11 16:13:36.369  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Starting...
+2025-12-11 16:13:36.437  INFO 19764 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : MyHikariCP - Added connection org.postgresql.jdbc.PgConnection@149984a7
+2025-12-11 16:13:36.438  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Start completed.
+2025-12-11 16:13:36.450  INFO 19764 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (MyHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-11 16:13:36.469  INFO 19764 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-11 16:13:36.469  INFO 19764 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:13:36.755  WARN 19764 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-11 16:13:36.870  WARN 19764 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: a7e76001-c51e-4b42-85b5-a71c99b6c5c0
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-11 16:13:36.884  INFO 19764 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-11 16:13:37.493  WARN 19764 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-12-11 16:13:38.624  INFO 19764 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-11 16:13:38.770  INFO 19764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-12-11 16:13:38.831  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-12-11 16:13:38.832  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@2c2d670f]]
+2025-12-11 16:13:38.832  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-12-11 16:13:38.852  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9000 (http) with context path '/'
+2025-12-11 16:13:38.863  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Started BackEndApplication in 3.551 seconds (process running for 11889.707)
+2025-12-11 16:13:38.865  INFO 19764 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-12-11 16:13:56.864  INFO 19764 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2025-12-11 16:13:56.885  INFO 19764 --- [Thread-115] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-11 16:13:56.894  INFO 19764 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-11 16:13:56.896  INFO 19764 --- [Thread-115] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-12-11 16:13:56.896  INFO 19764 --- [Thread-115] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@2c2d670f]]
+2025-12-11 16:13:56.896  INFO 19764 --- [Thread-115] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-12-11 16:13:56.898  INFO 19764 --- [Thread-115] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:13:56.899  INFO 19764 --- [Thread-115] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown initiated...
+2025-12-11 16:13:56.912  INFO 19764 --- [Thread-115] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown completed.
+2025-12-11 16:13:57.101  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Starting BackEndApplication using Java 21.0.7 with PID 19764 (E:\풀스택 조연희\instagram-clone\back-end\build\classes\java\main started by TJ in E:\풀스택 조연희\instagram-clone\back-end)
+2025-12-11 16:13:57.101  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-12-11 16:13:58.057  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-11 16:13:58.186  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 0 JPA repository interfaces.
+2025-12-11 16:13:58.761  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9000 (http)
+2025-12-11 16:13:58.762  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-11 16:13:58.762  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-11 16:13:58.814  INFO 19764 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-11 16:13:58.814  INFO 19764 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1710 ms
+2025-12-11 16:13:59.219  INFO 19764 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-11 16:13:59.221  INFO 19764 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-11 16:13:59.231  INFO 19764 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-11 16:13:59.231  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Starting...
+2025-12-11 16:13:59.298  INFO 19764 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : MyHikariCP - Added connection org.postgresql.jdbc.PgConnection@1d34b63a
+2025-12-11 16:13:59.299  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Start completed.
+2025-12-11 16:13:59.312  INFO 19764 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (MyHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-11 16:13:59.328  INFO 19764 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-11 16:13:59.328  INFO 19764 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:13:59.750  WARN 19764 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-11 16:13:59.882  WARN 19764 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: b58dd287-5893-4b55-bd6f-bd1eecfdea4e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-11 16:13:59.886  INFO 19764 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-11 16:14:00.793  WARN 19764 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-12-11 16:14:01.537  INFO 19764 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-11 16:14:01.635  INFO 19764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-12-11 16:14:01.666  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-12-11 16:14:01.666  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@74323dd]]
+2025-12-11 16:14:01.666  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-12-11 16:14:01.669  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9000 (http) with context path '/'
+2025-12-11 16:14:01.679  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Started BackEndApplication in 4.657 seconds (process running for 11912.522)
+2025-12-11 16:14:01.680  INFO 19764 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-12-11 16:14:03.568  INFO 19764 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (2 additions, 0 deletions, 0 modifications)
+2025-12-11 16:14:03.570  INFO 19764 --- [Thread-119] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-11 16:14:03.572  INFO 19764 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-11 16:14:03.573  INFO 19764 --- [Thread-119] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-12-11 16:14:03.573  INFO 19764 --- [Thread-119] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@74323dd]]
+2025-12-11 16:14:03.573  INFO 19764 --- [Thread-119] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-12-11 16:14:03.575  INFO 19764 --- [Thread-119] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:14:03.576  INFO 19764 --- [Thread-119] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown initiated...
+2025-12-11 16:14:03.580  INFO 19764 --- [Thread-119] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown completed.
+2025-12-11 16:14:03.708  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Starting BackEndApplication using Java 21.0.7 with PID 19764 (E:\풀스택 조연희\instagram-clone\back-end\build\classes\java\main started by TJ in E:\풀스택 조연희\instagram-clone\back-end)
+2025-12-11 16:14:03.708  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-12-11 16:14:04.140  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-11 16:14:04.148  INFO 19764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2025-12-11 16:14:04.422  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9000 (http)
+2025-12-11 16:14:04.423  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-11 16:14:04.423  INFO 19764 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-11 16:14:04.452  INFO 19764 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-11 16:14:04.452  INFO 19764 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 743 ms
+2025-12-11 16:14:04.673  INFO 19764 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-11 16:14:04.677  INFO 19764 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-11 16:14:04.684  INFO 19764 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-11 16:14:04.685  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Starting...
+2025-12-11 16:14:04.846  INFO 19764 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : MyHikariCP - Added connection org.postgresql.jdbc.PgConnection@24e88834
+2025-12-11 16:14:04.847  INFO 19764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Start completed.
+2025-12-11 16:14:04.859  INFO 19764 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (MyHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-11 16:14:04.874  INFO 19764 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-11 16:14:04.874  INFO 19764 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:14:05.241  WARN 19764 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-11 16:14:05.351  WARN 19764 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 9990ccae-6cfc-418f-b9af-ffaa57adc083
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-11 16:14:05.356  INFO 19764 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-11 16:14:07.514  WARN 19764 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-12-11 16:14:08.319  INFO 19764 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-11 16:14:08.396  INFO 19764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-12-11 16:14:08.420  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-12-11 16:14:08.421  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@537cc6e3]]
+2025-12-11 16:14:08.421  INFO 19764 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-12-11 16:14:08.423  INFO 19764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9000 (http) with context path '/'
+2025-12-11 16:14:08.432  INFO 19764 --- [restartedMain] com.instagram.BackEndApplication         : Started BackEndApplication in 4.749 seconds (process running for 11919.275)
+2025-12-11 16:14:08.434  INFO 19764 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-12-11 16:15:08.419  INFO 19764 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2025-12-11 16:22:02.884  INFO 19764 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-11 16:22:02.887  INFO 19764 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-11 16:22:02.889  INFO 19764 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-12-11 16:22:02.889  INFO 19764 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@537cc6e3]]
+2025-12-11 16:22:02.889  INFO 19764 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-12-11 16:22:02.891  INFO 19764 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:22:02.892  INFO 19764 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown initiated...
+2025-12-11 16:22:02.896  INFO 19764 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown completed.
+2025-12-11 16:22:06.486  INFO 16380 --- [restartedMain] com.instagram.BackEndApplication         : Starting BackEndApplication using Java 21.0.7 with PID 16380 (E:\풀스택 조연희\instagram-clone\back-end\build\classes\java\main started by TJ in E:\풀스택 조연희\instagram-clone\back-end)
+2025-12-11 16:22:06.488  INFO 16380 --- [restartedMain] com.instagram.BackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-12-11 16:22:06.541  INFO 16380 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-12-11 16:22:06.541  INFO 16380 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-12-11 16:22:07.939  INFO 16380 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-11 16:22:07.963  INFO 16380 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 JPA repository interfaces.
+2025-12-11 16:22:09.191  INFO 16380 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9000 (http)
+2025-12-11 16:22:09.213  INFO 16380 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-11 16:22:09.213  INFO 16380 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-11 16:22:09.288  INFO 16380 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-11 16:22:09.288  INFO 16380 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2747 ms
+2025-12-11 16:22:09.756  INFO 16380 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-11 16:22:09.846  INFO 16380 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-12-11 16:22:09.889  INFO 16380 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-11 16:22:10.255  INFO 16380 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-11 16:22:10.292  INFO 16380 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Starting...
+2025-12-11 16:22:10.481  INFO 16380 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : MyHikariCP - Added connection org.postgresql.jdbc.PgConnection@2c941115
+2025-12-11 16:22:10.483  INFO 16380 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Start completed.
+2025-12-11 16:22:10.627  INFO 16380 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (MyHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-11 16:22:11.104  INFO 16380 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-11 16:22:11.111  INFO 16380 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:22:11.845  WARN 16380 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-11 16:22:11.986  WARN 16380 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 1a78bd5c-32a0-40ac-ae2b-a9361a13a616
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-11 16:22:12.003  INFO 16380 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-11 16:22:13.109  WARN 16380 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-12-11 16:22:14.253  INFO 16380 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-11 16:22:14.389  INFO 16380 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-12-11 16:22:14.460  INFO 16380 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-12-11 16:22:14.461  INFO 16380 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@59465ac7]]
+2025-12-11 16:22:14.462  INFO 16380 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-12-11 16:22:14.480  INFO 16380 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9000 (http) with context path '/'
+2025-12-11 16:22:14.495  INFO 16380 --- [restartedMain] com.instagram.BackEndApplication         : Started BackEndApplication in 8.725 seconds (process running for 9.563)
+2025-12-11 16:22:14.864  INFO 16380 --- [RMI TCP Connection(3)-192.168.0.69] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-11 16:22:14.864  INFO 16380 --- [RMI TCP Connection(3)-192.168.0.69] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-11 16:22:14.867  INFO 16380 --- [RMI TCP Connection(3)-192.168.0.69] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-12-11 16:22:41.185  INFO 16380 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : [UserController.kakaoLogin()] 요청 / ip : 127.0.0.1
+2025-12-11 16:22:41.185  INFO 16380 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : [UserController.kakaoLogin()] 요청 / ip : 127.0.0.1
+2025-12-11 16:22:41.186  INFO 16380 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getAccessToken() 서비스 호출 ==========
+2025-12-11 16:22:41.186  INFO 16380 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getAccessToken() 서비스 호출 ==========
+2025-12-11 16:22:41.186  INFO 16380 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Parameter : [LoNCBETNAlydKYxlEO4pZcx2PNambNJ_7Bd7-Rm77whEbWNt6LYF4gAAAAQKFwYuAAABmwxKZOQBl6J2VXah6g]
+2025-12-11 16:22:41.186  INFO 16380 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Parameter : [LoNCBETNAlydKYxlEO4pZcx2PNambNJ_7Bd7-Rm77whEbWNt6LYF4gAAAAQKFwYuAAABmwxKZOQBl6J2VXah6g]
+2025-12-11 16:22:41.608 ERROR 16380 --- [http-nio-9000-exec-1] c.i.user.model.service.KakaoServiceImpl  : 카카오 토큰 발급 실패: 400  on POST request for "https://kauth.kakao.com/oauth/token": "{"error":"invalid_grant","error_description":"Redirect URI mismatch.","error_code":"KOE303"}"
+2025-12-11 16:22:41.608 ERROR 16380 --- [http-nio-9000-exec-2] c.i.user.model.service.KakaoServiceImpl  : 카카오 토큰 발급 실패: 400  on POST request for "https://kauth.kakao.com/oauth/token": "{"error":"invalid_grant","error_description":"Redirect URI mismatch.","error_code":"KOE303"}"
+2025-12-11 16:22:41.608  INFO 16380 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : Running Time : 421ms
+2025-12-11 16:22:41.608  INFO 16380 --- [http-nio-9000-exec-1] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 16:22:41.608  INFO 16380 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : Running Time : 421ms
+2025-12-11 16:22:41.608  INFO 16380 --- [http-nio-9000-exec-2] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 16:23:14.446  INFO 16380 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2025-12-11 16:24:23.829  INFO 16380 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : [UserController.kakaoLogin()] 요청 / ip : 127.0.0.1
+2025-12-11 16:24:23.830  INFO 16380 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getAccessToken() 서비스 호출 ==========
+2025-12-11 16:24:23.830  INFO 16380 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Parameter : [nVuaP2iNR6zHCwyBcvGJ74pzc4joBtcN4NzL3vco19CQuncdW_y38QAAAAQKFwAnAAABmwxL9ukq17LwdM8QAg]
+2025-12-11 16:24:23.829  INFO 16380 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : [UserController.kakaoLogin()] 요청 / ip : 127.0.0.1
+2025-12-11 16:24:23.830  INFO 16380 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : ========== KakaoServiceImpl.getAccessToken() 서비스 호출 ==========
+2025-12-11 16:24:23.831  INFO 16380 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : Parameter : [nVuaP2iNR6zHCwyBcvGJ74pzc4joBtcN4NzL3vco19CQuncdW_y38QAAAAQKFwAnAAABmwxL9ukq17LwdM8QAg]
+2025-12-11 16:24:23.874 ERROR 16380 --- [http-nio-9000-exec-6] c.i.user.model.service.KakaoServiceImpl  : 카카오 토큰 발급 실패: 400  on POST request for "https://kauth.kakao.com/oauth/token": "{"error":"invalid_grant","error_description":"Redirect URI mismatch.","error_code":"KOE303"}"
+2025-12-11 16:24:23.874  INFO 16380 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : Running Time : 44ms
+2025-12-11 16:24:23.874  INFO 16380 --- [http-nio-9000-exec-6] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 16:24:23.874 ERROR 16380 --- [http-nio-9000-exec-5] c.i.user.model.service.KakaoServiceImpl  : 카카오 토큰 발급 실패: 400  on POST request for "https://kauth.kakao.com/oauth/token": "{"error":"invalid_grant","error_description":"Redirect URI mismatch.","error_code":"KOE303"}"
+2025-12-11 16:24:23.874  INFO 16380 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : Running Time : 43ms
+2025-12-11 16:24:23.874  INFO 16380 --- [http-nio-9000-exec-5] com.instagram.common.aop.LoggingAspect   : ===================================================================================
+2025-12-11 16:27:14.601  INFO 16380 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2025-12-11 16:27:14.606  INFO 16380 --- [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-11 16:27:14.610  INFO 16380 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-11 16:27:14.613  INFO 16380 --- [Thread-5] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-12-11 16:27:14.614  INFO 16380 --- [Thread-5] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@59465ac7]]
+2025-12-11 16:27:14.614  INFO 16380 --- [Thread-5] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-12-11 16:27:14.621  INFO 16380 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:27:14.625  INFO 16380 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown initiated...
+2025-12-11 16:27:14.641  INFO 16380 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown completed.
+2025-12-11 16:27:14.923  INFO 16380 --- [restartedMain] com.instagram.BackEndApplication         : Starting BackEndApplication using Java 21.0.7 with PID 16380 (E:\풀스택 조연희\instagram-clone\back-end\build\classes\java\main started by TJ in E:\풀스택 조연희\instagram-clone\back-end)
+2025-12-11 16:27:14.923  INFO 16380 --- [restartedMain] com.instagram.BackEndApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-12-11 16:27:15.418  INFO 16380 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-11 16:27:15.426  INFO 16380 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2025-12-11 16:27:15.938  INFO 16380 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9000 (http)
+2025-12-11 16:27:15.940  INFO 16380 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-11 16:27:15.941  INFO 16380 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-11 16:27:15.974  INFO 16380 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-11 16:27:15.974  INFO 16380 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1049 ms
+2025-12-11 16:27:16.289  INFO 16380 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-11 16:27:16.292  INFO 16380 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-11 16:27:16.306  INFO 16380 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-11 16:27:16.308  INFO 16380 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Starting...
+2025-12-11 16:27:16.482  INFO 16380 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : MyHikariCP - Added connection org.postgresql.jdbc.PgConnection@500ec941
+2025-12-11 16:27:16.483  INFO 16380 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Start completed.
+2025-12-11 16:27:16.496  INFO 16380 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (MyHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-11 16:27:16.521  INFO 16380 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-11 16:27:16.521  INFO 16380 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:27:16.881  WARN 16380 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-11 16:27:16.999  WARN 16380 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 51324d3a-5073-4f39-938e-14698c4e8b03
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-12-11 16:27:17.006  INFO 16380 --- [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-12-11 16:27:18.209  WARN 16380 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-12-11 16:27:19.078  INFO 16380 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-11 16:27:19.171  INFO 16380 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-12-11 16:27:19.205  INFO 16380 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-12-11 16:27:19.205  INFO 16380 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5bd6ec64]]
+2025-12-11 16:27:19.206  INFO 16380 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-12-11 16:27:19.214  INFO 16380 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9000 (http) with context path '/'
+2025-12-11 16:27:19.225  INFO 16380 --- [restartedMain] com.instagram.BackEndApplication         : Started BackEndApplication in 4.352 seconds (process running for 314.293)
+2025-12-11 16:27:19.228  INFO 16380 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-12-11 16:27:19.582  INFO 16380 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-11 16:27:19.601  INFO 16380 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-11 16:27:19.602  INFO 16380 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-12-11 16:27:19.603  INFO 16380 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5bd6ec64]]
+2025-12-11 16:27:19.603  INFO 16380 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2025-12-11 16:27:19.606  INFO 16380 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-11 16:27:19.607  INFO 16380 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown initiated...
+2025-12-11 16:27:19.612  INFO 16380 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : MyHikariCP - Shutdown completed.
