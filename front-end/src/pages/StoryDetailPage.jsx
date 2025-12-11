@@ -30,6 +30,7 @@ const StoryDetailPage = () => {
     const [loading, setLoading] = useState(true);
     const [message, setMessage] = useState('');
     const [showDeleteModal, setShowDeleteModal] = useState(false);
+    const currentUser = JSON.parse(localStorage.getItem('user')); // 현재 아이디 확인
 
     // userId -> storyId
     useEffect(() => {
@@ -80,6 +81,7 @@ const StoryDetailPage = () => {
     }
 
     useEffect(() => {
+
         if(!stories) return;
 
         const duration = 5000;
@@ -97,6 +99,7 @@ const StoryDetailPage = () => {
         }, intervalTime);
 
         return () => clearInterval(timer);
+
 
         // 현재 바라보고 있는 페이지 번호가 변경되거나, 배열이 추가 될 때 감지
     }, [currentIndex, stories]);
@@ -138,20 +141,22 @@ const StoryDetailPage = () => {
 
     // 현재 스토리에 따른 유저정보와 스토리 아이디
     const currentStory = stories[currentIndex];
-    console.log("currentStory", currentStory);
+    // console.log("currentStory", currentStory);
 
     const handleDeleteStory = async () => {
         try {
             // deleteStory 에 현재 스토리 스토리 아이디 전달하여 스토리 삭제 sel delete 처리하기
+            await apiService.deleteStory(currentStory.storyId);
             // controller deleteStory
 
-            //삭제 후 스토리 목록에서 제거
-            const updateStories = stories.filter((_,index) => index !== currentIndex);
+            // 삭제 후 스토리 목록에서 제거
+            const updateStories = stories.filter((_, index) => index !== currentIndex);
             // 스토리 없을 경우
             if(updateStories.length === 0){
                 // 마지막 스토리를 삭제한 경우 피드로 이동
+                navigate('/feed');
             } else {
-                if(currentIndex >= updateStories.length){
+                if (currentIndex >= updateStories.length) {
                     setCurrentIndex(updateStories.length - 1);
                 }
                 setStories(updateStories);
@@ -204,13 +209,21 @@ const StoryDetailPage = () => {
                         </span>
                     </div>
                     <div className="story-header-actions">
-                        <MoreHorizontal color="white"
-                                        className="story-icon"
-                                        onClick={(e)=> {
-                                            e.stopPropagation();
-                                            setShowDeleteModal(true);
-                                        }}
-                        />
+                        {/*본인일 때만 스토리 삭제 아이콘 보이기*/}
+                        {/*아니 왜 똑같이 나오는데 userId는 못 쓰는가!!!!*/}
+                        {
+                            currentUser.userId === currentStory.userId ?
+                            (
+                                <MoreHorizontal color="white"
+                                                className="story-icon"
+                                                onClick={(e)=> {
+                                                    e.stopPropagation();
+                                                    setShowDeleteModal(true);
+                                                }}
+                                />
+                            ) : ""
+                        }
+
                         <X
                             color="white"
                             className="story-icon"
@@ -226,7 +239,7 @@ const StoryDetailPage = () => {
                      alt="story"
                      className="story-main-image" />
 
-                {currentIndex > 0 &&(
+                {currentIndex > 0 && (
                     <div className="story-nav-hint story-nev-left">
                         <ChevronLeft color="white" size={32} />
                     </div>

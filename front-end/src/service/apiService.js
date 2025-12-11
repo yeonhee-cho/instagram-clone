@@ -247,13 +247,20 @@ const apiService = {
         return res.data;
     },
 
+    // 스토리 삭제
+    deleteStory: async (storyId) => {
+        const res = await api.delete(`stories/${storyId}`);
+        console.log("✅ 스토리 삭제", res.data);
+        return res.date;
+    },
+
     // ===== 사용자 API =====
 
     // 사용자 프로필 조회
     // GET /users/:userId
     getUser: async (userId) => {
         const res = await api.get(`/users/${userId}`);
-        console.log("✅ 사용자 프로필 조회", res.data)
+        console.log("✅ 사용자 프로필 조회", res.data);
         return res.data;
     },
 
@@ -261,7 +268,7 @@ const apiService = {
     // GET /users/:userId/posts
     getUserPosts: async (userId) => {
         const res = await api.get(`/users/${userId}/post`);
-        console.log("✅ 사용자 게시물 조회", res.data)
+        console.log("✅ 사용자 게시물 조회", res.data);
         return res.data;
     },
 
@@ -279,7 +286,7 @@ const apiService = {
                 }
             });
 
-            console.log("✅ updateProfile", res.data)
+            console.log("✅ updateProfile", res.data);
 
             if(res.data) {
                 // 2. res.data가 있으면 localStorage.setItem('user', JSON.stringify(res.data))

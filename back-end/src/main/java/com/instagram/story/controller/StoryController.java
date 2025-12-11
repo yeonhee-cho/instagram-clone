@@ -3,8 +3,10 @@ package com.instagram.story.controller;
 import com.instagram.common.util.JwtUtil;
 import com.instagram.story.model.dto.Story;
 import com.instagram.story.model.service.StoryService;
+import com.instagram.user.model.dto.User;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -62,6 +64,17 @@ public class StoryController {
         } catch (Exception e){
             e.printStackTrace(); // 에러 메세지
             return ResponseEntity.badRequest().body("❌ 스토리 조회 실패 : "+ e.getMessage());
+        }
+    }
+
+    @DeleteMapping("{storyId}")
+    public ResponseEntity<?> deleteStory(@PathVariable("storyId") int storyId){
+        try{
+            storyService.deleteStory(storyId);
+            return ResponseEntity.ok(true); // ? 라서 "성공"을 써도 됨
+
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body("스토리 삭제 실패 : " + e.getMessage());
         }
     }
 }

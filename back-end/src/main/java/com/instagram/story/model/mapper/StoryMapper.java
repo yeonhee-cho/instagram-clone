@@ -13,6 +13,10 @@ public interface StoryMapper {
     // 업데이트
     void updateStoryImage(int storyId, String storyImage);
 
+    // 스토리 삭제
+    Story selectStoryById(int storyId);
+    void deleteStory(int storyId);
+
     // 모든 스토리 조회
     List<Story> selectAllStories();
 

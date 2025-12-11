@@ -35,6 +35,13 @@
         ORDER BY created_at ASC
     </select>
 
+    <!-- 스토리 아이디 스토리 조회 -->
+    <select id="selectStoryById" resultType="Story" parameterType="int">
+        SELECT story_id, user_id, story_image, created_at
+        FROM stories
+        WHERE story_id = #{storyId}
+    </select>
+
     <!-- 스토리 이미지 업데이트 -->
     <update id="updateStoryImage" parameterType="Story">
         UPDATE stories
@@ -44,10 +51,9 @@
     <!--
         만료된 스토리
         - 삭제? vs 안 보이고 보관?
+    -->
     <delete id="deleteStory" parameterType="int">
-        DELETE
-        FROM stories
+        DELETE FROM stories
         WHERE story_id = #{storyId}
     </delete>
-    -->
 </mapper>
