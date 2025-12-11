@@ -56,7 +56,7 @@ public class StoryController {
     public ResponseEntity<?> getStory(@PathVariable("userId") int userId){
         log.info("시작");
         try{
-            Story a = storyService.getStoriesByUserId(userId);
+            List<Story> a = storyService.getStoriesByUserId(userId);
             log.info("a: {}", a);
             return ResponseEntity.ok(a);
         } catch (Exception e){

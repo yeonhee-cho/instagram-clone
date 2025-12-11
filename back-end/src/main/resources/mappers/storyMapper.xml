@@ -32,7 +32,7 @@
         SELECT story_id, user_id, story_image, created_at, expires_at, user_name, user_avatar
         FROM active_stories_view
         WHERE user_id = #{userId}
-        ORDER BY created_at DESC
+        ORDER BY created_at ASC
     </select>
 
     <!-- 스토리 이미지 업데이트 -->
@@ -43,11 +43,11 @@
     </update>
     <!--
         만료된 스토리
-        - 삭제? 안 보이고 보관?
-        <delete id="deleteStory" parameterType="int">
-            DELETE
-            FROM stories
-            WHERE story_id = #{storyId}
-        </delete>
+        - 삭제? vs 안 보이고 보관?
+    <delete id="deleteStory" parameterType="int">
+        DELETE
+        FROM stories
+        WHERE story_id = #{storyId}
+    </delete>
     -->
 </mapper>

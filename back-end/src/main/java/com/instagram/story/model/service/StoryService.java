@@ -14,7 +14,7 @@ public interface StoryService {
     List<Story> getAllStories();
 
     // 특정 사용자 조회
-    Story getStoriesByUserId(int userId);
+    List<Story> getStoriesByUserId(int userId);
 
     void deleteExpiredStories();
 }

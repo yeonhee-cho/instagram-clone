@@ -76,18 +76,43 @@ const FeedPage = () => {
         } finally {
             setLoading(false);
         }
+
         try {
             const storiesData = await apiService.getStories();
             console.log('📌 storiesData', storiesData);
-            setStories(storiesData);
+            // 사용자 별로 그룹화 시켜주기
+            const gu = groupStoriesByUser(storiesData);
+            setStories(gu);
         } catch (err) {
             console.error("❌ stories 피드 불러오기 실패:", err);
             alert("stories 피드를 불러오는 중 문제가 발생했습니다.");
         } finally {
             setLoading(false);
         }
-
     };
+
+    // 사용자 별로 스토리를 그룹화하고 가장 최근 스토리만 반환
+    // select * from stories 에서 가져 온 모든 데이터를 storiesData 변수에 전달
+    const groupStoriesByUser = (storiesData) => {
+        const userStoriesMap = {}; // 추후 유저들을 그룹화해서 담을 변수 공간
+        // db에서 가져온 모든 스토리를 for 문으로 순회
+        storiesData.forEach(story => {
+            const userId = story.userId; // 각 스토리에 해당하는 유저 아이디를 변수이름에 담아
+            // 해당 사용자의 첫 스토리이거나, 더 최근 스토리인 경우 스토리 유저 나열 순서를 맨 앞으로 이동
+            // 정렬 = 알고리즘
+            if (!userStoriesMap[userId]
+                ||
+                new Date(story.createdAt) > new Date(userStoriesMap[userId].createdAt)
+            ) {
+                userStoriesMap[userId] = story;
+            }
+        });
+        // 위에서 그룹화한 userStoriesMap 유저들을 배열로 변환하고 최신순으로 정렬
+        // 정렬 = 알고리즘
+        return Object.values(userStoriesMap).sort((a, b) =>
+            new Date(b.createdAt) - new Date(a.createdAt)
+        );
+    }
 
     // toggleLike 함수를 작성하세요
     // 1. postId와 isLiked를 파라미터로 받음
@@ -168,7 +193,7 @@ const FeedPage = () => {
                     <div className="stories-container">
                         <div className="stories-wrapper">
                             {stories.map((story) => (
-                                <div key={story.storyId} className="story-item">
+                                <div key={story.userId} className="story-item">
                                     <div className="story-avatar-wrapper">
                                         <img src={getImageUrl(story.userAvatar)}
                                              className="story-avatar"
