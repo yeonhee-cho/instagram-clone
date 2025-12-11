@@ -221,10 +221,14 @@ const apiService = {
     },
 
     getStory : async (userId) => {
-        console.log("getStory");
-        const res = await api.get(`/stories/user/${userId}`);
-        console.log('✅ stories.data,userId', res.data);
-        return res.data;
+        try {
+            console.log("getStory");
+            const res = await api.get(`/stories/user/${userId}`);
+            console.log('✅ stories.data,userId', res.data);
+            return res.data;
+        } catch (err) {
+            console.error("❌ 스토리 조회 에러 : ", err.response?.data || err.message);
+        }
     },
 
     // 스토리 작성

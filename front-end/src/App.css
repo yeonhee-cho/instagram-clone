@@ -871,6 +871,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
 }
 
 .story-user-avatar {
@@ -922,6 +923,7 @@ body {
     padding: 10px 20px;
     color: white;
     font-size: 14px;
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
 }
 .story-message-input::placeholder { color: white; opacity: 0.8; }
 .story-message-input:focus { outline: none; border-color: white; }

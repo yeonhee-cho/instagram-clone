@@ -7,6 +7,13 @@
 <mapper namespace="com.instagram.story.model.mapper.StoryMapper">
     <!-- 스토리 생성 -->
     <!-- ! 자동 생성 하면 story_id 안 넣어줘도 됨 ! -->
+    <!--
+    NOTE
+    story_id 를 작성할 경우 클라이언트가 작성한 스토리 아이디를 넘겨준다.
+    그런데 프론트엔드에서 백엔드로 받아 온 스토리 아이디가 없고, story_id 측이 int 인 경우
+    story_id 값은 null 대신 0 값이 자동으로 추가
+    따라서 story_id 값을 제거하고 자동으로 번호 설정되도록 해주기!
+    -->
     <insert id="insertStory" parameterType="Story" useGeneratedKeys="true" keyProperty="storyId" keyColumn="story_id">
         INSERT INTO stories (user_id,story_image,created_at,expires_at)
         VALUES (#{userId},#{storyImage},CURRENT_TIMESTAMP,CURRENT_TIMESTAMP + INTERVAL '24 hours')

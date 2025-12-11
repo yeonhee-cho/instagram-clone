@@ -93,7 +93,7 @@ const StoryDetailPage = () => {
                             {storyData.userName}
                         </span>
                         <span className="story-time">
-                            {formatDate(storyData.createdAt)}
+                            {formatDate(storyData.createdAt, 'relative')}
                         </span>
                     </div>
                     <div className="story-header-actions">
@@ -116,8 +116,7 @@ const StoryDetailPage = () => {
                         <input
                             type="text"
                             placeholder="메시지 보내기..."
-                            className="story-message-input"
-                        />
+                            className="story-message-input"/>
                     </div>
                     <Heart color="white"
                            className="story-icon" />
