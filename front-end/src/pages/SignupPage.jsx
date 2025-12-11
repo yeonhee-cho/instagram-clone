@@ -42,6 +42,11 @@ const SignupPage = () => {
     useEffect(() => {
         if(location.state?.email) {
             // 카카오에서 넘어 온 정보로 email username fullname 작성하기
+            const kakaoUser = location.state;
+            console.log("kakaoUser", kakaoUser)
+            setEmail(kakaoUser.email);
+            setUsername(kakaoUser.name);
+            setFullName(kakaoUser.name);
         }
     }, []);
 
@@ -147,6 +152,8 @@ const SignupPage = () => {
                             onChange={(e) => setEmail(e.target.value)}
                             onKeyPress={handleKeyPress}
                             autoComplete="email"
+                            disabled={location.state}
+                            readOnly={location.state}
                         />
                         <input className="login-input"
                                type="text"
@@ -155,6 +162,8 @@ const SignupPage = () => {
                                onChange={(e) => setFullName(e.target.value)}
                                onKeyPress={handleKeyPress}
                                autoComplete="name"
+                               disabled={location.state}
+                               readOnly={location.state}
                         />
                         <input className="login-input"
                                type="text"
@@ -163,6 +172,8 @@ const SignupPage = () => {
                                onChange={(e) => setUsername(e.target.value)}
                                onKeyPress={handleKeyPress}
                                autoComplete="username"
+                               disabled={location.state}
+                               readOnly={location.state}
                         />
                         <input className="login-input"
                                type="password"
