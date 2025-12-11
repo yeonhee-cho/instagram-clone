@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.instagram.user.model.dto.User;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -19,14 +20,22 @@ import org.springframework.web.client.RestTemplate;
 @Service
 @RequiredArgsConstructor
 public class KakaoServiceImpl {
+    // import org.springframework.beans.factory.annotation.Value;
+    @Value("${kakao_client_id}")
+    private String kakao_client_id;
+
+    @Value("${kakao_redirect_uri}")
+    private String kakao_redirect_uri;
+
+    @Value("${kakao_client_secret}")
     public String getAccessToken(String code) {
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-type", "application/x-www-form-urlencoded;charset=utf-8");
 
         MultiValueMap<String, String> body = new LinkedMultiValueMap<>();
         body.add("grant_type", "authorization_code");
-        body.add("client_id", "6592547ba1f4d03e2b1460d728146293");
-        body.add("redirect_uri", "http://localhost:3000/auth/kakao/callback");
+        body.add("client_id", "kakao_client_id");
+        body.add("redirect_uri", "kakao_redirect_uri");
         body.add("code", code);
 
         HttpEntity<MultiValueMap<String, String>> kakaoTokenRequest = new HttpEntity<>(body, headers);
