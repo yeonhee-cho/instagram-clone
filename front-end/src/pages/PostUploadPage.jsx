@@ -12,6 +12,7 @@ import apiService from '../service/apiService';
 import { ArrowLeft, Image } from 'lucide-react';
 import {getFilteredFile, FILTER_OPTIONS} from "../service/filterService";
 import Header from "../components/Header";
+import MentionInput from "../components/MentionInput";
 
 /* 필요에 따라 소비자가 업로드 한 이미지를 리사이즈 처리화 해야할 수 있다. 
 * 예) 10mb 이상의 이미지를 올리면 8mb 이하의 이미지로 사이즈 축소, 크기 축소*/
@@ -209,11 +210,11 @@ const PostUploadPage = () => {
                                           className="upload-caption-input"
                                 />
                                 */}
-                                <textarea placeholder="문구를 입력하세요... (@로 사용자 태그)"
-                                          value={caption}
-                                          onChange={(e) => setCaption(e.target.value)}
-                                          rows={4}
-                                          className="upload-caption-input"
+                                <MentionInput
+                                    value={caption}
+                                    onChange={setCaption}
+                                    placeholder="문구를 입력하세요... (@로 사용자 태그)"
+                                    rows={4}
                                 />
                                 {/* 글자 수 표시 (예: 0/2,200) */}
                                 <div className="upload-caption-content">

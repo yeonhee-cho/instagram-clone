@@ -164,13 +164,6 @@ const FeedPage = () => {
 
     };
 
-    // handleLogout 함수
-    const handleLogout = () => {
-        // 1. window.confirm으로 로그아웃 확인
-        // 2. 확인하면 apiService.logout() 호출
-        if(window.confirm('로그아웃 하시겠습니까?')) apiService.logout();
-    };
-
     // loading이 true면 "로딩 중..." 표시
     if (loading) {
         return (
@@ -194,14 +187,20 @@ const FeedPage = () => {
                     <div className="stories-container">
                         <div className="stories-wrapper">
                             {stories.map((story) => (
-                                <div key={story.userId} className="story-item">
-                                    <div className="story-avatar-wrapper">
+                                <div key={story.userId}
+                                     className="story-item"
+                                     onClick={() => navigate(`/story/detail/${story.userId}`)}
+                                >
+                                    <div className="story-avatar-wrapper"
+                                         key={story.id}
+                                    >
                                         <img src={getImageUrl(story.userAvatar)}
                                              className="story-avatar"
-                                             onClick={() => {navigate(`/story/detail/${story.userId}`)}}
                                         />
                                     </div>
-                                    <span className="story-username">{story.userName}</span>
+                                    <span className="story-username">
+                                        {story.userName}
+                                    </span>
                                 </div>
                             ))}
                         </div>
@@ -216,7 +215,6 @@ const FeedPage = () => {
                                 <div className="post-user-info">
                                     <img src={getImageUrl(post.userAvatar)}
                                          className="post-user-avatar"
-                                         onClick={() => {navigate(`/myfeed`)}}
                                     />
                                     <span className="post-username">{post.userName}</span>
                                 </div>
@@ -246,8 +244,9 @@ const FeedPage = () => {
                                     <span className="post-caption-username">{post.userName}</span>
 
                                     {/* MentionText */}
-                                    <MentionText text={post.postCaption} />
+                                    <MentionText text={post.postCaption}/>
                                 </div>
+
                                 {post.commentCount > 0 && (
                                     <button className="post-comments-btn">
                                         댓글{post.commentCount}개 모두 보기
