@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import { Grid, Bookmark, Settings } from 'lucide-react';
-import {useNavigate, useParams} from "react-router-dom";
 import apiService from "../service/apiService";
+import {useNavigate, useParams} from "react-router-dom";
 import {getImageUrl} from "../service/commonService";
 
 /*
@@ -30,9 +30,12 @@ const MyFeedPage = () => {
         setLoading(true);
         try {
             const currentUser = JSON.parse(localStorage.getItem('user'));
+            console.log("currentUser", currentUser);
             const userId = currentUser.userId;
+            console.log("userId", userId);
 
             if(!userId) return navigate('/login');
+
             /*
             NOTE
             불필요한 게시물을 모두 가져온 후 필터 작업을 진행해야해서
@@ -46,6 +49,11 @@ const MyFeedPage = () => {
             const allPosts = await apiService.getPost(userId);
             setPosts(allPosts);
             console.log("allPosts : ", allPosts);
+
+            setUser({
+                userAvatar: currentUser.userAvatar,
+                userName: currentUser.userName
+            })
         } catch (err) {
             console.log(err);
             alert("데이터를 불러오는데 실패했습니다.");
@@ -54,6 +62,9 @@ const MyFeedPage = () => {
         }
     }
 
+    if(loading) return (
+        <div>로딩중</div>
+    )
     return (
         <div className="feed-container">
             <Header type="feed" />
