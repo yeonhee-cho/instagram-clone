@@ -56,4 +56,37 @@
         FROM users
         WHERE user_id = #{userId}
     </delete>
+
+    <!-- 유저 이름으로 검색 -->
+    <!--
+        1. id: searchUsersByUserName
+        2. parameterType: String
+        3. resultType: User
+        4. LIKE 검색 사용 (CONCAT 함수 활용)
+        5. user_name 기준 오름차순 정렬
+        6. 최대 10개만 조회 (LIMIT 사용)
+        7. 비밀번호 제외하고 필요한 컬럼만 SELECT
+    -->
+    <select id="searchUsersByUserName" parameterType="String" resultType="User">
+        SELECT user_name, user_id, user_email, user_fullname, user_avatar
+        FROM users
+        WHERE user_name LIKE CONCAT('%', #{query}, '%')
+        ORDER BY user_fullname
+        LIMIT 10
+
+    </select>
+
+    <!-- 유저네임으로 정확히 일치하는 유저 조회 -->
+    <!--
+        1. id: selectUserByUserNameExact
+        2. parameterType: String
+        3. resultType: User
+        4. WHERE user_name = #{userName} 조건 사용
+        5. 모든 컬럼 조회
+    -->
+    <select id="selectUserByUserNameExact" parameterType="String" resultType="User">
+        SELECT user_name, user_id, user_email, user_fullname, user_avatar
+        FROM users
+        WHERE user_name = #{userName}
+    </select>
 </mapper>

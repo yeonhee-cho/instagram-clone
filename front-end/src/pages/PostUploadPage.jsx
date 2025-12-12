@@ -192,11 +192,24 @@ const PostUploadPage = () => {
                                     {user.userName}
                                 </div>
 
-                                {/* textarea로 캡션 입력 */}
-                                {/* placeholder: "문구를 입력하세요..." */}
-                                {/* value: caption */}
-                                {/* onChange: setCaption */}
+                                {/*
+                                    1. 기존 textarea 주석 처리
+                                    2. <MentionInput /> 사용
+                                    3. props 전달:
+                                       - value={caption}
+                                       - onChange={setCaption}
+                                       - placeholder="문구를 입력하세요... (@로 사용자 태그)"
+                                       - rows={4}
+                                */}
+                                {/*
                                 <textarea placeholder="문구를 입력하세요."
+                                          value={caption}
+                                          onChange={(e) => setCaption(e.target.value)}
+                                          rows={4}
+                                          className="upload-caption-input"
+                                />
+                                */}
+                                <textarea placeholder="문구를 입력하세요... (@로 사용자 태그)"
                                           value={caption}
                                           onChange={(e) => setCaption(e.target.value)}
                                           rows={4}

@@ -119,7 +119,7 @@ const apiService = {
         return res.data;
     },
 
-    // TODO: 로그아웃 함수
+    // 로그아웃 함수
     // localStorage에서 token과 user 제거하고 /login으로 이동
     logout: () => {
         localStorage.removeItem('token');
@@ -303,7 +303,32 @@ const apiService = {
         } catch (err) {
             return Promise.reject(err);
         }
-    }
+    },
+
+    // TODO 1: 유저 검색 API 호출 함수 구현
+    // GET /api/users/search?q={query}
+    searchUsers: async (query) => {
+        // 요구사항:
+        // 1. query가 없으면 빈 배열 반환
+        // 2. api.get()을 사용하여 `/users/search?q=${query}` 호출
+        // 3. 성공 시 res.data 반환
+        // 4. 에러 발생 시 콘솔에 로그 출력 후 빈 배열 반환
+
+        // 여기에 코드 작성
+
+    },
+
+    // TODO 2: 유저네임으로 유저 조회 API 호출 함수 구현
+    // GET /api/users/username/{username}
+    getUserByUsername: async (username) => {
+        // 요구사항:
+        // 1. api.get()을 사용하여 `/users/username/${username}` 호출
+        // 2. 성공 시 res.data 반환
+        // 3. 에러 발생 시 콘솔에 로그 출력 후 null 반환
+
+        // 여기에 코드 작성
+
+    },
 };
 
 export default apiService;

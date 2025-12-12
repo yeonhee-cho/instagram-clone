@@ -14,6 +14,7 @@ import apiService from '../service/apiService';
 import { Heart, MessageCircle, Send, Bookmark, MoreHorizontal } from 'lucide-react';
 import Header from "../components/Header";
 import {getImageUrl} from "../service/commonService";
+import MentionText from "../components/MentionText";
 
 /*
 피드 페이지에서 Heart 를 클릭하면 좋아요 수 증가
@@ -243,7 +244,9 @@ const FeedPage = () => {
 
                                 <div className="post-caption">
                                     <span className="post-caption-username">{post.userName}</span>
-                                    {post.postCaption}
+
+                                    {/* MentionText */}
+                                    <MentionText text={post.postCaption} />
                                 </div>
                                 {post.commentCount > 0 && (
                                     <button className="post-comments-btn">
