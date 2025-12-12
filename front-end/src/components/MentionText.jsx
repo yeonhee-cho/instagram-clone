@@ -56,7 +56,8 @@ const MentionText = ({ text, className = '' }) => {
         e.stopPropagation();
         try {
             // 2. apiService.getUserByUsername(username) 호출
-            const u = apiService.getUserByUsername(username);
+            const u = await apiService.getUserByUsername(username);
+            console.log("멘션 클릭 핸들러 구현 u", u);
             // 3. user가 존재하고 userId가 있으면 navigate로 이동
             //    `/myfeed?userId=${user.userId}` 또는 적절한 경로
             if(u && u.userId) {
@@ -64,7 +65,7 @@ const MentionText = ({ text, className = '' }) => {
             }
         } catch (err) {
             // 4. 에러 발생 시 콘솔에 로그 출력
-            console.err("유저 찾기 실패 : ", err);
+            console.err("❌ 유저 찾기 실패 : ", err);
         }
     };
 

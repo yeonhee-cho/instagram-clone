@@ -331,6 +331,7 @@ const apiService = {
         try {
             // 1. api.get()을 사용하여 `/users/username/${username}` 호출
             const res = await api.get(`/users/username/${username}`);
+            console.log("유저네임으로 유저 조회", res.data);
             // 2. 성공 시 res.data 반환
             return res.data;
         } catch (err) {

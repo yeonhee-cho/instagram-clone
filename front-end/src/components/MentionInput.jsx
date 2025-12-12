@@ -159,6 +159,7 @@ const MentionInput = ({ value, onChange, placeholder, rows = 4 }) => {
 
     }, []);
 
+    // commend -> 이동 예정
     const highlightMentions = (text) => {
         // console.log("textarea 전체 텍스트 : ", text);
         // const mentionRegex = /@(\w+)/g; // 영문 정규식

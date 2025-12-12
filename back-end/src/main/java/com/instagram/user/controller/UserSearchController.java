@@ -37,6 +37,7 @@ public class UserSearchController {
     public ResponseEntity<User> getUserByUsername(@PathVariable String userName) {
         try {
             User u = userService.getUserByUsername(userName);
+            log.info("유저네임으로 조회 user: {}", u);
 
             if(u == null){
                 return ResponseEntity.notFound().build();
