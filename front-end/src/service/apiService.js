@@ -141,15 +141,22 @@ const apiService = {
     // GET /posts/:postId
     // user or my 추가
     getUserPost: async (userId) => {
-        const res = await api.get(`/posts/${userId}`);
+        const res = await api.get(`/posts/user/${userId}`);
         console.log('✅ 특정 게시물 조회', res.data);
 
         return res.data;
     },
 
+    // getMyPost: async (userId) => {
+    //     const res = await api.get(`/posts/my/${userId}`);
+    //     console.log('✅ 특정 게시물 조회', res.data);
+    //
+    //     return res.data;
+    // },
+
     // 단순 getPost 사용
     getPost : async (postId) => {
-        const res = await api.get(`/posts/user/${postId}`);
+        const res = await api.get(`/posts/${postId}`);
         return res.data;
     },
 
@@ -198,23 +205,33 @@ const apiService = {
 
     // ===== 댓글 API =====
 
-    // TODO: 댓글 목록 조회
+    // 댓글 목록 조회
     // GET /posts/:postId/comments
     getComments: async (postId) => {
-        // TODO: API 호출을 완성하세요
+        console.log("댓글 목록 조회");
+        const res = await api.get(`/posts/${postId}/comments`);
+        console.log("댓글 목록 조회 res.data", res.data);
+        return res.data;
     },
 
-    // TODO: 댓글 작성
+    // 댓글 작성
     // POST /posts/:postId/comments
     // body: { commentContent }
     createComment: async (postId, commentContent) => {
-        // TODO: API 호출을 완성하세요
+        const res = await api.post(`/posts/${postId}/comments`, {
+            commentContent : commentContent,
+        });
+        // console.log("✅ 댓글 작성 res.data", res.data);
+        return res.data;
     },
 
-    // TODO: 댓글 삭제
+    // 댓글 삭제
     // DELETE /comments/:commentId
     deleteComment: async (commentId) => {
-        // TODO: API 호출을 완성하세요
+        console.log("댓글 삭제", commentId);
+        const res = await api.delete(`/comments/${commentId}`);
+        console.log("댓글 삭제 res.data", res.data);
+        return res.data;
     },
 
     // ===== 스토리 API =====

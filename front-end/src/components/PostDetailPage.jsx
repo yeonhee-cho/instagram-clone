@@ -1,6 +1,6 @@
 import Header from "./Header";
 import {getImageUrl} from "../service/commonService";
-import {Bookmark, Heart, MessageCircle, Send} from "lucide-react";
+import {Bookmark, Heart, MessageCircle, Send, Trash2} from "lucide-react";
 import MentionText from "./MentionText";
 import React, {useEffect, useState} from "react";
 import apiService from "../service/apiService";
@@ -9,17 +9,59 @@ import PostOptionsMenu from "./PostOptionsMenu";
 
 const PostDetailPage = () => {
     const {postId} = useParams();
+    const {commentId} = useParams();
     const [post, setPost] = useState(null);
     const [loading, setLoading] = useState(true);
     const [selectedPost, setSelectedPost] = useState(null);
     const navigate = useNavigate();
 
+    const [comments, setComments] = useState([]);
+    const [commentText,setCommentText] = useState('');
+
     const currentUser = JSON.parse(localStorage.getItem("user") ||'[]');
 
     useEffect(() => {
         loadFeedData();
+        loadComments();
     }, []);
 
+    const loadComments = async () => {
+        try {
+            setLoading(false);
+            const commentData = await apiService.getComments(postId);
+            setComments(commentData.comments || []);
+        } catch (err) {
+            console.error(err);
+            setLoading(true);
+            setComments([]);
+            alert("댓글을 불러오는 중 문제가 발생했습니다.");
+        }
+    };
+
+    const handleDeleteComment = async (commentId) => {
+        try {
+            console.log(commentId)
+            await apiService.deleteComment(commentId);
+            alert("댓글이 삭제되었습니다.");
+            loadComments();
+        } catch(err) {
+            alert("댓글 삭제에 실패했습니다.");
+        }
+    };
+
+    const handleCommentSubmit = async (postId) => {
+        if (!commentText.trim()) return;
+        
+        try {
+            const r = await apiService.createComment(postId, commentText);
+            console.log("r", r);
+            setCommentText('');
+            loadComments();
+        } catch (e) {
+            console.log(e)
+            alert("댓글 작성 실패");
+        }
+    };
 
     const loadFeedData = async () => {
         setLoading(true);
@@ -197,6 +239,34 @@ const PostDetailPage = () => {
                             {/* MentionText */}
                             <MentionText text={post.postCaption}/>
                         </div>
+                        <div className="comments-section">
+                            {comments.length === 0 ? (
+                                <div className="comments-empty">
+                                    첫 번째 댓글을 남겨보세요!
+                                </div>
+                            ):(
+                                comments.map((comment, i)=> (
+                                    <div key={i} className="comment-item">
+                                        <img className="comment-avatar" src={getImageUrl(post.userAvatar)} />
+                                        <div className="comment-content">
+                                            <div className="comment-text">
+                                                <span className="comment-username"></span>
+                                                <MentionText text={comment.commentContent} />
+                                            </div>
+                                            <div className="comment-time">
+                                                {comment.createdAt}
+                                            </div>
+                                        </div>
+                                        {currentUser.userId === comment.userId &&(
+                                            <Trash2 size={16}
+                                                    className="comment-delete-btn"
+                                                    onClick={() => handleDeleteComment(comment.commentId)}
+                                            />
+                                        )}
+                                    </div>
+                                ))
+                            )}
+                        </div>
 
                         {post.commentCount > 0 && (
                             <button className="post-comments-btn">
@@ -206,6 +276,20 @@ const PostDetailPage = () => {
                         <div className="post-time">
                             {post.createdAt ||'방금 전'}
                         </div>
+                    </div>
+                    <div className="comment-input-container">
+                        <input className="comment-input"
+                               value={commentText}
+                               onChange={e => setCommentText(e.target.value)}
+                               placeholder="댓글 달기..."
+                        />
+                        <button className="comment-post-btn"
+                                onClick={() => handleCommentSubmit(post.postId)}
+                                disabled={!commentText.trim()}
+                                style={{opacity: commentText.trim() ? 1 : 0.3}}
+                        >
+                            게시
+                        </button>
                     </div>
                 </article>
             </div>

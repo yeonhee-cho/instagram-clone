@@ -61,7 +61,7 @@ public class PostController {
         return ResponseEntity.ok(posts);
     }
 
-    @GetMapping("/{userId}")
+    @GetMapping("/user/{userId}")
     public ResponseEntity<List<Post>> getAllPostsByUserId(@RequestHeader("Authorization") String authHeader,
                                                           @PathVariable int userId){
         try {
@@ -74,7 +74,7 @@ public class PostController {
             return ResponseEntity.badRequest().build();
         }
     }
-    @GetMapping("/user/{postId}")
+    @GetMapping("/{postId}")
     public ResponseEntity<Post> getAllPostsById(@RequestHeader("Authorization") String authHeader,
                                                           @PathVariable int postId){
         try {
