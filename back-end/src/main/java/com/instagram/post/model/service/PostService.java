@@ -12,7 +12,7 @@ public interface PostService {
     List<Post> getAllPosts(int currentUserId);
 
     // 나의 피드나 특정 유저의 피드로 접속했을 때 유저가 올린 게시물들 조회
-    Post getPostById(int postId, int currentUserId);
+    Post getPostsById(int postId, int currentUserId);
 
     // 나의 피드나 특정 유저의 피드로 접속했을 때 특정 피드를 선택하여 피드 세부사항 조회
     boolean createPost(MultipartFile postImage,

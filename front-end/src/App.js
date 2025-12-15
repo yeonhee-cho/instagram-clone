@@ -23,6 +23,7 @@ import MyFeedPage from "./pages/MyFeedPage";
 import StoryDetailPage from "./pages/StoryDetailPage";
 import EditProfilePage from "./pages/EditProfilePage";
 import KakaoCallback from "./pages/KakaoCallback";
+import PostDetailPage from "./components/PostDetailPage";
 
 function App() {
     const [user, setUser] = useState(() => {
@@ -52,6 +53,12 @@ function App() {
                            element={
                                <PrivateRoute>
                                    <FeedPage/>
+                               </PrivateRoute>}
+                    />
+                    <Route path="/post/:postId"
+                           element={
+                               <PrivateRoute>
+                                   <PostDetailPage/>
                                </PrivateRoute>}
                     />
                     <Route path="/upload"

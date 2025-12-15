@@ -15,6 +15,7 @@ import { Heart, MessageCircle, Send, Bookmark, MoreHorizontal } from 'lucide-rea
 import Header from "../components/Header";
 import {getImageUrl} from "../service/commonService";
 import MentionText from "../components/MentionText";
+import PostOptionsMenu from "../components/PostOptionsMenu";
 
 /*
 피드 페이지에서 Heart 를 클릭하면 좋아요 수 증가
@@ -29,8 +30,12 @@ const FeedPage = () => {
     // loading state 선언 (초기값: true)
     const [loading, setLoading] = useState(false);
 
+    const [selectedPost, setSelectedPost] = useState(null);
+
     // navigate 함수
     const navigate = useNavigate();
+
+    const currentUser = JSON.parse(localStorage.getItem("user") ||'[]');
 
     // useEffect를 사용하여 컴포넌트 마운트 시 loadFeedData 호출
     useEffect(() => {
@@ -164,6 +169,17 @@ const FeedPage = () => {
 
     };
 
+    const deletePost = async (postId) => {
+        try {
+            await apiService.deletePost(postId);
+            setPosts(posts.filter(p => p.postId !== postId));
+            setSelectedPost(null);
+            alert("게시물이 삭제되었습니다.");
+        } catch(err) {
+            alert("게시물 삭제에 실패했습니다.");
+        }
+    }
+
     // loading이 true면 "로딩 중..." 표시
     if (loading) {
         return (
@@ -196,6 +212,7 @@ const FeedPage = () => {
                                     >
                                         <img src={getImageUrl(story.userAvatar)}
                                              className="story-avatar"
+                                             alt={`${story.userName}`}
                                         />
                                     </div>
                                     <span className="story-username">
@@ -215,13 +232,37 @@ const FeedPage = () => {
                                 <div className="post-user-info">
                                     <img src={getImageUrl(post.userAvatar)}
                                          className="post-user-avatar"
+                                         onClick={() => {navigate(`/myfeed/${post.userId}`)}}
+                                         alt={`${post.userName}`}
                                     />
-                                    <span className="post-username">{post.userName}</span>
+                                    <p style={{display:'flex', flexDirection: 'column'}}>
+                                        <span className="post-username">{post.userName}</span>
+                                        <span className="post-location">{post.postLocation}</span>
+                                    </p>
                                 </div>
-                                <MoreHorizontal className="post-more-icon" />
+                                <PostOptionsMenu
+                                    post={post}
+                                    currentUserId={currentUser.userId}
+                                    onDelete={deletePost}
+                                />
                             </div>
 
-                            <img src={post.postImage} className="post-image" />
+                            {/*
+                            모달로 디테일 띄우기
+                            <img src={post.postImage}
+                                 className="post-image"
+                                 onClick={() => setSelectedPost(post)}
+                                 style={{cursor : 'pointer'}}
+                                 alt={`${post.userName}의 게시물 이미지`}
+                            />
+                            */}
+
+                            <img src={post.postImage}
+                                 className="post-image"
+                                 onClick={() => navigate(`/post/${post.postId}`)}
+                                 style={{cursor : 'pointer'}}
+                                 alt={`${post.userName}의 게시물 이미지`}
+                            />
                             <div className="post-content">
                                 <div className="post-actions">
                                     <div className="post-actions-left">
@@ -261,6 +302,18 @@ const FeedPage = () => {
                 )}
                 {/* TODO: 게시물이 없을 때 메시지 표시 */}
             </div>
+
+            {/*
+            {selectedPost && (
+                <PostDetailModal
+                    post={selectedPost}
+                    currentUserId={currentUser.userId}
+                    onClose={() => setSelectedPost(null)}
+                    onDelete={deletePost}
+                    onToggleLike={toggleLike}
+                />
+            )}
+            */}
         </div>
     );
 };

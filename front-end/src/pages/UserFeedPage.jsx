@@ -1,19 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import Header from '../components/Header';
-import { Grid, Bookmark, Settings } from 'lucide-react';
+import {useEffect, useState} from "react";
+import {useNavigate} from "react-router-dom";
 import apiService from "../service/apiService";
-import {useNavigate, useParams} from "react-router-dom";
 import {getImageUrl} from "../service/commonService";
+import Header from "../components/Header";
+import {Grid,Bookmark} from "lucide-react";
 
-/*
-MyFeedPage 와 StoryDetail 임의 데이터를 controller 에서 가져온 데이터로 변경해보기
-GET -> mapper.xml mapper.java service.java serviceImpl.java restcontroller.java 순서로 작업 후
-       postman 이나 백엔드 api/endpoint 주소에서 데이터를 가져오는지 확인
-       APIservice.js 에서 백엔드 데이터 전달받는 작업
-        각 jsx 에서 api 로 가져온 데이터를 화면에 보여주는작업
-        이후 세부 js 작업 진행
-*/
-const MyFeedPage = () => {
+
+const UserFeedPage = () => {
     const [user, setUser] = useState(null);
     const [posts, setPosts] = useState([]);
     const [activeTab, setActiveTab] = useState('posts');
@@ -22,11 +15,11 @@ const MyFeedPage = () => {
 
     useEffect(() => {
         // 1. apiService => 데이터 가져오기 가져 온 데이터 List 형태로 출력
-        loadMyFeedData();
+        loadUserFeedData();
     }, []);
 
 
-    const loadMyFeedData = async () => {
+    const loadUserFeedData = async () => {
         setLoading(true);
         try {
             const currentUser = JSON.parse(localStorage.getItem('user'));
@@ -38,16 +31,6 @@ const MyFeedPage = () => {
 
             setUser(currentUser);
 
-            /*
-            NOTE
-            불필요한 게시물을 모두 가져온 후 필터 작업을 진행해야해서
-            나의 게시물만 가져오는 api를 이용해 나의 게시물 피드를 가져오도록 변경함
-            // 일단 전체 게시물 가져오기
-            const allPosts = await apiService.getPosts();
-
-            // 내 게시물만 필터링
-            const myPosts = allPosts.filter(post => post.userId !== userId);
-            */
             const allPosts = await apiService.getUserPost(userId);
             setPosts(allPosts);
             console.log("allPosts : ", allPosts);
@@ -101,12 +84,6 @@ const MyFeedPage = () => {
                             <li>팔로워 <strong>0</strong></li>
                             <li>팔로잉 <strong>0</strong></li>
                         </ul>
-                        {/*
-                        <div className="profile-bio-container">
-                            <div className="profile-fullname">{user.userFullname}</div>
-                            <div className="profile-bio">{user.userAvatar}</div>
-                        </div>
-                        */}
                     </div>
                 </header>
 
@@ -142,10 +119,7 @@ const MyFeedPage = () => {
 
                 <div className="profile-posts-grid">
                     {posts.map((post) => (
-                        <div key={post.postId}
-                             className="grid-item"
-                             onClick={() => navigate(`/post/${post.postId}`)}
-                        >
+                        <div key={post.postId} className="grid-item">
                             <img src={post.postImage} alt="post" />
                             <div className="grid-hover-overlay"></div>
                         </div>
@@ -156,4 +130,4 @@ const MyFeedPage = () => {
     );
 };
 
-export default MyFeedPage;
+export default UserFeedPage;

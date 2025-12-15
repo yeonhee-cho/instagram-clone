@@ -139,10 +139,17 @@ const apiService = {
 
     // 특정 게시물 조회
     // GET /posts/:postId
-    getPost: async (userId) => {
+    // user or my 추가
+    getUserPost: async (userId) => {
         const res = await api.get(`/posts/${userId}`);
         console.log('✅ 특정 게시물 조회', res.data);
 
+        return res.data;
+    },
+
+    // 단순 getPost 사용
+    getPost : async (postId) => {
+        const res = await api.get(`/posts/user/${postId}`);
         return res.data;
     },
 

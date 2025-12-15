@@ -30,7 +30,7 @@ public class PostServiceImpl implements PostService {
      * 게시글 상세 조회
      */
     @Override
-    public Post getPostById(int postId, int currentUserId) {
+    public Post getPostsById(int postId, int currentUserId) {
         return postMapper.selectPostById(postId, currentUserId);
     }
 

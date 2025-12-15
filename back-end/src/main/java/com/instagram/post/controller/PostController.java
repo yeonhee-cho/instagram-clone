@@ -74,6 +74,19 @@ public class PostController {
             return ResponseEntity.badRequest().build();
         }
     }
+    @GetMapping("/user/{postId}")
+    public ResponseEntity<Post> getAllPostsById(@RequestHeader("Authorization") String authHeader,
+                                                          @PathVariable int postId){
+        try {
+             String token = authHeader.substring(7);
+             int currentUserId = jwtUtil.getUserIdFromToken(token);
+
+            Post posts = postService.getPostsById(postId, currentUserId);
+            return ResponseEntity.ok(posts);
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().build();
+        }
+    }
 
     @PostMapping("{postId}/like")
     public ResponseEntity<Boolean> addLike(@PathVariable int postId,

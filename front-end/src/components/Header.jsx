@@ -1,8 +1,10 @@
 import {ArrowLeft, Film, Home, MessageCircle, PlusSquare, Settings, User} from "lucide-react";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import apiService from "../service/apiService";
 import Sidebar from "./Sidebar";
+
+import SearchModal from "./SearchModal";
 
 const Header = ({
     type="feed",
@@ -17,19 +19,31 @@ const Header = ({
 
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-    const openSidebar = () => setIsSidebarOpen(true);
+    // 검색 모달 상태 변수 선언
+    // isSearchOpen 상태 변수를 선언하고 초기값을 false로 설정
+    const [isSearchOpen, setIsSearchOpen] = useState(false);
 
+    const openSidebar = () => setIsSidebarOpen(true);
     const closeSidebar = () => setIsSidebarOpen(false);
+
+    // 검색 모달 열기/닫기 함수 구현
+    // 1. openSearch 함수: setIsSearchOpen(true) 호출
+    // 2. closeSearch 함수: setIsSearchOpen(false) 호출
+    const openSearch = () => setIsSearchOpen(true);
+    const closeSearch = () => setIsSearchOpen(false);
 
     if(type === 'feed') {
         return(
             <>
                 <header className="header">
                     <div className="header-container">
-                        <h1 className="header-title">Instagram</h1>
+                        <h1 className="header-title" onClick={() => navigate(('/'))}>
+                            <img src="/static/img/logo.png" alt="instagram"/>
+                        </h1>
                         <div className="header-nav">
-                            <Home className="header-icon"
-                                  onClick={() => navigate(('/'))}/>
+                            {/* Home 아이콘 클릭 시 검색 모달 열기 */}
+                            {/* onClick에 openSearch 함수 연결 (기존 navigate('/') 제거) */}
+                            <Home className="header-icon" onClick={openSearch}/>
                             <MessageCircle className="header-icon"/>
                             <PlusSquare className="header-icon"
                                         onClick={() => navigate(('/upload'))}/>
@@ -44,6 +58,13 @@ const Header = ({
                     </div>
                 </header>
                 <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
+
+                {/*
+                    SearchModal 컴포넌트 추가
+                    1. isOpen prop에 isSearchOpen 전달
+                    2. onClose prop에 closeSearch 전달
+                */}
+                <SearchModal isOpen={isSearchOpen} onClose={closeSearch} />
             </>
     )
     }
@@ -62,7 +83,7 @@ const Header = ({
                         <ArrowLeft size={24}/>
                     </button>
 
-                    <h2 className="upload-title">새 게시물</h2>
+                    <h2 className="upload-title">{title}</h2>
 
                     {/* 공유 버튼 (onClick: handlePost, disabled: loading) */}
                     <button className="upload-submit-btn"
