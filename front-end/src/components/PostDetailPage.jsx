@@ -247,7 +247,7 @@ const PostDetailPage = () => {
                             ):(
                                 comments.map((comment, i)=> (
                                     <div key={i} className="comment-item">
-                                        <img className="comment-avatar" src={getImageUrl(post.userAvatar)} />
+                                        <img className="comment-avatar" src={getImageUrl(comment.userAvatar)} />
                                         <div className="comment-content">
                                             <div className="comment-text">
                                                 <span className="comment-username"></span>
