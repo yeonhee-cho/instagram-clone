@@ -74,7 +74,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User getUserByEmail(String email) {
-        return null;
+        return userMapper.selectUserByUserEmail(email);
     }
 
     @Override
