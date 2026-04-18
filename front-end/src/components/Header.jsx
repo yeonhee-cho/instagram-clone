@@ -37,7 +37,10 @@ const Header = ({
             <>
                 <header className="header">
                     <div className="header-container">
-                        <h1 className="header-title" onClick={() => navigate(('/'))}>
+                        <h1 className="header-title"
+                            onClick={() => navigate('/feed')}
+                            width="100px"
+                            style={{paddingTop: '3px', cursor:'pointer'}}>
                             <img src="/static/img/logo.png" alt="instagram"/>
                         </h1>
                         <div className="header-nav">

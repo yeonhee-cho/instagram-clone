@@ -96,6 +96,15 @@ function App() {
                                </PrivateRoute>
                            }
                     />
+                    {/*
+                    <Route path="/myfeed"
+                           element={<FeedRouter />} />
+                           element={
+                                <PrivateRoute>
+                                   <MyFeedPage />
+                                </PrivateRoute>
+                           }
+                     */}
                     <Route path="/profile/edit"
                     element={
                     <PrivateRoute>

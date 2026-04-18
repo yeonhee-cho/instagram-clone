@@ -35,7 +35,7 @@ const FeedPage = () => {
     // navigate 함수
     const navigate = useNavigate();
 
-    const currentUser = JSON.parse(localStorage.getItem("user") ||'[]');
+    const currentUser = JSON.parse(localStorage.getItem("user") ||[]);
 
     // useEffect를 사용하여 컴포넌트 마운트 시 loadFeedData 호출
     useEffect(() => {
@@ -177,6 +177,7 @@ const FeedPage = () => {
             alert("게시물이 삭제되었습니다.");
         } catch(err) {
             alert("게시물 삭제에 실패했습니다.");
+            console.error(err);
         }
     }
 
@@ -232,7 +233,10 @@ const FeedPage = () => {
                                 <div className="post-user-info">
                                     <img src={getImageUrl(post.userAvatar)}
                                          className="post-user-avatar"
-                                         onClick={() => {navigate(`/myfeed/${post.userId}`)}}
+                                         style={{cursor: 'pointer'}}
+                                         o onClick={post.userId === currentUser.userId
+                                        ? () => navigate('/myfeed')
+                                        :() => navigate(`/myfeed?userId=${post.userId}`)}
                                          alt={`${post.userName}`}
                                     />
                                     <p style={{display:'flex', flexDirection: 'column'}}>

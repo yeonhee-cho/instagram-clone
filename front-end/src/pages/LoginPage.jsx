@@ -83,6 +83,7 @@ const LoginPage = () => {
 
                     <div>
                         <input
+                            className="login-input"
                             type="text"
                             placeholder="전화번호, 사용자 이름 또는 이메일"
                             value={userEmail}
@@ -91,6 +92,7 @@ const LoginPage = () => {
                         />
 
                         <input
+                            className="login-input"
                             type="password"
                             placeholder="비밀번호"
                             value={password}
@@ -112,9 +114,11 @@ const LoginPage = () => {
                         <div className="divider-line"></div>
                     </div>
 
+                    {/*
                     <button className="facebook-login">
                         Facebook으로 로그인
                     </button>
+                    */}
 
                     <img src="/static/img/kakao_login_large_wide.png"
                          onClick={handleKakaoLogin}
@@ -130,6 +134,7 @@ const LoginPage = () => {
                         계정이 없으신가요?
                         <button className="signup-link"
                                 onClick={() => navigate("/signup")}
+                                style={{paddingLeft: '4px'}}
                         >
                             가입하기
                         </button>

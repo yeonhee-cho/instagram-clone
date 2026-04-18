@@ -3,7 +3,7 @@ import {MoreHorizontal} from "lucide-react";
 
 const PostOptionsMenu = ({post, currentUserId, onDelete}) => {
     const [showMenu, setShowMenu] = useState(false);
-    const isOwnPost = post.userId === currentUserId; //포스트 작성자와 로그인 유저가 같나요?
+    const isOwnPost = post.userId === currentUserId; // 포스트 작성자와 로그인 유저가 같나요?
 
     const handleDelete = () => {
         if(window.confirm("게시물을 삭제하시겠습니까?")) {
@@ -32,7 +32,8 @@ const PostOptionsMenu = ({post, currentUserId, onDelete}) => {
             <div className="post-menu-overlay">
                 <div className="post-menu-modal">
                     {isOwnPost && (
-                            <button className="post-menu-button delete" onClick={handleDelete}>
+                            <button className="post-menu-button delete"
+                                    onClick={handleDelete}>
                                 삭제하기
                             </button>
                         )

@@ -51,6 +51,7 @@ const SearchModal = ({ isOpen, onClose }) => {
                 setSearchResults(res || []);
             } catch (e) {
                 setSearchResults([]);
+                console.error(err);
             } finally {
                 setIsLoading(false);
             }
@@ -72,7 +73,7 @@ const SearchModal = ({ isOpen, onClose }) => {
         const newRecent = [
             user,
             ...recentSearches.filter(u => u.userId !== user.userId)
-        ].slice(0, 10);
+        ].slice(0, 10); // 10개까지만
 
         setRecentSearches(newRecent);
         localStorage.setItem('recentSearches', JSON.stringify(newRecent));

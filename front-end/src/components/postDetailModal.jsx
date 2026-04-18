@@ -14,7 +14,7 @@ const PostDetailModal = ({ post, currentUserId, onClose, onDelete, onToggleLike 
 
     // ============================================
     // 링크 공유 함수 구현
-    // ============================================
+    // ==ㄹ==========================================
     const handleShare = async () => {
         // 공유할 URL 만들기
         const shareUrl = `${window.location.origin}/post/${post.postId}`;

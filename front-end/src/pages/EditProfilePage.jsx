@@ -24,6 +24,8 @@ const EditProfilePage = () => {
     const [previewImage, setPreviewImage] = useState('');
     const [file, setFile] = useState(null);
 
+    const currentUser = JSON.parse(localStorage.getItem('user'));
+
     // useEffect로 loadUserData 호출
     useEffect(() => {
         loadUserData();
@@ -68,7 +70,7 @@ const EditProfilePage = () => {
         }
     };
 
-    // handleChange 함수 작성 - 연희
+    // handleChange 함수 작성
     const handleChange = (e) => {
         // 1. e.target에서 name, value 추출 (구조분해)
         const {name, value} = e.target;
@@ -117,7 +119,6 @@ const EditProfilePage = () => {
 
         } catch (err) {
             console.error(err);
-            console.log("왜 오류가 발생하는가?", err);
             alert('프로필 저장 중 오류가 발생했습니다.');
         } finally {
             setLoading(false);
@@ -143,7 +144,7 @@ const EditProfilePage = () => {
                     <div className="edit-profile-form">
                         {/* 프로필 사진 섹션 구현 */}
                         <div className="form-group photo-section">
-                            {/* TODO 이미지 디테일 만들기 */}
+                            {/* 이미지 디테일 만들기 */}
                             <div className="photo-label-area">
                                 {/* img 태그: src={previewImage} */}
                                 <img src={previewImage}
