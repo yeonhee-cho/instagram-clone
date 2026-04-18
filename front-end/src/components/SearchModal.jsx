@@ -51,7 +51,7 @@ const SearchModal = ({ isOpen, onClose }) => {
                 setSearchResults(res || []);
             } catch (e) {
                 setSearchResults([]);
-                console.error(err);
+                console.error(e);
             } finally {
                 setIsLoading(false);
             }
