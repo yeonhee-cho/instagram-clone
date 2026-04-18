@@ -141,10 +141,12 @@ application.properties
 * 배포 환경(AWS)까지 포함한 End-to-End 개발 경험
 
 ---
-
+<!--
 ## 📄 상세 문서
 
 * `frontend/README.md` : 프론트엔드 구조 및 트러블 슈팅
 * `backend/README.md`  : 백엔드 구조 및 트러블 슈팅
+-->
+## 📄 Note
 
 각 영역의 상세 구현과 문제 해결 과정은 개별 README에서 확인할 수 있습니다.
