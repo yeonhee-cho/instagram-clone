@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# 📱 Instagram Clone – Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+본 프로젝트는 Instagram Clone 프로젝트의 **프론트엔드 영역**으로,  
+사용자 화면(UI)과 사용자 인터랙션을 담당하는 React 기반 SPA 애플리케이션입니다.
 
-## Available Scripts
+백엔드(Spring Boot)와 REST API 방식으로 통신하며,  
+JWT 인증 상태를 기반으로 화면을 제어합니다.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🧱 프로젝트 구조
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+front-end/
+├─ public/
+├─ src/
+│ ├─ api/ # Axios API 요청 로직
+│ ├─ components/ # 공통 UI 컴포넌트
+│ ├─ pages/ # 화면 단위 페이지
+│ ├─ hooks/ # Custom Hooks
+│ ├─ styles/ # 공통 스타일
+│ └─ utils/ # 공통 유틸
+└─ package.json
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🎯 프로젝트 목표
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 사용자 중심의 화면 흐름 설계
+- 백엔드와 역할을 분리한 프론트엔드 구조 설계
+- JWT 인증 상태 기반 화면 제어 경험
+- REST API 연동 및 비동기 처리 이해
+- 컴포넌트 재사용성을 고려한 UI 설계
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠 기술 스택
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React 18
+- JavaScript (ES6+)
+- Axios
+- HTML5 / CSS3
+- Tailwind CSS
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## ✨ 주요 기능
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 👤 인증 UI
+- 회원가입 / 로그인 화면
+- 로그인 상태 유지 처리
+- 인증 상태에 따른 화면 분기
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 🖼 게시물 / 피드
+- 게시물 목록 및 상세 화면 렌더링
+- 사용자별 피드 조회
+- 게시물 업로드 UI
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### ❤️ 사용자 인터랙션
+- 좋아요 / 댓글 UI
+- 프로필 및 마이페이지 화면
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🔄 프론트엔드 처리 흐름
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. 사용자가 페이지 접속
+2. 로그인 성공 시 JWT 토큰 저장
+3. Axios 요청 시 Authorization Header에 토큰 포함
+4. 백엔드 API 응답 수신
+5. 상태 업데이트 및 화면 렌더링
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🚀 실행 방법
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+cd front-end
+npm install
+npm start
+```
