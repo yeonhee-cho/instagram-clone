@@ -120,9 +120,11 @@ const LoginPage = () => {
                     </button>
                     */}
 
-                    <img src="/static/img/kakao_login_large_wide.png"
-                         onClick={handleKakaoLogin}
-                    />
+                    <div className="sns-button">
+                        <img src="/static/img/kakao_login_large_wide.png"
+                             onClick={handleKakaoLogin}
+                        />
+                    </div>
 
                     <button className="forgot-password">
                         비밀번호를 잊으셨나요?

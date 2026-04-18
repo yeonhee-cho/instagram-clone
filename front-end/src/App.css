@@ -31,7 +31,8 @@ body {
 }
 
 .login-title {
-    font-size: 2.5rem;
+    width: 100%;
+    font-size: 2rem; /*2.5rem*/
     font-family: 'Cookie', cursive;
     text-align: center;
     margin-bottom: 2rem;
@@ -97,6 +98,14 @@ body {
     cursor: pointer;
 }
 
+.sns-button {
+    width: 100%;
+}
+
+.sns-button img {
+    width: 100%;
+}
+
 .forgot-password {
     width: 100%;
     text-align: center;
@@ -145,6 +154,8 @@ body {
     font-size: 1.5rem;
     font-weight: 600;
     font-family: 'Cookie', cursive;
+    display: flex;
+    align-items: center;
 }
 
 .header-title img{
